@@ -1,0 +1,23 @@
+= Kikuchiyo's Way
+  A game to teach people of all ages basic movement in the vim-editor
+
+== Background-Storyline:
+
+  Kikuchiyo is banished from his home-planet after voicing his concerns
+  of the negative effects of nepotism within the court due to severe 
+  injustices it was causing to the less priveledged people on his planet.
+
+  Kikuchiyo is banished to the 'Land of C.S. Dogmas', where he must collect
+  rubies and diamonds to survive.
+
+== Player-Interaction 
+
+  Stage 1: Steal to Eat
+    Player controls Kikuchiyo to avoid the 'C.S. Dogmas', whose job is to horde
+    their master's rubies and diamonds.
+
+== Lessons:
+  Run ( hjkl )  
+  Jump ( wbOo )
+  Teleport ( H0L$ )
+  Pick-up ( i ) 
