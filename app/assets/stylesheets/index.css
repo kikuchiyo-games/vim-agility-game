@@ -1,0 +1,214 @@
+      table { 
+        background-color:black;
+        padding-top:0;
+        margin-top:0;
+      }
+      #kikuchiyo {padding-right:-12px; margin-right:-12px;}      
+      html {
+        padding:0;
+        margin:0;
+        width:100%; 
+        height:100%; 
+        position:absolute;
+      }
+        body {
+          position:absolute;
+          width:90%;
+          height:80%;
+          margin-left:2%;
+          padding-left:2.5%;
+          margin-right:3.5%;
+          padding-right:3.5%;
+          background-color:white;
+          -moz-border-radius: 2px; 
+          -webkit-border-radius: 2px; 
+          -khtml-border-radius: 2px; 
+          border-radius: 2px;	
+          border-color: black;
+          background: black;
+          background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(white));
+          background: -webkit-linear-gradient(black, white);
+          background: -moz-linear-gradient(black, white);
+          background: -ms-linear-gradient(black, white);
+          background: -o-linear-gradient(black, white);
+          background: linear-gradient(black, white);
+          -pie-background: linear-gradient(black, white);
+        }
+          #container  { 
+            position:absolute;
+            width:95%; 
+            height:100%; 
+            background-color:white; 
+            margin:0; padding:0;
+          }
+            #header-container { 
+              width:100%;
+              height:20%; 
+            }
+            
+              td#header-left {
+                /*float:left;*/
+                background-image:url('kikuchiyos_way_header.png'); 
+                background-repeat:no-repeat;
+                background-size:90%;
+                padding:0px; padding-bottom:20px;
+                margin:0px; margin-bottom:20px;
+                /*width:50%;*/
+              }
+
+              td#header-right {
+                margin:0px; margin-bottom:20px;
+                padding:0px; padding-bottom:20px;
+                clear:none;
+                background-image:url('black_shim.png'); 
+                background-repeat:repeat-x;
+                background-size:100%;
+              }
+
+            #navlist { 
+              float:left; padding-bottom:0px; padding-left:20px; padding-top:4%;
+            }
+
+            #navlist ul { 
+              margin:0; padding:0; padding-left:10px; margin-left:10px;
+            }
+
+            #navlist li {
+              color:red; list-style:none; display:inline; padding-bottom:0px; 
+            }
+
+              button {
+                font-size:20px;
+                font-weight:bold;
+                color:black;
+              }
+
+              .radius {
+                -moz-border-radius: 2px; 
+                -webkit-border-radius: 2px; 
+                -khtml-border-radius: 2px; 
+                border-radius: 2px;
+              }
+              .gradiant-brown {
+                -moz-border-radius: 2px; 
+                -webkit-border-radius: 2px; 
+                -khtml-border-radius: 2px; 
+                border-radius: 2px;	
+                border-color: white;
+                background: white;
+                background: -webkit-gradient(linear, 0 0, 0 bottom, from(white), to(white));
+                background: -webkit-linear-gradient(white, white);
+                background: -moz-linear-gradient(white, white);
+                background: -ms-linear-gradient(white, white);
+                background: -o-linear-gradient(white, white);
+                background: linear-gradient(white, white);
+                -pie-background: linear-gradient(white, white);
+              }
+
+              .gradiant-black-white {
+                -moz-border-radius: 2px; 
+                -webkit-border-radius: 2px; 
+                -khtml-border-radius: 2px; 
+                border-radius: 2px;	
+                border-color: white;
+                background: black;
+                background: -webkit-gradient(linear, 0 0, 0 bottom, from(white), to(black));
+                background: -webkit-linear-gradient(white, black);
+                background: -moz-linear-gradient(white, black);
+                background: -ms-linear-gradient(white, black);
+                background: -o-linear-gradient(white, black);
+                background: linear-gradient(white, black);
+                -pie-background: linear-gradient(white, black);
+              }
+              .gradiant-black {
+                -moz-border-radius: 2px; 
+                -webkit-border-radius: 2px; 
+                -khtml-border-radius: 2px; 
+                border-radius: 2px;	
+                border-color: white;
+                background: black;
+                background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(white));
+                background: -webkit-linear-gradient(black, white);
+                background: -moz-linear-gradient(black, white);
+                background: -ms-linear-gradient(black, white);
+                background: -o-linear-gradient(black, white);
+                background: linear-gradient(black, white);
+                -pie-background: linear-gradient(black, white);
+              }
+              .gradiant {
+                -moz-border-radius: 2px; 
+                -webkit-border-radius: 2px; 
+                -khtml-border-radius: 2px; 
+                border-radius: 2px;	
+                border-color: white;
+                background: black;
+                background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(white));
+                background: -webkit-linear-gradient(black, white);
+                background: -moz-linear-gradient(black, white);
+                background: -ms-linear-gradient(black, white);
+                background: -o-linear-gradient(black, white);
+                background: linear-gradient(black, white);
+                -pie-background: linear-gradient(black, white);
+              }
+
+            #partial-body { 
+              color:white;
+              clear:both;
+              /*margin-left:25%; 
+              margin-right:25%; */
+            }
+
+            #partial-body ul { 
+              list-style:none;
+              margin-left:0px;
+            }
+
+            #partial-body ul, #partial-body li { 
+              margin-left:0px; 
+              padding-left:0px; 
+              height:10%; 
+              padding-bottom:20px;
+            }
+
+            label.label { 
+              height:10%; 
+              width:20%; 
+              margin-top:0px; 
+              margin-botton:0px; 
+              padding-top:0px; 
+              padding-botton:0px;
+            }
+
+            .input { 
+              height:10%; 
+              width:24%; 
+              margin-right:10px; 
+              clear:none; 
+              margin-top:0px; 
+              margin-botton:0px; 
+              padding-top:0px; 
+              padding-botton:0px;
+            }
+
+            h3 { margin-left:0px; margin-bottom:0px; }
+
+            .spacer { 
+              height:1px; padding-top:1%; 
+              padding-bottom:0; 
+              margin-top:0; 
+              margin-bottom:0; 
+              color:white;
+            }
+
+        #partial-container {
+          background-image:url('gradiant_horizontal_fade.png');
+          background-size:100%;
+          height:90%;
+          margin-top:0px;
+        }
+          #partial-container div {
+            padding-top:1%;
+            padding-left:1%;
+            margin-top:16px;
+          }
+          #draw-target { padding-right:-10px; margin-right:-10px; padding-left:0px; margin-left:0px;}

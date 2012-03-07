@@ -1,0 +1,64 @@
+<!doctype html>
+<html  class = 'gradiant'>
+  <head>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+    <!LAYOUT VIEW RELATED SCRIPTS>
+      <script src="javascripts/underscore.js"></script>
+      <script src="javascripts/backbone.js"></script>
+      <script src="javascripts/app.js"></script>
+      <script src="javascripts/views/partial.js"></script>
+      <script src="javascripts/views/game.js"></script>
+      <script src="index.js"></script>
+
+    <!GAME RELATED SCRIPTS>
+      <script> TRAINING = true; </script>; 
+      <script> GAME_OVER = false </script>; 
+      <!--script src="show_header.js"></script-->
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+  </head>
+  <body>
+    <div id = 'container' class = 'gradiant'>
+
+      <table id = 'header-container' cellpadding = '0' border = '0'>
+        <tr cellpadding = '0'>
+          <td width = '50%' id = 'header-left' cellpadding = '0'></td>
+          <td width = '50%' id = 'header-right' cellpadding = '0'>
+            <div id = 'nav'>
+              <ul id = 'navlist'>
+                <li><button id = 'login'    class = 'gradiant-brown'>login</button></li>
+                <li><button id = 'register' class = 'gradiant-brown'>register</button></li>
+                <li><button id = 'home'     class = 'gradiant-brown'>sample home</button></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div id = 'partial-container'>
+        <div id = 'partial-body' class = 'radius'>
+        </div>
+      </div>
+      <div id = 'audio-container'>
+      </div>
+    </div>
+
+    <footer></footer>
+      <!-- HOMEMADE MAIN: DATA STRUCTURES AND OBJECTS -->
+        <script src="javascripts/lib/sheet_clips.js"></script>
+        <script src="javascripts/lib/animation.js"></script>
+        <script src="javascripts/lib/movement.js"></script>
+        <script src="javascripts/lib/table_maker.js"></script>
+        <script src="javascripts/lib/dev_rubies.js"></script>
+        <script src="javascripts/lib/dev_kikuchiyo.js"></script>
+
+      <!-- HOMEMADE GAME SETUP: DATA STRUCTURES AND OBJECTS -->
+        <script src="javascripts/lib/config.js"></script>
+        <script src="javascripts/lib/game.js"></script>
+        <script src="javascripts/lib/doc_ready.js"></script>
+  </body>
+</html>

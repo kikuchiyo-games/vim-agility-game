@@ -1,0 +1,2 @@
+module KikuchiyosWayHelper
+end
