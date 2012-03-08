@@ -1,7 +1,7 @@
 
 function make_rubies(){
 
-  var ruby_image = "images/rubies/ruby.png"
+  var ruby_image = "ruby.png"
 
   for (var r=0; r < RUBIES; r++) {
 

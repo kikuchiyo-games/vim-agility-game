@@ -62,8 +62,8 @@ var player = function( spec ){
   that.last_key_press = spec.last_key_press || "108"
 
   that.sheets = {
-    good:"images/kikuchiyo_sprite_sheet_try_3.png", //good:"images/kikuchiyo_sprite_sheet_alpha.png",
-    evil:"images/sheets/mega_man_evil.png"
+    good:"../images/kikuchiyo_sprite_sheet_try_3.png", //good:"images/kikuchiyo_sprite_sheet_alpha.png",
+    evil:"../images/mega_man_evil.png"
   }; 
 
   that.set_sheet = function(){

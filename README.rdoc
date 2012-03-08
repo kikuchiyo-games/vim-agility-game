@@ -35,7 +35,7 @@
 
     -- Stage 6: Raiding the C.S. Dogma Outposts!
 
-    -- Stage 7: Learning Magic! ( xcdAIv )
+    -- Stage 7: Learning Magic! ( :s )
 
     ...
     ...

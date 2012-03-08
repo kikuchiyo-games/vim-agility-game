@@ -186,7 +186,7 @@ $(document).ready(function(){
     imagesWidth:595,
     height:sprite_height,
     $drawTarget: $('#draw-target'),
-    images: "../images/sheets/mega_man_boss.png"
+    images: "../images/mega_man_boss.png"
   };
   //--[10]--//
   //
@@ -263,7 +263,7 @@ $(document).ready(function(){
 
   //--[13]--//
   //  we interpret meaningful user input
-  var ruby_image = "../images/rubies/ruby.png";
+  var ruby_image = "../images/ruby.png";
   page_rubies=[RUBIES];
   for (var r=0; r < RUBIES; r++) {
     page_rubies[r] = Rubies(r, ruby_image);

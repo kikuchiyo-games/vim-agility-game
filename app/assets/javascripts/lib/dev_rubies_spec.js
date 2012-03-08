@@ -4,7 +4,7 @@ test("game should be able to place rubies on the page", function() {
   RUBIES = 200
   page_rubies=[RUBIES];
 
-  var ruby_image = "images/rubies/ruby.png"
+  var ruby_image = "ruby.png"
 
   for (var r=0; r < RUBIES; r++) {
     page_rubies[r] = Rubies(r, ruby_image);
@@ -44,7 +44,7 @@ test("game should be able to place rubies on the page", function() {
   RUBIES = 200
   page_rubies=[RUBIES];
 
-  var ruby_image = "images/rubies/ruby.png"
+  var ruby_image = "rubies/ruby.png"
 
   for (var r=0; r < RUBIES; r++) {
     page_rubies[r] = Rubies(r, ruby_image);
@@ -86,7 +86,7 @@ test("game should be able to place rubies on the page", function() {
   RUBIES = 200
   page_rubies=[RUBIES];
 
-  var ruby_image = "images/rubies/ruby.png"
+  var ruby_image = "rubies/ruby.png"
 
   for (var r=0; r < RUBIES; r++) {
     page_rubies[r] = Rubies(r, ruby_image);

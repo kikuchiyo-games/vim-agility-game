@@ -21,9 +21,9 @@ var game = function( spec ){
 
       if ( r % 2 == 0 ){
 
-        var ruby_image = "images/rubies/ruby.png"
+        var ruby_image = "../images/ruby.png"
 
-      } else { var ruby_image = "images/rubies/diamond.png" }
+      } else { var ruby_image = "../images/diamond.png" }
 
       page_rubies[ r ] = Rubies( r, ruby_image );
       page_rubies[ r ].draw(
