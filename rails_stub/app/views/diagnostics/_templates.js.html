@@ -1,0 +1,175 @@
+<!-- Templates -->
+  <script type="text/template" id="tab-navigation-toolbar">
+    <ul>
+      {{= lists }}
+    </ul>
+    {{= divs }}
+  </script>
+
+  <script type="text/template" id="tab-navigation-toolbar-list-component">
+    <li><a href = '#{{= href }}' >{{= text }}</a></li>
+  </script>
+
+  <script type="text/template" id="tab-navigation-toolbar-div-component">
+    <div id = '{{=href}'></div>
+  </script>
+
+  <script type="text/template" id="alert_list_row_template">
+    <ul></ul> 
+  </script>
+
+  <script type="text/template" id="alert_list_template">
+    <li> {{= description}}</li> 
+  </script>
+
+  <script type="text/template" id="filter_template">
+    <div style = 'border-bottom:1px solid; margin-bottom:1%; padding-bottom:1%;'>
+      <table>
+        <tr class = 'tr-filters'>
+          <td width = '10%' id = 'favorite-icon' style = 'display:inline'>
+            <select>
+              <option>Select a Favorite View...</option>
+              <option>night alerts</option>
+              <option>day alerts</option>
+            </select>
+            <a href = '#'><img class = 'add_favorite' src = 'images/favorite.png'></img></a>
+          </td>
+          <td width = '35%'  style = 'display:inline'>
+            Display
+            <select> 
+              <option>Active Alerts</option>
+              <option>Inactive alerts</option>
+            </select>
+            for
+            <select> 
+              <option>All Daylight Projects</option>
+              <option>All Night-time Projects</option>
+            </select>
+          </td>
+          <td width = '38%' id = 'add-project-icon'  style = 'display:inline'>
+            Filter By: 
+            <select> 
+              <option>Keyword</option>
+              <option>Something other than a Keyword...</option>
+            </select> 
+            <a href = '#'>Frozen Columns</a> 
+            <a href = '#'>Project</a> 
+            <img class = 'add_project' src = 'images/add_project.png'></img>
+            <a id = 'map-controller'>Toggle Map</a> 
+          </td>
+        </tr>
+      </table>
+    </div>
+  </script>
+
+  <script type="text/template" id="project_profile_template">
+    <div id = 'project-summary-list-container'>
+      <ul 'project-summary-list'>
+        <li id = 'Number'   class = 'impact' >Number: <span> PA-10-00576 </span></li>
+        <li id = 'Size'     class = 'impact' >Size <span><select><option>AC</option><option>DC</option></select>:</span><span>13,063.68 </span></li>
+        <li id = 'Customer' class = 'impact' >Customer: <span> Philadelphia Inc. </span></li>
+        <li id = 'Fund'     class = 'impact' >Fund: <span> None - Direct Sales </span></li>
+        <li id = 'Type'     class = 'impact' >Type: <span> SPSA </span></li>
+      </ul>
+    </div>
+    <div style = "padding-bottom:1%; margin-bottom:2%;">
+      <div style = "width:50%;"></div>
+      <div style = "width:50%; float:right; clear:none;">
+        <ul>
+          <li class = 'menu tabs right' ><button>TICKET</button></li>
+          <li class = 'menu tabs right' ><button>NOTATE</button></li>
+          <li class = 'menu tabs right' ><button>SNOOZE</button></li>
+        </ul>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="spatial_analysis_bellow_template">
+    <h3 id = 'spatial-analysis-bellow-h3' class = 'menu tabs'><a href="#" class = 'selected'>Spatial Analysis</a></h3>
+    <div id = 'spatial-analysis-bellow-div'>
+      <div class = 'filters'> </div>
+      <div id = 'summary_table_container'></div>
+      <div id = 'map_container'>
+        <div id="main">
+          <div id="meridians"></div>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="project_analysis_bellow_template">
+    <h3 class = 'menu tabs'><a href="#" class = 'unselected'>Project Analysis</a></h3>
+    <div>
+      <div id = 'profile' class = 'profile'></div>
+      <div id = "tabs-detail">
+        <div id = "device-information"><p> No Example Provided For Device-Information  </p></div>
+        <div id = 'issues'>
+          <div id = "tabs-alert-details">
+            <div id = 'tickets'> <ul></ul> </div>
+            <div id = 'alerts'> <ul id ='alerts_list'></ul> </div>
+          </div>
+        </div>
+        <div id = "monitoring" style = 'width:100%; height:100%;'>
+          <div id = 'tabs-monitoring'>
+            <div id="placeholder" style = 'width:1000px; height:100%;'></div>
+            <div id="initialization-layout" ><p> No Example Provided For Initialization Layout </p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="data_mining_bellow_template">
+    <h3 id = 'data-mining-bellow-h3' class = 'menu tabs '><a href="#" class = 'unselected'>Data Mining</a></h3>
+    <div id='roc-table'>
+      <div class = 'filters'></div>
+      <div id = 'details_table_container'></div>
+    </div>
+  </script>
+  
+  <script type="text/template" id="diagnostics_page_template">
+    <div id = 'diagnostics'>
+      <div id="summary-accordion">
+        <h3 id = 'spatial-analysis-bellow-h3' class = 'menu tabs'>
+          <a href="#" class = 'selected'>Spatial Analysis</a>
+        </h3>
+        <div id = 'spatial-analysis-bellow-div'>
+          <div id = 'summary-filter' class = 'filters'> </div>
+          <div id = 'summary_table_container'></div>
+          <div id = 'map_container'>
+            <div id="main">
+              <div id="meridians"></div>
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+
+        <h3 id = 'data-mining-bellow-h3' class = 'menu tabs '><a href="#" class = 'unselected'>Data Mining</a></h3>
+        <div id='roc-table'>
+          <div id = 'details-filter' class = 'filters'></div>
+          <div id = 'details_table_container'></div>
+        </div>        
+
+        <h3 class = 'menu tabs'><a href="#" class = 'unselected'>Project Analysis</a></h3>
+        <div>
+          <div id = 'profile' class = 'profile'></div>
+          <div id = "tabs-detail">
+            <div id = "device-information"><p> No Example Provided For Device-Information  </p></div>
+            <div id = 'issues'>
+              <div id = "tabs-alert-details">
+                <div id = 'tickets'> <ul></ul> </div>
+                <div id = 'alerts'> <ul id ='alerts_list'></ul> </div>
+              </div>
+            </div>
+            <div id = "monitoring" style = 'width:100%; height:100%;'>
+              <div id = 'tabs-monitoring'>
+                <div id="placeholder" style = 'width:1000px; height:100%;'></div>
+                <div id="initialization-layout" ><p> No Example Provided For Initialization Layout </p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <!-- Imported Styles -->
+    <%= stylesheet_link_tag 'application.css' %>
+    <%= stylesheet_link_tag 'demo_page.css' %>
+    <%= stylesheet_link_tag 'demo_table.css' %>
+    <%= stylesheet_link_tag 'spike.css' %>
+    <%= stylesheet_link_tag 'ColVis.css' %>
+    <%= stylesheet_link_tag 'ColReorder.css' %>
+
+    <!-- Imported Libraries -->
+    <%= javascript_include_tag "jquery-1.7.1.min.js" %>
+    <%= javascript_include_tag "jquery.tools.min.js" %>
+    <%= javascript_include_tag "jquery.flot.js" %>
+    <%= javascript_include_tag "jquery-ui-1.8.17.custom.min.js" %>
+    <%= javascript_include_tag "jquery.dataTables.js" %>
+    <%= javascript_include_tag "ColReorder.js" %>
+    <%= javascript_include_tag "ColVis.js" %>
+    <%= javascript_include_tag "jquery.dataTables.rowGrouping.js" %>
+    <%= javascript_include_tag "underscore.js" %>
+    <%= javascript_include_tag "backbone.js" %>
+
+    <!-- Backbone-Setup -->
+    <%= javascript_include_tag "setup.js" %>
+
+    <!--Backbone-Models-->
+  	<%= javascript_include_tag "models/alert.js" %>
+
+    <!--Backbone-Collections-->
+  	<%= javascript_include_tag "collections/alertCollection.js" %>
+
+    <!--Backbone-Views-->
+    <%= javascript_include_tag "views/tabView.js" %>
+    <%= javascript_include_tag "views/tabPageView.js" %>
+    <%= javascript_include_tag "views/tabDiagnosticsDetailView.js" %>
+    <%= javascript_include_tag "views/tabDiagnosticsIssueDetailView.js" %>
+    <%= javascript_include_tag "views/tabDiagnosticsMonitoringDetailView.js" %>
+
+    <%= javascript_include_tag "views/tableView.js" %>
+    <%= javascript_include_tag "views/tableAlertSummaryView.js" %>
+    <%= javascript_include_tag "views/tableAlertDetailsView.js" %>
+    <%= javascript_include_tag "views/bellowView.js" %>
+    <%= javascript_include_tag "views/bellowDataMiningView.js" %>
+    <%= javascript_include_tag "views/bellowProjectAnalysisView.js" %>
+    <%= javascript_include_tag "views/bellowSpatialAnalysisView.js" %>
+
+    <%= javascript_include_tag "views/projectProfileView.js" %>
+    <%= javascript_include_tag "views/accordionView.js" %>
+    <%= javascript_include_tag "views/accordionDiagnosticsView.js" %>
+
+  	<%= javascript_include_tag "views/filterView.js" %>
+  	<%= javascript_include_tag "views/summaryFilterView.js" %>
+  	<%= javascript_include_tag "views/detailsFilterView.js" %>
+  	<%= javascript_include_tag "views/listView.js" %>
+  	<%= javascript_include_tag "views/listAlertsView.js" %>
+  	<%#= javascript_include_tag "views/listTicketsView.js" %>
+    <%= javascript_include_tag "views/diagnosticsView.js" %>
+
+  </head>
+
+  <body style="font-size:62.5%; max-height:90%;">
+    <div class = 'bg' style = "background-color:white;">
+      <table cellpadding="0" cellspacing="0" class="admin_banner">
+        <tr>
+          <td id="left_banner"  valign = "top"                 > &nbsp; </td>
+          <td id="center_banner"                               > &nbsp; </td>
+          <td id="right_banner" valign = "bottom" align="right"> &nbsp; </td>
+        </tr>
+      </table>
+      <%= yield %>
+    </div> 
+    <script  
+      id   = 'get-gmap' 
+      type = "text/javascript" 
+      src  = "http://maps.google.com/maps?file=api&v=2&key=AIzaSyCUC926dGW7_mMFUl_9MGviT6Wh9zCy7zw&scale=3&size=312x112&sensor=true" 
+    ></script>
+    <%= javascript_include_tag "nightOverlay.js" %>
+  </body>
+</html> 

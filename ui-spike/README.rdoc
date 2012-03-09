@@ -1,0 +1,53 @@
+== SOD-UI
+
+=== Get Requests by Frame
+  1. Data Grid    Frame
+  2. Data Chart Frame
+
+=== View Components Breakdown
+    - Tab View
+        - Diagnostics Tab
+            - Accordion View
+
+                - Spatial Analysis Bellow View Instance
+                    - Table View
+                        * description: summary table of alerts 
+                    - Map View
+                        * description: spatial representation of alerts    
+
+                - Data Mining Bellow View Instance
+                    - Filter View
+                        * description: advanced filtering of Table View
+
+                    - Table View
+                        * description: detailed listing of projects
+
+                - Project Analysis Bellow View Instance
+                    - Project Summary View
+                        * description: about five statistics on project
+
+                    - Action View
+                        * description: user may snooze, notate, or ticket an alert
+
+                    - Tab(s) View
+                        - Device Information Tab View
+                            * No Example Given in Wire-Frame
+
+                        - Issues Tab View
+                            - Tickets Tab
+                                - List View
+                                    - Tickets
+                                        * description:    list tickets for selected project
+
+                            - Alerts Tab
+                                - List View
+                                    - Alerts
+                                        * description: list alerts for selected project
+
+                        - Monitoring Tab View
+                            - Production Graph Tab
+                                - Chart View
+                                    * description: time representation of project data
+
+                            - Initialization Layout
+                                * No Example Given in Wire-Frame

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetLiveCompactWeatherByUSZipCodeResponse xmlns="http://api.wxbug.net/">
+      <GetLiveCompactWeatherByUSZipCodeResult>
+        <City>Denver</City>
+        <Country>USA</Country>
+        <CurrIcon>cond000.gif</CurrIcon>
+        <CurrDesc>Clear</CurrDesc>
+        <GustWindSpeed>11</GustWindSpeed>
+        <GustWindSpeedUnit>mph</GustWindSpeedUnit>
+        <GustWindDirectionString>NW</GustWindDirectionString>
+        <InputLocationUrl>http://weather.weatherbug.com/CO/Denver-weather.html</InputLocationUrl>
+        <Latitude>39.7227783203125</Latitude>
+        <Longitude>-104.93805694580078</Longitude>
+        <ObDate>2/16/2012</ObDate>
+        <ObDateTime>2012-02-16T16:36:00</ObDateTime>
+        <RainToday>0</RainToday>
+        <RainUnit>&amp;quot;</RainUnit>
+        <State> CO</State>
+        <StationIDRequested />
+        <StationIDReturned>DNVRS</StationIDReturned>
+        <StationName>Steck ES</StationName>
+        <Temperature>30.1</Temperature>
+        <TemperatureUnit>&amp;deg;F</TemperatureUnit>
+        <TimeZone>MST</TimeZone>
+        <TimeZoneOffset>-7</TimeZoneOffset>
+        <WebUrl>http://weather.weatherbug.com/CO/Denver-weather.html</WebUrl>
+        <WindDirection>NNE</WindDirection>
+        <WindSpeed>2</WindSpeed>
+        <WindSpeedUnit>mph</WindSpeedUnit>
+        <ZipCode>80220</ZipCode>
+      </GetLiveCompactWeatherByUSZipCodeResult>
+    </GetLiveCompactWeatherByUSZipCodeResponse>
+  </soap:Body>
+</soap:Envelope>
