@@ -46,9 +46,15 @@ var player = function( spec ){
   //that.image_width = 594;
   //that.height = 64;
   //that.width = 59;
-  that.image_width = 584;
-  that.height = 60;
-  that.width = 58.4;
+  that.image_width = 595;
+  // good with no_transport
+  that.height = 72.25; 
+  that.width = 59.24;
+
+  // fair, but not good enough 
+  //  that.height = 69.8; 
+  //  that.width = 59.24;
+
   // that.height = 60;
   // that.width = 50;
 
@@ -63,13 +69,16 @@ var player = function( spec ){
 
   that.sheets = {
     //good:"../images/kikuchiyo_sprite_sheet_try_3.png", //good:"images/kikuchiyo_sprite_sheet_alpha.png",
-    good:"../images/mega_man_evil.png",
+    //good:"../images/no_transport.png",
+    good:"../images/digital_kikuchiyo.png",
+    
     evil:"../images/mega_man_evil.png"
   }; 
 
   that.set_sheet = function(){
     try {
       that.sheet = that.sheets[ that.nature ];
+      that.teleportation_sheet = "../images/teleportation.png";
     } catch (e) {
       alert( that.nature + "has no associated sheet. Cannot animate." );
     }
@@ -111,21 +120,14 @@ var player = function( spec ){
   };
 
   that.is_teleport_key_press = function( key_press ){
-    
     return ( ["72", "48", "76", "77", "52"].indexOf( key_press ) != -1)
-
-    //var teleport_keys = sheet_clips.kikuchiyo.teleport;
-    //   return teleport_keys.indexOf( key_press ) != -1;
-
   };
 
   that.get_animation = function( key_press ){
     try {
       if ( that.is_teleport_key_press( key_press ) ){
         return sheet_clips.kikuchiyo.teleport;
-
       } else { return animation.kikuchiyo[ key_press ] }
-      
     } catch ( e ) { return null } //user simply hit a key we do not map to an action
   };
 
@@ -137,7 +139,8 @@ var player = function( spec ){
     var new_movement = that.get_movement(key_press); 
 
     if (new_movement.z == 'teleport') {
-
+      that.element.css({ backgroundImage: 'url(' + that.teleportation_sheet + ')' });
+      that.draw();
       if ( new_movement.x != -1 ) { that.x = new_movement.x }
       if ( new_movement.y != -1 ) { that.y = new_movement.y }
 
@@ -181,23 +184,26 @@ var player = function( spec ){
 
   that.draw=function(){
 
+    // that.style.left = that.x + 'px'; 
+    // that.style.top  = that.y + 'px'; 
+     
     that.style.left = that.x + 'px'; 
     that.style.top  = that.y + 'px'; 
-     
   };
 
   that.make_cell_on_page=function(){
 
-    var div_style = "style=\"width:" + that.width + "px; height:" + that.height + "px; position:absolute;\"";
-    that.element = $("#draw-target").append( '<div id = \'kikuchiyo\'' + div_style + '></div>' ).find( ':last' );
-
+    var div_style = "style=\"overflow:hidden; width:" + that.width + "px; height:" + that.height + "px; position:absolute;\"";
+    that.element = $("#draw-target").append( '<div id = \'kikuchiyo\' ' + div_style + '></div>' ).find( ':last' );
     that.style = that.element[ 0 ].style;
-    
     that.element.css({ 
       width:that.width, 
       height:that.height, 
       height:that.height, 
-      backgroundImage: 'url(' + that.sheet + ')'
+      padding:0,
+      margin:0,
+      backgroundImage: 'url(' + that.sheet + ')',
+      overflow:'hidden'
     });
 
     that.draw();
@@ -210,9 +216,9 @@ var player = function( spec ){
 
     index *= that.width;
 
-    var image_width = that.image_width;
     var height = that.height;
     var math_floor = that.math_floor; 
+    var image_width = that.image_width;
     var hOffset = -index % image_width;
     var vOffset = -math_floor( index / image_width ) * height;
 
@@ -238,19 +244,19 @@ var player = function( spec ){
 
 
     if ( sheet_to_animate.teleport == null ) {
-
+      that.element.css({ backgroundImage: 'url(' + that.sheet + ')' });
+      that.draw();
       var sheet_range = sheet_to_animate.action;
-
     } else { 
-
+      alert('yo!');
+      that.element.css({ backgroundImage: 'url(' + that.teleportaion_sheet + ')' });
+      that.draw();
       var sheet_range = sheet_to_animate 
     }
 
     that.active_sheet = sheet_range;
 
-    if ( that.active_sheet != that.last_sheet ) {
-      that.current_image_index = -1;
-    }
+    if ( that.active_sheet != that.last_sheet ) { that.current_image_index = -1; }
 
     ( that.current_image_index )++
 
@@ -267,45 +273,32 @@ var player = function( spec ){
    
     that.change_image();
     that.set_location( { x:that.x, y:that.y } );
-
     setTimeout( that.animate, 140 );
-
   }; 
 
   that.got_ruby = function(){
     for ( r in page_rubies ){
-
       var this_ruby = page_rubies[ r ];
-
       if ( this_ruby == undefined ){ continue }
 
+      var x_diff = Math.abs(this_ruby.x - that.x );
+      var y_diff = Math.abs(this_ruby.y - that.y );
 
-      if ( QUNIT ){
-        var x_interception = ( Math.abs(this_ruby.x - that.x ) == 0 );
-        var y_interception = ( Math.abs(this_ruby.y - that.y ) == 0 );
-
-      } else {
-        
-        var x_interception = ( Math.abs(this_ruby.x - that.x ) < 30 );
-        var y_interception = ( Math.abs(this_ruby.y - that.y ) < 30 );
-
-      }
+      var x_interception = ( 30 <= x_diff && x_diff <= 60 );
+      var y_interception = ( 10 <= y_diff && y_diff <= 60 );
 
       if ( x_interception && y_interception ) {
-
         that.rubies += this_ruby.rubies;
         that.points += this_ruby.points;
         that.diamonds += this_ruby.diamonds;
-        //$("li.score-points").html("Bravery Points:" + that.points);
+
         $("li.score-points").html("Experience Points:" + that.points);
         $("li.score-rubies").html("Rubies:" + that.rubies);
         $("li.score-diamonds").html("Diamonds:" + that.diamonds);
+
         this_ruby.destroy();
-        play_sound('picked_up_gem');
+        play_sound( 'picked_up_gem' );
         page_rubies[ r ] = undefined;
-
-        //that.increment_sprite_rubies();
-
       }
     }
   };

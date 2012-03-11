@@ -1,7 +1,7 @@
 
   function audio_div( id, file, container ){
     var audio_div_string = "<audio id=\"" + id + "\"  src=\"" + file + "\"> </audio>";
-    $( container ).html( audio_div_string );
+    $( container ).append( audio_div_string );
   }
 
   function play_sound(soundobj) {
@@ -12,6 +12,8 @@
   $(document).ready(function(){
 
     audio_div("theme", "/audios/kikuchiyo_title_page_the_one.wav", "#audio-container");
+    audio_div("picked_up_gem", "/audios/gem_up.wav", "#audio-container");
+
     setInterval(function(){
       play_sound("theme");
     }, 10);

@@ -3,18 +3,33 @@
         padding-top:0;
         margin-top:0;
       }
-      #kikuchiyo {padding-right:-12px; margin-right:-12px;}      
+
+      #kikuchiyo {
+        /*padding-left:-10px;
+        margin-right:-60px; 
+        margin-bottom:-60px; 
+        padding-bottom:-60px; 
+        padding-right:-60px;*/
+        background-repeat:no-repeat-y;
+        /*background-size:595px 345px;*/
+        overflow-x:hidden;
+        overflow-y:hidden;
+      }      
+
       html {
         padding:0;
         margin:0;
         width:100%; 
-        height:100%; 
+        height:700px; 
         position:absolute;
+        overflow:hidden;
+        background-repeat: no-repeat;
       }
+
         body {
           position:absolute;
           width:90%;
-          height:80%;
+          height:650px;
           margin-left:2%;
           padding-left:2.5%;
           margin-right:3.5%;
@@ -26,6 +41,7 @@
           border-radius: 2px;	
           border-color: black;
           background: black;
+          background-repeat: no-repeat;
           background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(white));
           background: -webkit-linear-gradient(black, white);
           background: -moz-linear-gradient(black, white);
@@ -34,35 +50,38 @@
           background: linear-gradient(black, white);
           -pie-background: linear-gradient(black, white);
         }
+
           #container  { 
+            background-repeat: no-repeat;
             position:absolute;
             width:95%; 
-            height:100%; 
+            height:600px; 
             background-color:white; 
             margin:0; padding:0;
           }
+
             #header-container { 
               width:100%;
-              height:20%; 
+              height:200px; 
             }
             
-              td#header-left {
+              td#header-right {
                 /*float:left;*/
                 background-image:url('kikuchiyos_way_header.png'); 
                 background-repeat:no-repeat;
-                background-size:90%;
+                background-size:600px 200px;
                 padding:0px; padding-bottom:20px;
                 margin:0px; margin-bottom:20px;
                 /*width:50%;*/
               }
 
-              td#header-right {
+              td#header-left {
                 margin:0px; margin-bottom:20px;
                 padding:0px; padding-bottom:20px;
                 clear:none;
                 background-image:url('black_shim.png'); 
                 background-repeat:repeat-x;
-                background-size:100%;
+                background-size:600px 200px;
               }
 
             #navlist { 

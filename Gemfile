@@ -12,9 +12,15 @@ gem 'json'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'capybara'
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'headless'
+  gem 'rspec-rails'
+  #PREREQUISITE (DEBIAN): sudo apt-get install libqt4-dev
+  gem 'capybara-webkit' #, :git => "git://github.com/thoughtbot/capybara-webkit"
+
 end
 
 gem 'jquery-rails'
