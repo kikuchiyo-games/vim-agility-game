@@ -12,7 +12,8 @@
   $(document).ready(function(){
 
     audio_div("theme", "/audios/kikuchiyo_title_page_the_one.wav", "#audio-container");
-    audio_div("picked_up_gem", "/audios/gem_up.wav", "#audio-container");
+    audio_div("teleport",      "/audios/teleport.wav", "#audio-container");
+    audio_div("picked_up_gem", "/audios/gem_up.wav",   "#audio-container");
 
     setInterval(function(){
       play_sound("theme");

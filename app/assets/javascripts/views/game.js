@@ -109,7 +109,7 @@ App.GameView = Backbone.View.extend({
       kikuchiyo.execute_command( key_code );
 
       for (var key in teleport_keys){
-        if (key_code == teleport_keys[key] ){ play_sound("teleport_sound"); }
+        if (key_code == teleport_keys[key] ){ play_sound("teleport"); }
       }
 
       if ( TRAINING && USER_NEEDS_A_CHALLENGE && !USER_BEING_CHALLENED){
