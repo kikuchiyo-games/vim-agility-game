@@ -278,7 +278,7 @@ $(document).ready(function(){
       if (page_rubies[r] != undefined){ return true }
     }
     GAME_OVER=true;
-    play_sound("thunder_clap");
+    //play_sound("thunder_clap");
     $('#countdown_dashboard').stopCountDown();
     $("#ruby_count").html("You have all " + RUBIES + " rubies! Good job!")
     alert("Good job, you got all the rubies!");

@@ -9,9 +9,12 @@
       <%=javascript_include_tag "underscore"%>
       <%=javascript_include_tag "backbone"%>
       <%=javascript_include_tag "app"%>
-      <%=javascript_include_tag "views/partial"%>
-      <%=javascript_include_tag "views/game"%>
-      <%=javascript_include_tag "index"%>
+      <%=javascript_include_tag "views/GemView"%>
+      <%=javascript_include_tag "views/TreasureView"%>
+      <%=javascript_include_tag "views/PartialView"%>
+      <%=javascript_include_tag "models/Sprite"%>
+      <%=javascript_include_tag "views/KikuchiyoView"%>
+      <%=javascript_include_tag "views/GameView"%>
 
     <!GAME RELATED SCRIPTS>
       <script> TRAINING = true; </script>; 
@@ -44,12 +47,10 @@
         <%=javascript_include_tag "lib/movement"%>
         <%=javascript_include_tag "lib/table_maker"%>
         <%=javascript_include_tag "lib/dev_rubies"%>
-        <%=javascript_include_tag "lib/dev_kikuchiyo"%>
+        <%#=javascript_include_tag "lib/dev_kikuchiyo"%>
 
       <!-- HOMEMADE GAME SETUP: DATA STRUCTURES AND OBJECTS -->
         <%=javascript_include_tag "lib/config"%>
-        <%=javascript_include_tag "lib/game"%>
-        <%=javascript_include_tag "lib/doc_ready"%>
-
+        <%=javascript_include_tag "index"%>
 </body>
 </html>
