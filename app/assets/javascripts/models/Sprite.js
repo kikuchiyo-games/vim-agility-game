@@ -11,7 +11,7 @@ App.Sprite = Backbone.Model.extend({
   height: 72.25,
   width: 59.24,
 
-  teleport_keys: [ "72", "48", "76", "77", "36" ],
+  teleport_keys: [ "72", "48", "76", "77", "52" ],
 
   initialize: function( nature ){
     this.nature = nature;
@@ -37,7 +37,7 @@ App.Sprite = Backbone.Model.extend({
   
         '76': { x: -1, y:window.innerHeight - 100, z:'teleport' },
         '77': { x:-1,  y:window.innerHeight/2,     z:'teleport' },
-        '36': { x: window.innerWidth - 100, y:-1,  z:'teleport' }
+        '52': { x: window.innerWidth - 100, y:-1,  z:'teleport' }
       }
     };
   },
@@ -65,7 +65,7 @@ App.Sprite = Backbone.Model.extend({
     //  alert( [ 72, 48, 76, 77, 36 ].indexOf( key ) );
     //}
     if ( key == 36 ) { return(true); }
-    return ( ([ "72", "48", "76", "77", "36"].indexOf(  key ) != -1) );
+    return ( ([ "72", "48", "76", "77", "52"].indexOf(  key ) != -1) );
   },
 
   standard_sheet: function( nature ){

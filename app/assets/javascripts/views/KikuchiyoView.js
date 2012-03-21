@@ -46,13 +46,15 @@ App.KikuchiyoView = Backbone.View.extend({
   },
 
   keydown: function( event ){
+    if ( event.keyCode == 16 ){ return; }
     var key_code = this.get_keycode( event.keyCode, event.shiftKey);
+    //alert( 'key_code = ' + key_code );
     //alert( 'key_code = ' + key_code );
     this.execute_command( key_code );
   },
 
   get_keycode: function( key, shift ){
-    //alert( 'key = ' + key)
+    //alert( 'key = ' + key + ', shift = ' + shift)
     if ( !shift && key > 64 && key < 91 ){
       return ( parseInt( key, 10 ) + 32 ) + '';
     } else { return key; }
@@ -91,7 +93,7 @@ App.KikuchiyoView = Backbone.View.extend({
     this.re_render();
     if ( new_movement.x != -1 ) { this.x = new_movement.x; }
     if ( new_movement.y != -1 ) { this.y = new_movement.y; }
-    alert( 'this.x = ' + this.x + 'this.y = ' + this.y );
+    //alert( 'this.x = ' + this.x + 'this.y = ' + this.y );
   },
 
   standard_movement: function( new_movement ){
