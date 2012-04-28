@@ -5,8 +5,8 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
+#gem 'sqlite3'
+gem 'pg'
 gem 'json'
 
 # Gems used only for assets and not required
@@ -19,8 +19,7 @@ group :assets do
   gem 'headless'
   gem 'rspec-rails'
   #PREREQUISITE (DEBIAN): sudo apt-get install libqt4-dev
-  gem 'capybara-webkit' #, :git => "git://github.com/thoughtbot/capybara-webkit"
-
+  #gem 'capybara-webkit' #, :git => "git://github.com/thoughtbot/capybara-webkit"
 end
 
 gem 'jquery-rails'
