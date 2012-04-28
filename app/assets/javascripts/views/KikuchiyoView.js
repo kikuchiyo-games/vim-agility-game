@@ -9,7 +9,7 @@ App.KikuchiyoView = Backbone.View.extend({
     this.user_controls = true;
 
     this.model = new App.Sprite( this.nature);
-
+    this.model.fetch();
     _.bindAll(this, 'keydown');
     //$( document ).bind('keypress', this.keydown);
     $( document ).bind('keydown', this.keydown);
