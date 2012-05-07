@@ -1,5 +1,7 @@
 KikuchiyosWay::Application.routes.draw do
 
+  get "sessions/new"
+  resource :session
   get "kikuchiyos_way/index"
 
   resources :kikuchiyos_way

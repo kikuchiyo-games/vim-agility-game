@@ -1,0 +1,18 @@
+<%= form_tag session_path, :class => 'gradiant-black-white span-24' do%>
+  <br />
+  <p class = 'span-18 push-8' >
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+  </p>
+  <p class = 'span-18 push-8' >
+    <%= label_tag :password %>
+    &nbsp;<%= password_field_tag :password %>
+    <br />
+    <br />
+    <%= submit_tag 'login', :class => 'push-2' %>
+  </p>
+  <hr>
+  <p style = 'color:red; font-weight:bold;' class = 'span-10 push-8'>
+    <%= flash[:notice] %>
+  </p>
+<%end%>

@@ -1,18 +1,18 @@
 App.PartialView = Backbone.View.extend({
 
   initialize: function(){
-    this.render('login');
+    //this.render('login');
     this.construct_sound_station();
-    $('#login').click(function(){ partial_view.render( 'login' ); });
-    $('#register').click(function(){ partial_view.render( 'register' ); });
+    //$('#login').click(function(){ partial_view.render( 'login' ); });
+    //$('#register').click(function(){ partial_view.render( 'register' ); });
     var that = this;
-    $('#home').click(function(){
-      that.render( 'home' );
-      $('#home-to-practice').click(function(){
+    //$('#home').click(function(){
+      //that.render( 'home' );
+      //$('#home-to-practice').click(function(){
         that.render( 'practice' );
         that.game  = new App.GameView();
-      });
-    });
+      //});
+    //});
   },
 
   audio_div: function( id, file, container ){

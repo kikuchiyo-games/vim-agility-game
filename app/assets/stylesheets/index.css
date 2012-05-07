@@ -1,3 +1,4 @@
+      #notice {color:red;}
       table { 
         background-color:black;
         padding-top:0;
@@ -5,13 +6,7 @@
       }
 
       #kikuchiyo {
-        /*padding-left:-10px;
-        margin-right:-60px; 
-        margin-bottom:-60px; 
-        padding-bottom:-60px; 
-        padding-right:-60px;*/
         background-repeat:no-repeat-y;
-        /*background-size:595px 345px;*/
         overflow-x:hidden;
         overflow-y:hidden;
       }      
@@ -20,28 +15,20 @@
         padding:0;
         margin:0;
         width:100%; 
-        height:700px; 
-        position:absolute;
-        overflow:hidden;
-        background-repeat: no-repeat;
+        background-color:white; 
+        height:100%; 
       }
 
         body {
-          /*position:absolute;*/
-          width:97%;
-          height:650px;
-          margin-left:1.5%;
-          /*padding-left:1.5%;*/
-          margin-right:1.5%;
-          /*padding-right:1.5%;*/
+          font-size:100%;
+          color:black;
+          height:100%;
           background-color:white;
           -moz-border-radius: 2px; 
           -webkit-border-radius: 2px; 
           -khtml-border-radius: 2px; 
           border-radius: 2px;	
           border-color: black;
-          background: black;
-          background-repeat: no-repeat;
           background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(white));
           background: -webkit-linear-gradient(black, white);
           background: -moz-linear-gradient(black, white);
@@ -53,21 +40,21 @@
 
           #container  { 
             background-repeat: no-repeat;
-            /*position:absolute;*/
-            width:95% !important;
-            margin-right:2.5% !important;
-            margin-left:2.5% !important;
-            height:600px; 
             background-color:white; 
             margin:0; padding:0;
           }
 
             #header-container { 
-              width:100%;
-              height:200px; 
+              height:30px; 
+              background-image:url('kikuchiyos_way_header.png'); 
+              background-repeat:no-repeat;
+              background-color:black;
+              background-size:200px;
+              padding:0px; padding-bottom:20px;
+              margin:0px; margin-bottom:20px;
             }
             
-              td#header-right {
+              #header-right {
                 /*float:left;*/
                 background-image:url('kikuchiyos_way_header.png'); 
                 background-repeat:no-repeat;
@@ -77,7 +64,7 @@
                 /*width:50%;*/
               }
 
-              td#header-left {
+              #header-left {
                 margin:0px; margin-bottom:20px;
                 padding:0px; padding-bottom:20px;
                 clear:none;
@@ -99,7 +86,6 @@
             }
 
               button {
-                font-size:20px;
                 font-weight:bold;
                 color:black;
               }
@@ -110,6 +96,7 @@
                 -khtml-border-radius: 2px; 
                 border-radius: 2px;
               }
+
               .gradiant-brown {
                 -moz-border-radius: 2px; 
                 -webkit-border-radius: 2px; 
@@ -131,15 +118,15 @@
                 -webkit-border-radius: 2px; 
                 -khtml-border-radius: 2px; 
                 border-radius: 2px;	
-                border-color: white;
-                background: black;
-                background: -webkit-gradient(linear, 0 0, 0 bottom, from(white), to(black));
-                background: -webkit-linear-gradient(white, black);
-                background: -moz-linear-gradient(white, black);
-                background: -ms-linear-gradient(white, black);
-                background: -o-linear-gradient(white, black);
-                background: linear-gradient(white, black);
-                -pie-background: linear-gradient(white, black);
+                border-color: green;
+                background: white;
+                background: -webkit-gradient(linear, 0 0, 0 bottom, from(green), to(white));
+                background: -webkit-linear-gradient(green, white);
+                background: -moz-linear-gradient(green, white);
+                background: -ms-linear-gradient(green, white);
+                background: -o-linear-gradient(green, white);
+                background: linear-gradient(green, white);
+                -pie-background: linear-gradient(green, white);
               }
               .gradiant-black {
                 -moz-border-radius: 2px; 

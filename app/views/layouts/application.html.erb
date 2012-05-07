@@ -2,9 +2,9 @@
 <html  class = 'gradiant'>
   <head>
     <title>KikuchiyosWay</title>
+    <%= stylesheet_link_tag    "screen"%>
     <%= stylesheet_link_tag    "index"%>
     <%=javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"%>
-
     <!LAYOUT VIEW RELATED SCRIPTS>
       <%=javascript_include_tag "underscore"%>
       <%=javascript_include_tag "backbone"%>
@@ -17,27 +17,16 @@
       <%=javascript_include_tag "views/GameView"%>
 
     <!GAME RELATED SCRIPTS>
-      <script> TRAINING = true; </script>; 
-      <script> GAME_OVER = false </script>; 
+      <script> TRAINING = true; </script>
+      <script> GAME_OVER = false </script>
       <!--script src="show_header.js"></script-->
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div id = 'container' class = 'gradiant'>
-      <table id = 'header-container' cellpadding = '0' border = '0'>
-        <tr cellpadding = '0'>
-          <td width = '100%' id = 'header-right' cellpadding = '0'>
-            <div id = 'nav'>
-              <ul id = 'navlist'>
-                <li><button id = 'login'    class = 'gradiant-brown'>login</button></li>
-                <li><button id = 'register' class = 'gradiant-brown'>register</button></li>
-                <li><button id = 'home'     class = 'gradiant-brown'>sample home</button></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-      </table>
+    <div class = 'container'>
+      <div id = 'header-container' class = 'span-24'>
+      </div>
       <%= yield %>
     </div>
     <footer></footer>
