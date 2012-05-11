@@ -5,7 +5,8 @@ KikuchiyosWay::Application.routes.draw do
   get "kikuchiyos_way/index"
 
   resources :kikuchiyos_way
-  root :to => 'kikuchiyos_way#index'
+  #root :to => 'kikuchiyos_way#index'
+  root :to => 'sessions#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
