@@ -5,7 +5,7 @@
       var thissound=document.getElementById( soundobj );
       thissound.play();
     }
-    setInterval(function(){ play_sound("theme"); }, 10);
+    //setInterval(function(){ play_sound("theme"); }, 10);
   });
 
 
