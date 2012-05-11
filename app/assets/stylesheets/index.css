@@ -1,5 +1,5 @@
       #notice {color:red;}
-      #sign-up, #log-in {color:#0066CC !important; border-bottom:0px; padding-bottom:0px;}
+      #create-account, #log-in, #sign-up {color:#0066CC !important; border-bottom:0px; padding-bottom:0px; top: -50px;}
       label {color:#0066CC !important;}
       table { 
         background-color:black;
