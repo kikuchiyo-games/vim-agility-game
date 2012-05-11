@@ -7,7 +7,7 @@ App.GameView = Backbone.View.extend({
     this.treasure = new App.TreasureView();
     this.kikuchiyo = new App.KikuchiyoView({game:this});
     var that = this;
-    setInterval(function(){ if ( !that.over ){ that.check_game_state();} }, 1000);
+    setInterval(function(){ if ( !that.over ){ that.check_game_state();} }, 100);
   },
   
   rubies: function( player ){

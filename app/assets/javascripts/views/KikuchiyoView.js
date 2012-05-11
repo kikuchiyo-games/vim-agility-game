@@ -11,8 +11,8 @@ App.KikuchiyoView = Backbone.View.extend({
     this.model = new App.Sprite( this.nature);
     this.model.fetch();
     _.bindAll(this, 'keydown');
-    //$( document ).bind('keypress', this.keydown);
-    $( document ).bind('keydown', this.keydown);
+    $( document ).bind('keypress', this.keydown);
+    //$( document ).bind('keydown', this.keydown);
 
     this.last_sheet = null;
     this.current_image_index = 0;
@@ -27,7 +27,7 @@ App.KikuchiyoView = Backbone.View.extend({
     this.render();
     this.execute_command( "108" );
     var that = this;
-    setInterval(function(){that.animate_sprite()}, 100);
+    setInterval(function(){that.animate_sprite()}, 160);
   },
 
   /* Interaction with Treasure Object */
@@ -42,11 +42,13 @@ App.KikuchiyoView = Backbone.View.extend({
           return( true );
         } 
       }
+      return( false );
     },
 
     keydown: function( event ){
-      if ( event.keyCode == 16 ){ return; }
-      var key_code = this.get_keycode( event.keyCode, event.shiftKey);
+      //alert( event.charCode )
+      if ( event.charCode == 16 ){ return; }
+      var key_code = this.get_keycode( event.charCode, event.shiftKey);
       this.execute_command( key_code );
     },
 
