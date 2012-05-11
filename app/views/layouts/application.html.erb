@@ -31,7 +31,7 @@
           <div id = 'create-account' class = 'push-5 span-4'>
             <%= link_to 'Create an Account!', new_users_path %>
           </div>
-        <% else %>
+        <% elsif params[:controller] == 'users' && params[:action] == 'new' %>
           <div id = 'create-account' class = 'push-5 span-4'>
             <%= link_to 'Log in', new_session_path %>
           </div>
