@@ -1,0 +1,35 @@
+<div class  = 'gradiant-green-black span-24' >
+  <h3 id = 'sign-up' class = 'span-10 push-2'>Sign Up</h3>
+  <hr>
+  <%= form_for @user do |f|%>
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <p class = 'span-18 push-2'>
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </p>
+    <p class = 'span-18 push-2'>
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </p>
+    <p class = 'span-18 push-2'>
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </p>
+    <p class = 'span-18 push-2 button'>
+      <%= f.submit %>
+    </p>
+  <%end%>
+  <hr>
+  <p style = 'color:red; font-weight:bold;' class = 'span-10 push-8'>
+    <%= flash[:notice] %>
+  </p>
+</div>

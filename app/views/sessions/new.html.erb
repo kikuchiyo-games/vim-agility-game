@@ -1,12 +1,15 @@
-<%= form_tag session_path, :class => 'gradiant-black-white span-24' do%>
-  <br />
-  <p class = 'span-18 push-8' >
-    <%= label_tag :username %>
-    <%= text_field_tag :username %>
+
+
+<%= form_tag session_path, :class => 'gradiant-green-black span-24' do%>
+  <h3 id = 'log-in' class = 'span-10 push-2'>Log In</h3>
+  <hr>
+  <p class = 'span-18 push-2' >
+    <%= label_tag :email, nil, :class => 'span-2' %>
+    <%= text_field_tag :email %>
   </p>
-  <p class = 'span-18 push-8' >
-    <%= label_tag :password %>
-    &nbsp;<%= password_field_tag :password %>
+  <p class = 'span-18 push-2' >
+    <%= label_tag :password, nil, :class => 'span-2' %>
+    <%= password_field_tag :password %>
     <br />
     <br />
     <%= submit_tag 'login', :class => 'push-2' %>

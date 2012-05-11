@@ -5,21 +5,19 @@ class SessionsController < ApplicationController
   end
 
   def create
-    begin
-    session[:user_id] = User.authenticate( 
-      params[:username], params[:password]
-    ).id
-    flash[:notice] = 'Welcome back!'
-    redirect_to :action => session[:intended_action], :controller => session[:intended_controller]
-    rescue  
-      flash[:notice] = 'Invalid username or password'
-      redirect_to new_session_path
+    user = User.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect_to kikuchiyos_way_index_path, :notice => "Logged in!"
+    else
+      flash.now.alert = "Email or password is invalid"
+      render "new"
     end
   end
-
+  
   def destroy
-    session[:user_id] = null
-    redirect_to session_path, :notice => 'Come Back soon!'
+    session[:user_id] = nil
+    redirect_to root_url, :notice => "Logged out!"
   end
 
 end

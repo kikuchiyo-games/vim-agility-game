@@ -26,7 +26,22 @@
   <body>
     <div class = 'container'>
       <div id = 'header-container' class = 'span-24'>
+        <br />
+        <% if params[:controller] == 'sessions' && params[:action] == 'new' %>
+          <div id = 'create-account' class = 'push-5 span-4'>
+            <%= link_to 'Create an Account!', new_users_path %>
+          </div>
+        <% elsif params[:controller] == 'users' && params[:action] == 'new' %>
+          <div id = 'create-account' class = 'push-5 span-4'>
+            <%= link_to 'Log in', new_session_path %>
+          </div>
+        <% else %>
+          <div id = 'create-account' class = 'push-5 span-4'>
+            <%= link_to 'Log out', destroy_session_path %>
+          </div>
+        <% end%>
       </div>
+
       <%= yield %>
     </div>
     <footer></footer>
