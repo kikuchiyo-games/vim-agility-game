@@ -1,0 +1,688 @@
+THIS ONE COMES BACK INCOMPLETE EVERY REQUEST FOR SOME REASON...
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <GetSiteSeriesDataResponse xmlns="http://tempuri.org/">
+    <GetSiteSeriesDataResult xmlns:a="http://schemas.datacontract.org/2004/07/SAMWCF" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <a:DataSeries>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T00:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T00:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T00:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T00:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T01:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T01:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T01:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T01:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T02:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T02:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T02:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T02:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T03:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T03:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T03:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T03:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T04:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T04:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T04:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T04:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T05:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T05:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T05:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T05:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T06:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T06:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T06:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T06:45:00</a:DateTime>
+    <a:Value>0.007</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T07:00:00</a:DateTime>
+    <a:Value>0.063</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T07:15:00</a:DateTime>
+    <a:Value>0.34</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T07:30:00</a:DateTime>
+    <a:Value>1.4</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T07:45:00</a:DateTime>
+    <a:Value>2.369</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T08:00:00</a:DateTime>
+    <a:Value>3.355</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T08:15:00</a:DateTime>
+    <a:Value>4.507</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T08:30:00</a:DateTime>
+    <a:Value>5.342</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T08:45:00</a:DateTime>
+    <a:Value>6.183</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T09:00:00</a:DateTime>
+    <a:Value>6.926</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T09:15:00</a:DateTime>
+    <a:Value>7.642</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T09:30:00</a:DateTime>
+    <a:Value>8.264</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T09:45:00</a:DateTime>
+    <a:Value>8.836</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T10:00:00</a:DateTime>
+    <a:Value>9.34</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T10:15:00</a:DateTime>
+    <a:Value>9.788</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T10:30:00</a:DateTime>
+    <a:Value>10.216</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T10:45:00</a:DateTime>
+    <a:Value>10.546</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T11:00:00</a:DateTime>
+    <a:Value>10.774</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T11:15:00</a:DateTime>
+    <a:Value>10.952</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T11:30:00</a:DateTime>
+    <a:Value>11.144</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T11:45:00</a:DateTime>
+    <a:Value>11.362</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T12:00:00</a:DateTime>
+    <a:Value>11.433</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T12:15:00</a:DateTime>
+    <a:Value>11.434</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T12:30:00</a:DateTime>
+    <a:Value>11.256</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T12:45:00</a:DateTime>
+    <a:Value>11.303</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T13:00:00</a:DateTime>
+    <a:Value>10.979</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T13:15:00</a:DateTime>
+    <a:Value>10.486</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T13:30:00</a:DateTime>
+    <a:Value>10.827</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T13:45:00</a:DateTime>
+    <a:Value>9.781</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T14:00:00</a:DateTime>
+    <a:Value>4.564</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T14:15:00</a:DateTime>
+    <a:Value>6.939</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T14:30:00</a:DateTime>
+    <a:Value>9.612</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T14:45:00</a:DateTime>
+    <a:Value>4.586</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T15:00:00</a:DateTime>
+    <a:Value>5.264</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T15:15:00</a:DateTime>
+    <a:Value>3.588</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T15:30:00</a:DateTime>
+    <a:Value>2.793</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T15:45:00</a:DateTime>
+    <a:Value>2.019</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T16:00:00</a:DateTime>
+    <a:Value>2.155</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T16:15:00</a:DateTime>
+    <a:Value>1.789</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T16:30:00</a:DateTime>
+    <a:Value>4.003</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T16:45:00</a:DateTime>
+    <a:Value>4.13</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T17:00:00</a:DateTime>
+    <a:Value>2.238</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T17:15:00</a:DateTime>
+    <a:Value>1.504</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T17:30:00</a:DateTime>
+    <a:Value>0.377</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T17:45:00</a:DateTime>
+    <a:Value>0.067</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T18:00:00</a:DateTime>
+    <a:Value>0.007</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T18:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T18:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T18:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T19:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T19:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T19:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T19:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T20:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T20:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T20:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T20:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T21:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T21:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T21:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T21:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T22:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T22:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T22:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T22:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T23:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T23:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T23:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-14T23:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T00:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T00:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T00:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T00:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T01:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T01:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T01:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T01:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T02:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T02:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T02:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T02:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T03:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T03:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T03:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T03:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T04:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T04:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T04:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T04:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T05:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T05:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T05:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T05:45:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T06:00:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T06:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T06:30:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T06:45:00</a:DateTime>
+    <a:Value>0.003</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T07:00:00</a:DateTime>
+    <a:Value>0.039</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T07:15:00</a:DateTime>
+    <a:Value>0.23</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T07:30:00</a:DateTime>
+    <a:Value>0.287</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T07:45:00</a:DateTime>
+    <a:Value>0.535</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T08:00:00</a:DateTime>
+    <a:Value>0.698</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T08:15:00</a:DateTime>
+    <a:Value>1.226</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T08:30:00</a:DateTime>
+    <a:Value>1.456</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T08:45:00</a:DateTime>
+    <a:Value>1.271</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T09:00:00</a:DateTime>
+    <a:Value>1.443</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T09:15:00</a:DateTime>
+    <a:Value>1.704</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T09:30:00</a:DateTime>
+    <a:Value>1.911</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T09:45:00</a:DateTime>
+    <a:Value>2.623</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T10:00:00</a:DateTime>
+    <a:Value>2.542</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T10:15:00</a:DateTime>
+    <a:Value>2.742</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T10:30:00</a:DateTime>
+    <a:Value>3.086</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T10:45:00</a:DateTime>
+    <a:Value>3.313</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T11:00:00</a:DateTime>
+    <a:Value>5.439</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T11:15:00</a:DateTime>
+    <a:Value>6.127</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T11:30:00</a:DateTime>
+    <a:Value>4.83</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T11:45:00</a:DateTime>
+    <a:Value>5.804</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T12:00:00</a:DateTime>
+    <a:Value>7.553</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T12:15:00</a:DateTime>
+    <a:Value>9.136</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T12:30:00</a:DateTime>
+    <a:Value>7.322</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T12:45:00</a:DateTime>
+    <a:Value>9.649</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T13:00:00</a:DateTime>
+    <a:Value>8.167</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T13:15:00</a:DateTime>
+    <a:Value>4.216</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T13:30:00</a:DateTime>
+    <a:Value>4.483</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T13:45:00</a:DateTime>
+    <a:Value>6.577</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T14:00:00</a:DateTime>
+    <a:Value>9.549</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T14:15:00</a:DateTime>
+    <a:Value>9.927</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T14:30:00</a:DateTime>
+    <a:Value>7.148</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T14:45:00</a:DateTime>
+    <a:Value>8.478</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T15:00:00</a:DateTime>
+    <a:Value>7.637</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T15:15:00</a:DateTime>
+    <a:Value>5.991</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T15:30:00</a:DateTime>
+    <a:Value>5.921</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T15:45:00</a:DateTime>
+    <a:Value>5.964</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T16:00:00</a:DateTime>
+    <a:Value>5.055</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T16:15:00</a:DateTime>
+    <a:Value>4.13</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T16:30:00</a:DateTime>
+    <a:Value>3.267</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T16:45:00</a:DateTime>
+    <a:Value>2.086</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T17:00:00</a:DateTime>
+    <a:Value>1.506</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T17:15:00</a:DateTime>
+    <a:Value>0.607</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T17:30:00</a:DateTime>
+    <a:Value>0.254</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T17:45:00</a:DateTime>
+    <a:Value>0.054</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T18:00:00</a:DateTime>
+    <a:Value>0.003</a:Value>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T18:15:00</a:DateTime>
+    <a:Value i:nil="true"/>
+    </a:DataPoint>
+    <a:DataPoint>
+    <a:DateTime>2012-02-15T18:30:00<
