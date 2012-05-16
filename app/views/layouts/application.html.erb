@@ -4,6 +4,7 @@
     <title>KikuchiyosWay</title>
     <%= stylesheet_link_tag    "screen"%>
     <%= stylesheet_link_tag    "index"%>
+    <%= stylesheet_link_tag    "sass"%>
     <%=javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"%>
     <!LAYOUT VIEW RELATED SCRIPTS>
       <%=javascript_include_tag "underscore"%>
@@ -32,6 +33,7 @@
       </div>
 
       <%= yield %>
+
     </div>
 
     <audio id = 'theme' src = '/audios/kikuchiyo_title_page_the_one.wav'> 
