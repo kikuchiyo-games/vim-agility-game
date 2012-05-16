@@ -1,63 +1,23 @@
 <!doctype html>
 <html  class = 'gradiant'>
   <head>
-    <title>KikuchiyosWay</title>
-    <%= stylesheet_link_tag    "screen"%>
-    <%= stylesheet_link_tag    "index"%>
-    <%= stylesheet_link_tag    "sass"%>
-    <%=javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"%>
-    <!LAYOUT VIEW RELATED SCRIPTS>
-      <%=javascript_include_tag "underscore"%>
-      <%=javascript_include_tag "backbone"%>
-      <%=javascript_include_tag "app"%>
-      <%=javascript_include_tag "views/GemView"%>
-      <%=javascript_include_tag "views/TreasureView"%>
-      <%=javascript_include_tag "views/PartialView"%>
-      <%=javascript_include_tag "models/Sprite"%>
-      <%=javascript_include_tag "views/KikuchiyoView"%>
-      <%=javascript_include_tag "views/GameView"%>
-
-    <!GAME RELATED SCRIPTS>
-      <script> TRAINING = true; </script>
-      <script> GAME_OVER = false </script>
-      <!--script src="show_header.js"></script-->
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title> Kikuchiyos Way </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <%= stylesheet_link_tag "screen" %>
+    <%= stylesheet_link_tag "index"  %>
     <%= csrf_meta_tags %>
   </head>
   <body>
     <div class = 'container'>
-      <div id = 'header-container' class = 'span-24'>
-        <br />
-
-
-      </div>
-
+      <div id = 'header-container' class = 'span-24'></div>
       <%= yield %>
-
     </div>
-
-    <audio id = 'theme' src = '/audios/kikuchiyo_title_page_the_one.wav'> 
-    </audio>
-    <audio id = 'teleport' src = '/audios/teleport.wav'> 
-    </audio>
-    <audio id = 'picked_up_gem' src = '/audios/gem_up.wav'> 
-    </audio>
+    <audio id = 'theme' src = '/audios/kikuchiyo_title_page_the_one.wav'></audio>
+    <audio id = 'picked_up_gem' src = '/audios/gem_up.wav'></audio>
+    <audio id = 'teleport' src = '/audios/teleport.wav'></audio>
     <script>
       var thissound=document.getElementById( 'theme' );
       thissound.play();
     </script>
-    <footer>
-    </footer>
-      <!-- HOMEMADE MAIN: DATA STRUCTURES AND OBJECTS -->
-        <%=javascript_include_tag "lib/sheet_clips"%>
-        <%=javascript_include_tag "lib/animation"%>
-        <%=javascript_include_tag "lib/movement"%>
-        <%=javascript_include_tag "lib/table_maker"%>
-        <%=javascript_include_tag "lib/dev_rubies"%>
-        <%#=javascript_include_tag "lib/dev_kikuchiyo"%>
-
-      <!-- HOMEMADE GAME SETUP: DATA STRUCTURES AND OBJECTS -->
-        <%=javascript_include_tag "lib/config"%>
-        <%=javascript_include_tag "index"%>
-</body>
+  </body>
 </html>
