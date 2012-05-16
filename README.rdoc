@@ -1,0 +1,48 @@
+= Kikuchiyo's Way
+  A game to teach people of all ages basic movement in the vim-editor
+
+== Background-Storyline:
+
+  Kikuchiyo is banished from his home-planet after voicing his concerns
+  over the negative effects of nepotism within the court and addressing the severe 
+  injustices it was causing to the less priveledged people on his planet.
+
+  Kikuchiyo is banished to the 'Land of C.S. Dogmas', a concentration camp,
+    where he must collect rubies and diamonds for his captors to survive.
+
+== Player-Interaction 
+
+  - Introducitons:
+    -- Introduction 1.  Explain background-storyline
+    -- Introduction 2.  Show Kikuchiyo entering the 'Land of C.S. Dogmas', 
+      as a prisoner
+
+  - Stages:    
+    -- Stage 1: Submitting to captors  ( hjkli )
+      Player must use basic key commands to follow orders.
+
+    -- Stage 2: Lessons from a veteran ( w0ob )
+      Player is taught the jump commands from an imprisoned agile warrior 
+
+    -- Stage 3: Steal to Eat
+      Player controls Kikuchiyo to avoid the 'C.S. Dogmas', whose job is to horde
+      their master's rubies and diamonds.
+
+    -- Stage 4: Meeting the Agile Revolutionaries
+      Player is saved and taken in by Agile Revolutionaries
+
+    -- Stage 5: Learning to Fight! ( blocking:xcd, raiding:vAI )
+
+    -- Stage 6: Raiding the C.S. Dogma Outposts!
+
+    -- Stage 7: Learning Magic! ( :s )
+
+    ...
+    ...
+    ...
+
+== Lessons:
+  Run ( hjkl )  
+  Jump ( wbOo )
+  Teleport ( H0L$ )
+  Pick-up ( i ) 

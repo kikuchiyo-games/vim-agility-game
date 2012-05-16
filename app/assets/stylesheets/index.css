@@ -1,0 +1,260 @@
+div.error_messages {margin-top:0px !important; padding-top:0px !important; top:-10px !important;}
+div.error_messages ul li{ color:red; }
+div.tile {
+  border:solid 1px green !important;
+  margin:0px !important;
+  height:10px !important; 
+  width:10px !important; 
+  clear:none !important; 
+  float:left !important;
+}
+
+div.display {width:100% !important;}
+
+div.even, div.odd {background-color:black;}
+
+#notice {color:red;}
+
+#create-account, #log-in, #sign-up {
+  color:#0066CC !important; border-bottom:0px; padding-bottom:0px; top: -50px;
+}
+
+label {color:#0066CC !important;}
+
+table { 
+  background-color:black;
+  padding-top:0;
+  margin-top:0;
+}
+
+#kikuchiyo {
+  background-repeat:no-repeat-y;
+  overflow-x:hidden;
+  overflow-y:hidden;
+}      
+
+html {
+  padding:0;
+  margin:0;
+  width:100%; 
+  background-color:white; 
+  height:100%; 
+}
+
+body {
+  font-size:100%;
+  color:black;
+  height:100%;
+  background-color:white;
+  -moz-border-radius: 2px; 
+  -webkit-border-radius: 2px; 
+  -khtml-border-radius: 2px; 
+  border-radius: 2px;	
+  border-color: black;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(white));
+  background: -webkit-linear-gradient(black, white);
+  background: -moz-linear-gradient(black, white);
+  background: -ms-linear-gradient(black, white);
+  background: -o-linear-gradient(black, white);
+  background: linear-gradient(black, white);
+  -pie-background: linear-gradient(black, white);
+}
+
+#container  { 
+  background-repeat: no-repeat;
+  background-color:white; 
+  margin:0; padding:0;
+}
+
+#header-container { 
+  height:30px; 
+  background-image:url('kikuchiyos_way_header.png'); 
+  background-repeat:no-repeat;
+  background-color:black;
+  background-size:200px;
+  padding:0px; padding-bottom:20px;
+  margin:0px; margin-bottom:20px;
+}
+            
+#header-right {
+  background-image:url('kikuchiyos_way_header.png'); 
+  background-repeat:no-repeat;
+  background-size:600px 200px;
+  padding:0px; padding-bottom:20px;
+  margin:0px; margin-bottom:20px;
+}
+
+#header-left {
+  margin:0px; margin-bottom:20px;
+  padding:0px; padding-bottom:20px;
+  clear:none;
+  background-image:url('black_shim.png'); 
+  background-repeat:repeat-x;
+  background-size:600px 200px;
+}
+
+#navlist { 
+  float:left; padding-bottom:0px; padding-left:20px; padding-top:4%;
+}
+
+#navlist ul { 
+  margin:0; padding:0; padding-left:10px; margin-left:10px;
+}
+
+#navlist li {
+  color:red; list-style:none; display:inline; padding-bottom:0px; 
+}
+
+button {
+  font-weight:bold;
+  color:black;
+}
+
+.radius {
+  -moz-border-radius: 2px; 
+  -webkit-border-radius: 2px; 
+  -khtml-border-radius: 2px; 
+  border-radius: 2px;
+}
+
+.gradiant-brown {
+  -moz-border-radius: 2px; 
+  -webkit-border-radius: 2px; 
+  -khtml-border-radius: 2px; 
+  border-radius: 2px;	
+  border-color: white;
+  background: white;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(white), to(white));
+  background: -webkit-linear-gradient(white, white);
+  background: -moz-linear-gradient(white, white);
+  background: -ms-linear-gradient(white, white);
+  background: -o-linear-gradient(white, white);
+  background: linear-gradient(white, white);
+  -pie-background: linear-gradient(white, white);
+}
+
+.gradiant-black-white {
+  -moz-border-radius: 2px; 
+  -webkit-border-radius: 2px; 
+  -khtml-border-radius: 2px; 
+  border-radius: 2px;	
+  border-color: green;
+  background: white;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(green), to(white));
+  background: -webkit-linear-gradient(green, white);
+  background: -moz-linear-gradient(green, white);
+  background: -ms-linear-gradient(green, white);
+  background: -o-linear-gradient(green, white);
+  background: linear-gradient(green, white);
+  -pie-background: linear-gradient(green, white);
+}
+
+.gradiant-green-black {
+  -moz-border-radius: 12px; 
+  -webkit-border-radius: 12px; 
+  -khtml-border-radius: 12px; 
+  border-radius: 12px;	
+  border-color: blue;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(blue), to(black));
+  background: -webkit-linear-gradient(blue, black);
+  background: -moz-linear-gradient(blue, black);
+  background: -ms-linear-gradient(blue, black);
+  background: -o-linear-gradient(blue, black);
+  background: linear-gradient(blue, black);
+  -pie-background: linear-gradient(blue, black);
+}
+
+.gradiant-black {
+  -moz-border-radius: 2px; 
+  -webkit-border-radius: 2px; 
+  -khtml-border-radius: 2px; 
+  border-radius: 2px;	
+  border-color: white;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(white));
+  background: -webkit-linear-gradient(black, white);
+  background: -moz-linear-gradient(black, white);
+  background: -ms-linear-gradient(black, white);
+  background: -o-linear-gradient(black, white);
+  background: linear-gradient(black, white);
+  -pie-background: linear-gradient(black, white);
+}
+
+.gradiant {
+  -moz-border-radius: 2px; 
+  -webkit-border-radius: 2px; 
+  -khtml-border-radius: 2px; 
+  border-radius: 2px;	
+  border-color: white;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(white));
+  background: -webkit-linear-gradient(black, white);
+  background: -moz-linear-gradient(black, white);
+  background: -ms-linear-gradient(black, white);
+  background: -o-linear-gradient(black, white);
+  background: linear-gradient(black, white);
+  -pie-background: linear-gradient(black, white);
+}
+
+
+#partial-body ul { 
+  list-style:none;
+  margin-left:0px;
+}
+
+#partial-body ul, #partial-body li { 
+  margin-left:0px; 
+  padding-left:0px; 
+  height:10%; 
+  padding-bottom:20px;
+}
+
+label.label { 
+  height:10%; 
+  width:20%; 
+  margin-top:0px; 
+  margin-botton:0px; 
+  padding-top:0px; 
+  padding-botton:0px;
+}
+
+.input { 
+  height:10%; 
+  width:24%; 
+  margin-right:10px; 
+  clear:none; 
+  margin-top:0px; 
+  margin-botton:0px; 
+  padding-top:0px; 
+  padding-botton:0px;
+}
+
+h3 { margin-left:0px; margin-bottom:0px; }
+
+.spacer { 
+  height:1px; padding-top:1%; 
+  padding-bottom:0; 
+  margin-top:0; 
+  margin-bottom:0; 
+  color:white;
+}
+
+#partial-container {
+  background-size:100%;
+  height:90%;
+  margin-top:0px;
+}
+
+#partial-container div {
+  padding-top:1%;
+  padding-left:1%;
+  margin-top:16px;
+}
+
+#draw-target { 
+  padding-right:-10px; 
+  margin-right:-10px; 
+  padding-left:0px; 
+  margin-left:0px;
+}

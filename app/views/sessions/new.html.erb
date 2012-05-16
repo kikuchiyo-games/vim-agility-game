@@ -1,0 +1,23 @@
+<div id = 'create-account' class = 'push-5 span-4'>
+  <%= link_to 'Create an Account!', new_users_path %>
+</div>
+
+<%= form_tag session_path, :class => 'gradiant-green-black span-24' do%>
+  <h3 id = 'log-in' class = 'span-10 push-2'>Log In</h3>
+  <hr>
+  <p class = 'span-18 push-2' >
+    <%= label_tag :email, nil, :class => 'span-2' %>
+    <%= text_field_tag :email %>
+  </p>
+  <p class = 'span-18 push-2' >
+    <%= label_tag :password, nil, :class => 'span-2' %>
+    <%= password_field_tag :password %>
+    <br />
+    <br />
+    <%= submit_tag 'login', :class => 'push-2' %>
+  </p>
+  <hr>
+  <p style = 'color:red; font-weight:bold;' class = 'span-10 push-8'>
+    <%= flash[:notice] %>
+  </p>
+<%end%>

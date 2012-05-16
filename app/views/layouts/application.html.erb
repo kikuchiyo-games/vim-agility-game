@@ -1,0 +1,23 @@
+<!doctype html>
+<html  class = 'gradiant'>
+  <head>
+    <title> Kikuchiyos Way </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <%= stylesheet_link_tag "screen" %>
+    <%= stylesheet_link_tag "index"  %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class = 'container'>
+      <div id = 'header-container' class = 'span-24'></div>
+      <%= yield %>
+    </div>
+    <audio id = 'theme' src = '/audios/kikuchiyo_title_page_the_one.wav'></audio>
+    <audio id = 'picked_up_gem' src = '/audios/gem_up.wav'></audio>
+    <audio id = 'teleport' src = '/audios/teleport.wav'></audio>
+    <script>
+      var thissound=document.getElementById( 'theme' );
+      thissound.play();
+    </script>
+  </body>
+</html>
