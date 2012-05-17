@@ -46,6 +46,7 @@
   Jump ( wbOo )
   Teleport ( H0L$ )
   Pick-up ( i ) 
+
 == Application Flow
   1. Sign Up
   2. Login =>
