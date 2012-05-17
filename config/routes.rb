@@ -3,10 +3,10 @@ KikuchiyosWay::Application.routes.draw do
   get "sessions/new"
   resource :session
   resource :users
-  resources :kikuchiyos_way
-  get "kikuchiyos_way/index"
-  get "kikuchiyos_way/show"
-  match "kikuchiyos_way/:id" => 'kicuchiyos_way#show'
+  resources :game
+  get "game/index"
+  get "game/show"
+  match "e/:id" => '"e#show'
 
   #root :to => 'kikuchiyos_way#index'
   root :to => 'sessions#new'

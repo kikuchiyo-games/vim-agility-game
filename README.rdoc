@@ -46,3 +46,43 @@
   Jump ( wbOo )
   Teleport ( H0L$ )
   Pick-up ( i ) 
+== Application Flow
+  1. Sign Up
+  2. Login =>
+    1. User Profile =>
+      1. Navigation To =>
+        1. Game =>
+          1. Current Level =>
+            1. Success => 
+              1. Success Scene
+              2. Statisics
+              3. Level Up Options
+            2. Death => 
+              1. Death Scene
+              2. Game
+        2. User Statistics  
+        3. Level Up Options
+        4. Leaderboard
+
+== UI Design
+  1. Sign Up
+    1. Kikuchiyos Way Logo In Header
+    2. Link to Log In Page
+    3. Sign Up Header
+    4. Form Container ( Blue to Black Gradiant with Rounded Corners )
+      1. Username Label => Username Input      
+      2. Password Label => Password Input
+      3. Password Confirmation Label => Password Confirmation Input
+  2. Log In
+    1. Kikuchiyos Way Logo In Header
+    2. Link to Sign Up Page
+    3. Log In Header
+    4. Form Container ( Blue to Black Gradiant with Rounded Corners )
+      1. Username Label => Username Input      
+      2. Password Label => Password Input
+  3. User Profile
+  3. Game
+  4. Levels
+  5. User Statistics
+  6. Level Up
+  7. Leaderboard

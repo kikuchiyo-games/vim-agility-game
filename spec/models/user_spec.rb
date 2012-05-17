@@ -13,14 +13,14 @@ describe User do
         user.save!
       }.should raise_error
     end 
-    it "creates users when passwords are supplied" do
+    it "creates users when password is supplied" do
       expect {
         @user = User.new :username => 'johnny', :password => 'abc123'
         @user.save!
       }.should_not raise_error
       User.find_by_username('johnny').should == @user
     end 
-    it "expectation here" do
+    it "ensures uniqueness of username" do
       expect {
         @user1 = User.new :username => 'johnny', :password => 'abc123'
         @user1.save
