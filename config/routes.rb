@@ -6,7 +6,8 @@ KikuchiyosWay::Application.routes.draw do
   resources :game
   get "game/index"
   get "game/show"
-  match "e/:id" => '"e#show'
+  get "users/show"
+  match "users/:id" => 'users#show'
 
   #root :to => 'kikuchiyos_way#index'
   root :to => 'sessions#new'

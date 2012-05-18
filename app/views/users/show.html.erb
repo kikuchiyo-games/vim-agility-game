@@ -1,0 +1,21 @@
+<div id = 'user-navigation-container' class = 'span-24'>
+  <div id = 'user-navigation' class = 'span-24 push-1'>
+    <div class = 'span-5 push-3'>
+      <p class = 'span-5'> <%= image_tag 'playIcon.png' %> </p>
+      <h4 class = 'span-5 push-1' style = 'display:none;'>Play</h4>
+    </div>
+    <div class = 'span-5 push-3'>
+      <p class ='span-5'> <%= image_tag 'resourcesIcon.png' %> </p>
+      <h4 class = 'span-5 push-1' style = 'display:none;'>Help</h4>
+    </div>
+    <div class = 'span-5 push-3'>
+      <p class ='span-5'> <%= image_tag 'networkHologramIcon.png' %> </p>
+      <h4 class = 'span-5' style = 'display:none;'>Leaderboard</h4>
+    </div>
+    <div class = 'span-5 push-3'>
+      <p class ='span-5'> <%= image_tag 'webHologramIcon.png' %> </p>
+      <h4 class = 'span-5' style = 'display:none;'>Web-Resources</h4>
+    </div>
+  </div>
+</div>
+<h3 class = 'span-24' id = 'welcome-text'> <%= @user.email %> </h3>

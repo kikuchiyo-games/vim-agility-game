@@ -1,3 +1,7 @@
+#user-navigation-container {height:90px !important; position:absolute;}
+#user-navigation-container h3 {color:white !important;}
+#welcome-text {margin-top:100px; color: #007FFF !important;}
+#user-navigation h4 {color:white !important;}
 div.error_messages {margin-top:0px !important; padding-top:0px !important; top:-10px !important;}
 div.error_messages ul li{ color:red; }
 div.tile {
@@ -115,6 +119,22 @@ button {
   -webkit-border-radius: 2px; 
   -khtml-border-radius: 2px; 
   border-radius: 2px;
+}
+
+.radius-black {
+  -moz-border-radius: 20px; 
+  -webkit-border-radius: 20px; 
+  -khtml-border-radius: 20px; 
+  border-radius: 20px;	
+  border-color: black;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(black), to(black));
+  background: -webkit-linear-gradient(black, black);
+  background: -moz-linear-gradient(black, black);
+  background: -ms-linear-gradient(black, black);
+  background: -o-linear-gradient(black, black);
+  background: linear-gradient(black, black);
+  -pie-background: linear-gradient(black, black);
 }
 
 .gradiant-brown {
