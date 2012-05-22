@@ -61,9 +61,10 @@
             2. Death => 
               1. Death Scene
               2. Game
-        2. User Statistics  
-        3. Level Up Options
-        4. Leaderboard
+        2. Level Up Options
+        3. Leaderboard
+        4. Help Options
+      2. User Statistics  
 
 == UI Design
   1. Sign Up
@@ -82,6 +83,12 @@
       1. Username Label => Username Input      
       2. Password Label => Password Input
   3. User Profile
+    1.  Navigation
+      1. Game
+      3. Level Up
+      4. Leaderboard
+      5. Help
+    2. Statistics
   3. Game
   4. Levels
   5. User Statistics

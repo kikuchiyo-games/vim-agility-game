@@ -1,7 +1,10 @@
-#user-navigation-container {height:90px !important; position:absolute;}
+#user-navigation-container {height:90px !important; /*position:absolute;*/}
 #user-navigation-container h3 {color:white !important;}
-#welcome-text {margin-top:100px; color: #007FFF !important;}
+#welcome-text {margin-top:100px; /*position:absolute;*/ color:white !important;}
+.text {color:white !important;}
 #user-navigation h4 {color:white !important;}
+#keys {margin-top:20px !important;}
+img.clickable {cursor:pointer;}
 div.error_messages {margin-top:0px !important; padding-top:0px !important; top:-10px !important;}
 div.error_messages ul li{ color:red; }
 div.tile {
