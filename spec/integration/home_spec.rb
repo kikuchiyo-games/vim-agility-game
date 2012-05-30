@@ -39,8 +39,6 @@ describe "when visiting the root-path" do
           page.find('div#log-in').should have_content('Log in') 
         end 
       end 
-
- 
     end 
   end 
 end
