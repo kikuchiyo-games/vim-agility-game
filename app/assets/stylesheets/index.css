@@ -1,6 +1,20 @@
+p {  text-shadow: black 0.1em 0.1em 0.2em !important; }
 #user-navigation-container {height:90px !important; /*position:absolute;*/}
 #user-navigation-container h3 {color:white !important;}
-#welcome-text {margin-top:100px; /*position:absolute;*/ color:white !important;}
+#welcome-text {margin-top:10px; /*position:absolute;*/ color:white !important;}
+#header-bottom{ margin-top:-40px !important;}
+#fotter { margin-top:-90px !important;}
+.key {cursor:pointer !important;}
+.key:hover { 
+  background-color:red;
+  -moz-border-radius: 2px; 
+  -webkit-border-radius: 2px; 
+  -khtml-border-radius: 2px; 
+  border-radius: 20px;
+  border-color: black;
+
+}
+
 .text {color:white !important;}
 #user-navigation h4 {color:white !important;}
 #keys {margin-top:20px !important;}
