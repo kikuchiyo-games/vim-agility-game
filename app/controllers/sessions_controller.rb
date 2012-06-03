@@ -5,10 +5,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to users_show_path, :notice => "Logged in!"
+    @user = User.find_by_email( params[ :email ] )
+    if @user && @user.authenticate( params[ :password ] )
+      session[:user_id] = @user.id
+      redirect_to user_path( @user.id ), :notice => "Logged in!"
     else
       flash.now.alert = "Email or password is invalid"
       render "new"
@@ -16,7 +16,9 @@ class SessionsController < ApplicationController
   end
   
   def destroy
-    session[:user_id] = nil
+    puts '**** IN DESTROY!!! ****'
+    reset_session 
+    #session[:user_id] = nil
     redirect_to root_url, :notice => "Logged out!"
   end
 

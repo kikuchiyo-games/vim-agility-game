@@ -32,13 +32,15 @@
 
   <div class = 'span-3'>
     <p class = 'span-3'> 
-      <%= image_tag 'stats.png', :class => 'span-2 clickable', :title => 'Review Rankings'%> 
+      <%= image_tag 'stats.png', :class => 'span-2 clickable', :title => 'Review Rankings' %> 
     </p>
   </div>
 
   <div class = 'span-3'>
     <p class = 'span-3'> 
-      <%= image_tag 'bed.png', :class => 'span-2 clickable', :title => 'Rest'%>
+      <%= link_to image_tag( 
+        'bed.png', :class => 'span-2 clickable', :title => 'Rest'
+      ), logout_path %>
      </p>
   </div>
 
@@ -57,27 +59,10 @@
 
 <div class = 'text push-3 span-24' id = 'key-description'>
   <div class = 'span-24'>
-    <%= image_tag 'letter-h-icon.png' , :class => 'span-2 key' %>
-    <p>Will move you left</p>
-  </div>
-  <div class = 'span-24'>
-    <%= image_tag 'letter-j-icon.png' , :class => 'span-2 key' %>
-    <p>Will move you down</p>
-  </div>
-  <div class = 'span-24'>
-    <div class = 'span-8'>
-      <div class = 'span-8'>
-        <%= image_tag 'letter-k-icon.png' , :class => 'span-2 key' %>
-        <p class = 'span-4'> Will move you up </p>
-      </div>
-      <div class = 'span-8'>
-        <%= image_tag 'letter-l-icon.png' , :class => 'span-2 key' %>
-        <p class = 'span-4'> Will move you right </p>
-      </div>
-    </div>
-    <div class = 'span-4 push-7'>
-      <%= image_tag 'bamboo.png' , :class => 'span-4' %>
-    </div>
+    <%= image_tag 'letter-h-icon.png' , :class => 'span-2 key', :title => 'Will move you left' %>
+    <%= image_tag 'letter-j-icon.png' , :class => 'span-2 key', :title => 'Will move you down' %>
+    <%= image_tag 'letter-k-icon.png' , :class => 'span-2 key', :title => 'Will move you up' %>
+    <%= image_tag 'letter-l-icon.png' , :class => 'span-2 key', :title => 'Will move you right' %>
   </div>
 </div>
-
+<%= image_tag 'letter-l-icon.png' , :class => 'push-18 span-2 key next-page', :title => 'Will move you right' %>

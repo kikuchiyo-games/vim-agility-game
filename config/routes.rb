@@ -1,16 +1,19 @@
 KikuchiyosWay::Application.routes.draw do
 
-  get "sessions/new"
+  #get "sessions/new"
   resource :session
   resource :users
   resources :game
-  get "game/index"
-  get "game/show"
-  get "users/show"
-  match "users/:id" => 'users#show'
+  match "users/:id" => 'users#show', :as => :user
+  match 'logout' => 'sessions#destroy'
+  root :to => 'sessions#new'
+  #get "game/index"
+  #get "game/show"
+  #get "users/show"
+
+  #get "session/destroy"
 
   #root :to => 'kikuchiyos_way#index'
-  root :to => 'sessions#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

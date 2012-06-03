@@ -5,8 +5,15 @@ p {  text-shadow: black 0.1em 0.1em 0.2em !important; }
 #header-bottom{ margin-top:-40px !important;}
 #fotter { margin-top:-90px !important;}
 .key {cursor:pointer !important;}
-.key:hover { 
-  background-color:red;
+
+.next-page {
+  position:absolute !important;
+  bottom:0px;
+}
+
+.next-page:hover { 
+  background-image: url(assets/letter-l-icon.png);
+  background-color:#7CFC00;
   -moz-border-radius: 2px; 
   -webkit-border-radius: 2px; 
   -khtml-border-radius: 2px; 

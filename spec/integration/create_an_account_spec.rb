@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
-describe "when visiting the root-path" do
+describe "when visiting the root-path", :js => true do
   before :each do
     visit root_path
   end
