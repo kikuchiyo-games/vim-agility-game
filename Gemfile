@@ -24,7 +24,9 @@ group :test, :development do
 
   gem 'cucumber-rails'
   gem 'rspec-rails'
-
   gem 'capybara'
+  gem 'therubyracer'
+  gem 'jasmine'
+  gem 'jasmine-headless-webkit'
   gem 'capybara-webkit'
 end

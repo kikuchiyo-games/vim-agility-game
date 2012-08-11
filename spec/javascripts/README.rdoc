@@ -1,0 +1,75 @@
+=Javascripts
+
+==Game
+
+    Kikuchiyo picks up Gems and Diamonds
+    Kikuchiyo dies if captured by Dogmas
+
+===Map
+
+    grid:
+
+      size:
+
+        96x96
+
+      binds:
+
+        Items
+
+        Kikuchiyo
+
+        Dogmas
+
+===Items
+
+====Gems
+
+    image:
+
+      a ruby
+
+====Diamonds
+
+    image:
+
+      a diamond
+
+===Characters
+
+====Kikuchiyo
+
+    moves:
+
+      walks:
+
+        arrow keys
+
+      runs:
+
+        hjkl
+
+      jumps:
+
+        wboO 
+
+      teleports:
+
+        HL$0
+
+    picks up items:
+
+      i
+
+====Dogmas
+
+    moves:
+
+      walks:
+
+        automated
+
+    captures Kikuchiyo:
+
+      automated
+
