@@ -18,15 +18,33 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'rcov'
-  gem 'sqlite3'
-  gem 'headless'
+  #-- db --#
+    gem 'sqlite3'
+end
 
-  gem 'cucumber-rails'
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'therubyracer'
-  gem 'jasmine'
-  gem 'jasmine-headless-webkit'
-  gem 'capybara-webkit'
+group :test do
+  #-- db --#
+    gem 'database_cleaner'
+
+  #-- reporting --#
+    gem 'rcov'
+
+  #-- tdd --#
+    gem 'rspec'
+    gem 'rspec-rails'
+
+  #-- bdd --#
+  #----- ruby -----#
+    gem 'cucumber'
+    gem 'cucumber-rails'
+
+  #----- js -----#
+    gem 'jasmine'
+    gem 'jasmine-headless-webkit'
+
+  #----- browser -----#
+    gem 'headless'
+    gem 'capybara'
+    gem 'therubyracer'
+    gem 'capybara-webkit'
 end
