@@ -1,6 +1,7 @@
 KikuchiyosWay::Application.routes.draw do
 
   #get "sessions/new"
+  match "game/ruby_chase" => 'game#ruby_chase'
   resource :session
   resource :users
   resources :game

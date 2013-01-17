@@ -1,0 +1,116 @@
+<!doctype html5>
+<html>
+  <head>
+
+    <!JQUERY PLUGIN NOT MINE>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+      <script>TRAINING = false;</script>
+      <script>GAME_OVER = false;</script>
+
+    <!HOMEMADE MAIN: DATA STRUCTURES AND OBJECTS>
+      <script src="sheet_clips.js"></script>
+      <script src="sounds.js"></script>
+      <script src="animation.js"></script>
+      <script src="movement.js"></script>
+      <script src="div_makers.js"></script>
+      <script src="table_maker.js"></script>
+      <script src="dev_rubies.js"></script>
+      <script src="dev_kikuchiyo.js"></script>
+
+    <!HOMEMADE CSS>
+      <link rel="stylesheet" type="text/css" href="stylesheets/draw_target.css" />
+
+    <!COUNTDOWN PLUGIN CODE NOT MINE...>
+      <script src="countdown/countdown.js"></script>
+      <script src="countdown/countdown_calls.js"></script>
+      <!--script src="countdown/jquery.lwtCountdown-1.0.js"></script-->
+
+    <!COUNTDOWN PLUGIN STYLE NOT MINE...>
+      <link rel="stylesheet" type="text/css" href="stylesheets/dark.css" />
+
+    <!HOMEMADE GAME SETUP: DATA STRUCTURES AND OBJECTS >
+      <script src="config.js"></script>
+      <script src="game.js"></script>
+      <script src="doc_ready.js"></script>
+
+    <!--QUNIT TESTING>
+      <script src="/Users/johnjimenez/Projects/jimenez/JavaScript/qunit/qunit/qunit.js"></script>
+      <script src="dev_countdown_spec.js"></script>
+      <script src="dev_rubies_spec.js"></script>
+      <script src="dev_kikuchiyo_spec.js"></script>
+      <script src="dev_evil_kikuchiyo_spec.js"></script>
+      <script src="dev_game_progress_spec.js"></script>
+      <link rel="stylesheet" type="text/css" href="stylesheets/index.css" />
+      <link rel="stylesheet" type="text/css" href="stylesheets/main.css"/>
+      <link rel="stylesheet" type="text/css" href="stylesheets/ruby_chase.css"/>
+      <link 
+        rel="stylesheet" 
+        type="text/css" 
+        href="/Users/johnjimenez/Projects/jimenez/JavaScript/qunit/qunit/qunit.css" 
+      />
+      <script src="swarminject.js"></script>
+    <END QUNIT TESTING--> 
+
+    <style>
+      #score-board {
+        position:absolute;
+        top:5%;
+        left:25%;
+        
+      }
+
+      #score-board-list li {
+        display:inline;
+        padding-right:20px;
+        font-size:23px;
+        font-style:bold;
+        list-style-type:none;
+      }
+
+      .score-points{color:red;}
+      .score-bravery-points{color:white;}
+      .score-diamonds{color:red;}
+      .score-rubies{color:red;}
+
+    </style>
+
+  </head>
+  <body style="background-image:url(images/kikuchiyo_introduction/river.png); no-repeat; background-size: 100%" >
+    <!--QUNIT TESTING>
+	    <h1 id="qunit-header">QUnit Test Suite</h1>
+	    <h2 id="qunit-banner"></h2>
+	    <div id="qunit-testrunner-toolbar"></div>
+	    <h2 id="qunit-userAgent">Hello</h2>
+	    <ol id="qunit-tests"></ol>
+	    <div id="qunit-fixture">test markup</div>
+    <END QUNIT TESTING-->
+
+    <!AUTOMATED COUNTDOWN DIVS AND AUDIO DIVS FOR SOUND EFFECTS>
+
+      <div id="draw-target"></div>
+
+      <div id="score-board">
+        <ul id = "score-board-list">
+          <li class = "score-rubies"  > Rubies : 0 </li>
+          <li class = "score-diamonds"> Diamonds : 0 </li>
+          <li class = "score-points"  > Experience Points : 0 </li>
+          <li class = "score-bravery-points"  > Bravery Points : 0 </li>
+        </ul>
+      </div>
+
+		  <div id="countdown_dashboard">
+        <script>
+          var units=[ "weeks", "days", "hours", "minutes", "seconds" ];
+          for (u in units){ time_div(units[u]); }
+          audio_div( "rain",           "../../sounds/weather/rain.wav" );
+          audio_div( "theme",          "sounds/kikuchiyo_theme.wav" );
+          audio_div( "picked_up_gem",  "sounds/gem_up.wav" );
+          audio_div( "teleport_sound", "sounds/electronics014 1.wav" );
+          audio_div( "thunder_clap",   
+            "../../sounds/weather/weather_thunder_rain_03_NifterDotCom.wav" 
+          );
+        </script>
+		  </div>
+
+  </body>
+</html>

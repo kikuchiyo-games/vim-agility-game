@@ -7,4 +7,7 @@ class GameController < ApplicationController
   def show
   end
 
+  def ruby_chase
+    render :template => 'game/ruby_chase.html.erb'
+  end
 end

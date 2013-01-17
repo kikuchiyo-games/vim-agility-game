@@ -6,6 +6,13 @@ p {  text-shadow: black 0.1em 0.1em 0.2em !important; }
 #fotter { margin-top:-90px !important;}
 .key {cursor:pointer !important;}
 
+.hide {
+  display:none;
+}
+
+#map {
+  margin-top:80px;
+}
 .next-page {
   position:absolute !important;
   bottom:0px;
