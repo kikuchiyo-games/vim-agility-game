@@ -4,7 +4,7 @@ html, body {
 }
 
 .not-visited {
-  background:url( '/assetsblue_glossy_ball.jpg' )
+  background:url( '/assetsblue_glossy_ball.jpg' );
   height:100px;
 }
 

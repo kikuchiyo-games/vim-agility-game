@@ -20,13 +20,13 @@ ul.left-panel li a, ul.right-panel li a {text-decoration:none;}
 ul.left-panel  {padding-left:0 !important; height:100% !important; border-right:solid 1px #ddd !important; border-bottom:solid 1px #ddd;}
 ul.right-panel {padding-left:0 !important; height:100% !important; border-left:solid 1px #ddd !important;  border-bottom:solid 1px #ddd;}
 #left-panel  { margin-right:0px; padding-right:0px; }
-#right-panel { margin-left:0px   padding-left:0px;}
+#right-panel { margin-left:0px;  padding-left: 0px; }
 #right-panel ul li a {float:right !important; }
 #content {
   margin-left:0px !important; 
-  margin-right:0px !important:
+  margin-right:0px !important;
   padding-left:0px !important; 
-  padding-right:0px !important:
+  padding-right:0px !important;
 }
 
 /* reset.css */

@@ -8,7 +8,10 @@ gem 'jquery-rails'
 gem 'json'
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
+  # gem 'activerecord-mysql2-adapter'
+  gem 'mysql2' #, '0.3.7'
+  # gem 'sqlite3'
 end
 
 group :assets do
