@@ -30,7 +30,7 @@ var game = function( spec ){
         Math.floor( Math.random() * ( window.innerWidth - 100 ) ),
         Math.floor( Math.random() * ( window.innerHeight - 100 ) )
       );
-      $( "#ruby" + r ).append( "<p>" + r + "</p>" );
+      $( "#ruby" + r ).append( "<p>" + /* r + */ "</p>" );
     }
   };
 
@@ -49,6 +49,6 @@ var game = function( spec ){
     }
     return true;
   };
-
+  
   return that;
 };

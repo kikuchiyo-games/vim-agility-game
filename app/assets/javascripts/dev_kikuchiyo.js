@@ -160,7 +160,9 @@ var player = function( spec ){
       return true 
     }
 
+
     if ( key_press == '105' ){
+      console.log( 'key_press = ' + key_press );
       that.got_ruby();
     }
 
@@ -218,9 +220,6 @@ var player = function( spec ){
 
   that.idle_user=function(){
     var now = new Date();
-
-  
-
     return ( now.getTime() - that.command_time.getTime() ) / 1000 > 0.5; 
   }
 
@@ -234,7 +233,6 @@ var player = function( spec ){
     if ( that.idle_user() ) { setTimeout( that.animate, 140 ); return }
 
     var sheet_to_animate = that.get_animation( that.last_key_press );
-
 
     if ( sheet_to_animate.teleport == null ) {
 
@@ -271,38 +269,41 @@ var player = function( spec ){
 
   }; 
 
+  that.hit_by_fireball = function(){
+    power_ball.draw( 0, that.y );
+  }
+
   that.got_ruby = function(){
     for ( r in page_rubies ){
 
       var this_ruby = page_rubies[ r ];
 
       if ( this_ruby == undefined ){ continue }
-
+  
       if ( QUNIT ){
         var x_interception = ( Math.abs(this_ruby.x - that.x ) == 0 );
         var y_interception = ( Math.abs(this_ruby.y - that.y ) == 0 );
 
       } else {
-        //alert( '[ this_ruby.x = ' + ( this_ruby.x ) + ', that.x = ' + that.x + ' ] [ this_ruby.y = ' + this_ruby.y + ', that.y = ' + that.y + ' ]');
-        var x_interception = ( Math.abs(this_ruby.x - that.x - 157 ) < 50 );
+        var x_interception = ( Math.abs(this_ruby.x - that.x - 257 ) < 50 );
         var y_interception = ( Math.abs(this_ruby.y - that.y - 20 ) < 50 );
+        console.log( 'this_ruby.x = ' + this_ruby.x + ', that.x = ' + that.x  );
+        console.log( 'this_ruby.y = ' + this_ruby.y );
+        console.log( 'y_interception = ' + y_interception );
 
       }
 
       if ( x_interception && y_interception ) {
-
         that.rubies += this_ruby.rubies;
         that.points += this_ruby.points;
         that.diamonds += this_ruby.diamonds;
-        $("li.score-points").html("Experience Points:" + that.points);
-        $("li.score-rubies").html("Rubies:" + that.rubies);
-        $("li.score-diamonds").html("Diamonds:" + that.diamonds);
+        $( "#experience_points" ).text( that.points );
+        $( "#rubies" ).text( that.rubies );
+        $( "#diamonds" ).text( that.diamonds );
         this_ruby.destroy();
-        play_sound('picked_up_gem');
+        play_sound( 'picked_up_gem' );
         page_rubies[ r ] = undefined;
-
         //that.increment_sprite_rubies();
-
       }
     }
   };

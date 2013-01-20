@@ -1,7 +1,8 @@
+    <%= javascript_include_tag "jquery-1.7.1.min" %>
     <%= stylesheet_link_tag    "index.css" %>
 
     <script>GAME_OVER = false;</script>
-	  <script src="javascripts/examples/Product/js/slides.min.jquery.js"></script>
+	  <script src="slides.min.jquery.js"></script>
     <script src="sounds.js"></script>
     <script src="div_makers.js"></script>
 	  <script>
@@ -25,21 +26,21 @@
             var end_list = "</li>"
           }
 
-          for ( var p in PICTURES ) {
-            var pic = PICTURES[ p ];
-            var href = "#";
+          //for ( var p in PICTURES ) {
+          //  var pic = PICTURES[ p ];
+          //  var href = "#";
 
-  	        string =  start_list + "<a href=\"" + href + "\" target=\"_blank\">";
-            string += "  <img ";
-            string += "    width=\"" + width  + "\" ";
-            string += "    alt=\"1144953 3 2x\" ";
-            string += "    src=\"images/kikuchiyo_introduction/" + pic + "\" ";
-            string += "  > ";
-            string += "</a> " + end_list;
+  	      //  string =  start_list + "<a href=\"" + href + "\" target=\"_blank\">";
+          //  string += "  <img ";
+          //  string += "    width=\"" + width  + "\" ";
+          //  string += "    alt=\"1144953 3 2x\" ";
+          //  string += "    src=\"images/kikuchiyo_introduction/" + pic + "\" ";
+          //  string += "  > ";
+          //  string += "</a> " + end_list;
 
-            $(dom_element).append( string );
+          //  $(dom_element).append( string );
 
-          }
+          //}
         };
 
         place_pictures_on_page( 856, ".slides_container" );
@@ -73,7 +74,6 @@
   		<div id = "footer"> </div>
       <script>
         audio_div("picked_up_gem", "sounds/gem_up.wav");
-        audio_div("rain", "sounds/weather/rain.wav");
         audio_div("theme", "sounds/kikuchiyo_training_theme.wav");
         audio_div( "teleport_sound", "sounds/electronics014 1.wav" );
         audio_div(
@@ -86,7 +86,7 @@
 
     <div id = 'map' class = 'span-24'>
       <div id = 'walking_slow' class = 'push-2 span-24'>
-         <%= link_to image_tag  ( 'blue_glossy_ball.png', :title => 'prison', :alt => 'prison' ), 'game/ruby_chase' %>
+        <%= link_to image_tag( 'blue_glossy_ball.png'),'game/ruby_chase' %>
       </div>
       <div id = 'walking_fast' class = 'push-6 span-10 hide'>
         <%= image_tag  'blue_glossy_ball.png', :title => 'escape', :alt => 'escape' %>

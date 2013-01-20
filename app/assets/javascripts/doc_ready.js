@@ -28,33 +28,51 @@ $( document ).ready( function(){
 
       GAME_OVER = true; 
 
-      var game_ending_text = "<a href = \"game_introduction.html\"><h1 style = \"position:absolute; left:25%; top:50%; color:red;\">";
-      if ( TRAINING ){
-        game_ending_text    += "  GOOD TEST! FEEL FREE TO HELP ME HOME WHEN YOU ARE COMFORTABLE.";
-      } else {
-        game_ending_text    += "  GAME OVER!";
-      }
-      game_ending_text    += "</h1>";
+      $.ajax({ 
+        type:'put',
+        url: '/profiles/update.json',
+        dataType: 'json',
+        beforeSend: function(jqXHR, settings) {
+          jqXHR.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+        },
+        data:{
+          experience_points: $('#experience_points').text(),
+          bravery_points: $('#bravery_points').text(),
+          diamonds: $('#diamonds').text(),
+          rubies: $('#rubies').text()
+        }
+      });
+
+      var game_ending_text = "<a href = \"/users/home\"><h1 style = \"position:absolute; left:25%; top:50%; color:red;\">";
+      game_ending_text    += "  GAME OVER!";
+      game_ending_text    += "</h1></a>";
 
       $('#countdown_dashboard').stopCountDown();
       $('body #draw-target').html(
           game_ending_text
       );
-      kikuchiyo.destroy();
+      if( typeof( kikuchiyo ) != 'undefined' ){
+        kikuchiyo.destroy();
+      }
 
     } else { 
 
       if (x_distance + y_distance){
         if (!GAME_OVER){
           kikuchiyo.bravery_points += 1 / ( x_distance + y_distance ); 
-          $("li.score-bravery-points").html( "Bravery Points : " + Math.round(kikuchiyo.bravery_points * 100)/100 );
+          points = Math.round( kikuchiyo.bravery_points * 100 ) / 100;
+          $("#bravery_points").text( points );
         }
       }
     }
     
     setTimeout(evil_player.capture_kikuchiyo, 60);
-
+    // if ( typeof( power_ball ) != 'undefined' ){
+    //   setTimeout(power_ball.move, 10);
+    //   setTimeout(kikuchiyo.hit_by_fireball, 60);
+    // }
   };   
+
 
   if (!TRAINING) {
 
@@ -78,6 +96,15 @@ $( document ).ready( function(){
   teleport_keys = [ "72", "48", "76", "77", "52" ];
 
   $( document ).keydown( function( event ){
+    // if ( KEY_PRESSES > 1 ){ 
+    //   if( game.player_won() != false ){
+    //     if ( !GAME_OVER ) {
+    //       alert( 'you won!' );
+    //     }
+    //     GAME_OVER = true;
+    //   };
+    // }
+    // KEY_PRESSES += 1;
 
     if (GAME_OVER){ return }; 
 

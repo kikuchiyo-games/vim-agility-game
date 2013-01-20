@@ -2,9 +2,12 @@ KikuchiyosWay::Application.routes.draw do
 
   #get "sessions/new"
   match "game/ruby_chase" => 'game#ruby_chase'
+  match "profiles/update.json" => 'profiles#update'
+  resource :profiles
   resource :session
   resource :users
   resources :game
+  match "leaderboard" => 'users#index'
   match "users/:id" => 'users#show', :as => :user
   match 'logout' => 'sessions#destroy'
   root :to => 'sessions#new'

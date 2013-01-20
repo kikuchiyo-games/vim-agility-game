@@ -4,18 +4,11 @@
       USER_NEEDS_A_CHALLENGE = true;
       USER_BEING_CHALLENED = false;
     </script>
-    <%= javascript_include_tag "jquery-1.7.1.min.js" %>
-    <%= javascript_include_tag "sheet_clips.js" %>
-    <%= javascript_include_tag "animation.js"%>  
-    <%= javascript_include_tag "movement.js"%>  
-    <%= javascript_include_tag "div_makers.js"%>  
-    <%= javascript_include_tag "table_maker.js"%>  
-    <%= javascript_include_tag "dev_rubies.js"%>  
-    <%= javascript_include_tag "dev_kikuchiyo.js"%>  
-    <%= javascript_include_tag "config.js"%>  
-    <%= javascript_include_tag "game.js"%>  
-    <%= javascript_include_tag "sounds.js"%>  
-    <%= javascript_include_tag "doc_ready.js"%>  
+    <%= javascript_include_tag "jquery-1.7.1.min",
+      "sheet_clips", "animation", "movement", "power_balls",
+      "div_makers", "table_maker", "dev_rubies",
+      "dev_kikuchiyo", "config", "game", "sounds", "doc_ready"
+    %>  
     <%= stylesheet_link_tag    "main.css" %>
     <%#= stylesheet_link_tag    "global.css" %>
     <%= stylesheet_link_tag    "draw_target.css" %>
@@ -36,12 +29,12 @@
 
     <div id="score-board" class = 'span-24'>
       <ul id = "score-board-list" class = "push-2 span-24" style = 'margin-top: -30px;'>
-        <li class = "score-rubies span-4"  > Rubies : 0 </li>
-        <li class = "score-diamonds span-4"> Diamonds : 0 </li>
-        <li class = "score-points span-4"  > Experience : 0 </li>
-        <li class = "score-bravery-points span-4"  > Bravery Points : 0 </li>
-        <li class = "span-4"  > Bravery Points : 0 </li>
-		      <div class = 'span-1'>
+        <li class = "score-rubies span-4"  > Rubies : <span id = 'rubies'>0</span> </li>
+        <li class = "score-diamonds span-4"> Diamonds : <span id = 'diamonds'>0</span>  </li>
+        <li class = "score-points span-4"  > Experience : <span id = 'experience_points'>0</span>  </li>
+        <li class = "score-bravery-points span-4"  > Bravery Points : <span id = 'bravery_points'>0</span>  </li>
+        <li class = "span-4"  > 		      
+          <div class = 'span-1'>
             <div class='dash' >
             	<span class='dash_title'>Seconds</span>
             	<div class='digit'>0</div>

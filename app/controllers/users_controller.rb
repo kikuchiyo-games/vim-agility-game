@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def index
+    @profiles = Profile.all.sort_by &:experience_points
+  end
+
   def show
     # ensure user is current_user, else redirect to log in and kill session
     @user = User.find( session[:user_id] )
@@ -13,9 +17,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def home
+    redirect_to users_show_path
+  end
+
   def create
     @user = User.new( params[:user] )
     if @user.save
+      Profile.new( :user_id => current_user ).save!
       session[:user_id] = @user.id
       redirect_to root_url, :notice => "Thank you for signing up!"
     else

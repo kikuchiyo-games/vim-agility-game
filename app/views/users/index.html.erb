@@ -1,0 +1,26 @@
+<div class = 'span-24 push-1'>
+  <ul style = 'list_container'>
+    <li class = 'span-24'>
+      <ul class = 'inline'>
+        <li class = 'span-4'> name </li>
+        <li class = 'span-4'> Experience </li>
+        <li class = 'span-4'> Bravery </li>
+        <li class = 'span-4'> Diamonds </li>
+        <li class = 'span-4'> Rubies  </li>
+      </ul>
+    </li>
+
+    <% @profiles.each do |profile| %>
+      <% user = User.find( profile.user_id ) %>
+      <li class = 'span-24'>
+        <ul class = 'inline'>
+          <li class = 'span-4'> <%= user.email%> </li>
+          <li class = 'span-4'> <%= profile.experience_points %></li>
+          <li class = 'span-4'> <%= profile.bravery_points %></li>
+          <li class = 'span-4'> <%= profile.diamonds %></li>
+          <li class = 'span-4'> <%= profile.rubies %></li>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+

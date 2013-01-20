@@ -5,7 +5,6 @@
     <hr>
     </div>
   </div>
-
   <div class = 'span-3'>
     <p class = 'span-3'> 
       <%= link_to image_tag( 'curtain.png', :class => 'span-2 clickable', :title => 'Travel Outside'), game_index_path %>
@@ -31,8 +30,22 @@
   </div>
 
   <div class = 'span-3'>
-    <p class = 'span-3'> 
+    <p id = 'user_stats_container' class = 'span-3' --> 
       <%= image_tag 'stats.png', :class => 'span-2 clickable', :title => 'Review Rankings' %> 
+      <div id = 'user_stats' style = 'display:none;'>
+        <h5> User Profile: </h5>
+        <hr>
+        <ul>
+          <li>email: <%=current_user.email %></li>
+        </ul>
+        <ul>
+          <% profile = current_user.profile %>
+          <li>Seniority <%=profile.experience_points %></li>
+          <li>Bravery   <%=profile.bravery_points%></li>
+          <li><%= image_tag 'rubies/ruby.png' %>:    <%=profile.rubies%></li>
+          <li><%= image_tag 'rubies/diamond.png' %>:  <%=profile.diamonds%></li>
+        </ul>
+      </div>
     </p>
   </div>
 
@@ -67,3 +80,5 @@
 </div>
 <%= image_tag 'letter-l-icon.png' , :class => 'push-18 span-2 key next-page', :title => 'Will move you right' %>
 <%= render :partial => 'shared/chase_music' %>
+<%= javascript_include_tag "jquery-1.7.1.min" %>
+<%= render :partial => 'shared/profile_stats' %>
