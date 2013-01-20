@@ -43,7 +43,7 @@ $( document ).ready( function(){
         }
       });
 
-      var game_ending_text = "<a href = \"/users/home\"><h1 style = \"position:absolute; left:25%; top:50%; color:red;\">";
+      var game_ending_text = "<a href = \"/users/" + USER_ID + "\"><h1 style = \"position:absolute; left:25%; top:50%; color:red;\">";
       game_ending_text    += "  GAME OVER!";
       game_ending_text    += "</h1></a>";
 
@@ -71,8 +71,7 @@ $( document ).ready( function(){
     //   setTimeout(power_ball.move, 10);
     //   setTimeout(kikuchiyo.hit_by_fireball, 60);
     // }
-  };   
-
+  };
 
   if (!TRAINING) {
 
