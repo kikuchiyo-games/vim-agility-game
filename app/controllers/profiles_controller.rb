@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_filter :authorize
+
   def update
     respond_to do |format|
       format.json {

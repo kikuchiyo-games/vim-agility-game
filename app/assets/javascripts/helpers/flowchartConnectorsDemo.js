@@ -3,7 +3,7 @@ $(document).ready(function(){
     jsPlumb.connect({ 
       source: 'walking_slow', 
       target: 'walking_fast',
-      anchors: ['BottomLeft', 'TopLeft'],
+      anchors: ['TopLeft', 'TopLeft'],
       paintStyle: { strokeStyle: "white", lineWidth: 1 },
       connector:[ "Bezier", { curviness:50 } ],
       endpoint:'Blank'

@@ -1,19 +1,27 @@
+#key-description {
+  margin-top:30px;
+}
+
 #user_stats_container {
   width:200px;
   position:absolute;
 }
 
 #walking_slow p {
-  color:blue;
+  color:white;
+  text-shadow: black 0.1em 0.1em 0.2em !important;
 }
 
 #map-header h2 {
   color:white;
+  font-family: Brush Script MT;
 }
+
 #map img {
   margin-top: -6px;
   margin-left: -10px;
 }
+
 #user_stats h5 {
   padding-top:10px;
   padding-left:10px;
@@ -37,7 +45,7 @@ ul.inline li, #user_stats li {
   font-family: Calibri, Tahoma, Geneva, sans-serif;
   position: absolute; 
   left: 1em; 
-  top: 250%; 
+  top: -190%; 
   z-index: 99;
   margin-left: 0; width: 750px;
   background: rgba(0, 0, 0, 0.7); border: 1px solid #FFAD33; 
@@ -83,10 +91,10 @@ ul.inline li, #user_stats li {
 p {  text-shadow: black 0.1em 0.1em 0.2em !important; }
 #user-navigation-container {height:90px !important; /*position:absolute;*/}
 #user-navigation-container h3 {color:white !important;}
-#welcome-text {margin-top:10px; /*position:absolute;*/ color:white !important;}
+#welcome-text {padding-left:230px; font-size: 30px; margin-top:-50px; /*position:absolute;*/ font-family: Brush Script MT; color:white !important; }
 #header-bottom{ margin-top:-40px !important;}
 #fotter { margin-top:-90px !important;}
-.key {cursor:pointer !important;}
+.key { cursor:pointer !important; border: green 1px solid; min-height:100px; max-width:90px; background-color:white;}
 
 .hide {
   display:none;

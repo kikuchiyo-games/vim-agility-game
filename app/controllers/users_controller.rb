@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
   before_filter :authorize, :only => :show
 
-  def new
-    @user = User.new
-  end
-
   def index
     @profiles = Profile.all.sort_by &:experience_points
+  end
+
+  def new
+    @user = User.new
   end
 
   def show

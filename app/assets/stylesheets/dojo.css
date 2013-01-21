@@ -1,0 +1,15 @@
+
+#user_header {
+  background-image: url( grass.png );
+  background-size: 60%;
+  height:100%;
+}
+#letter-container {
+  margin-top:-15px;
+}
+#dojo {
+  margin-top:23px;
+  background-image: url( dojo.png );
+  background-size: 100%;
+  min-height:350px;
+}
