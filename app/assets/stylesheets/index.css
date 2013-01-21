@@ -3,6 +3,17 @@
   position:absolute;
 }
 
+#walking_slow p {
+  color:blue;
+}
+
+#map-header h2 {
+  color:white;
+}
+#map img {
+  margin-top: -6px;
+  margin-left: -10px;
+}
 #user_stats h5 {
   padding-top:10px;
   padding-left:10px;
@@ -82,7 +93,24 @@ p {  text-shadow: black 0.1em 0.1em 0.2em !important; }
 }
 
 #map {
-  margin-top:80px;
+  margin-top:0px;
+  background:red;
+  padding-top:30px;
+  padding-bottom:30px;
+  padding-right:60px;
+  -moz-border-radius: 2px; 
+  -webkit-border-radius: 2px; 
+  -khtml-border-radius: 2px; 
+  border-radius: 20px;
+  border-color: black;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(green), to(white));
+  background: -webkit-linear-gradient(green, white);
+  background: -moz-linear-gradient(green, white);
+  background: -ms-linear-gradient(green, white);
+  background: -o-linear-gradient(green, white);
+  background: linear-gradient(green, white);
+  -pie-background: linear-gradient(green, white);
+
 }
 .next-page {
   position:absolute !important;

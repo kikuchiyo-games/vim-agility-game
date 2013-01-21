@@ -285,7 +285,7 @@ var player = function( spec ){
         var y_interception = ( Math.abs(this_ruby.y - that.y ) == 0 );
 
       } else {
-        var x_interception = ( Math.abs(this_ruby.x - that.x - 157 ) < 50 );
+        var x_interception = ( Math.abs(this_ruby.x - that.x - 217 ) < 50 );
         var y_interception = ( Math.abs(this_ruby.y - that.y - 20 ) < 50 );
         console.log( 'this_ruby.x = ' + this_ruby.x + ', that.x = ' + that.x  );
         console.log( 'this_ruby.y = ' + this_ruby.y );
