@@ -14,7 +14,9 @@ class UsersController < ApplicationController
     @user = User.find( session[:user_id] )
     if @user != current_user || ( params[:id] && @user.id != params[:id].to_i )
       redirect_to root_url, :notice => "You have been logged out for accessing a resrouce illegally."
+    else
     end
+
   end
 
   def home
@@ -24,8 +26,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new( params[:user] )
     if @user.save
-      Profile.new( :user_id => current_user ).save!
       session[:user_id] = @user.id
+      Profile.new( :user_id => @user.id ).save!
       redirect_to root_url, :notice => "Thank you for signing up!"
     else
       render "new"
