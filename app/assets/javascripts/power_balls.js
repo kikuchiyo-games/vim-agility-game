@@ -17,7 +17,7 @@ var PowerBall = function( id, power_ball_image ){
   that.x = null;
   that.y = null;
 
-  that.draw = function( x, y ){
+  that.draw = function( ){
     that.x = x;
     that.y = y;
     that[ 0 ].style.left = x + 'px'; 
@@ -34,7 +34,8 @@ var PowerBall = function( id, power_ball_image ){
     position:'absolute', 
     display:'block', 
     zIndex:'1000', 
-    background: 'url( /assets/blue_glossy_ball.png )' 
+    //background: 'url( /assets/blue_glossy_ball.png )' 
+    background: 'url( /assets/spear_small.png )' 
   });
 
   that.destroy=function(){

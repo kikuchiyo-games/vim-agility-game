@@ -160,10 +160,19 @@ var player = function( spec ){
       return true 
     }
 
+    if ( key_press == '97' ){
+      console.log('key_press = ' + key_press );
+      if ( typeof( that.spear ) != 'undefined' ){
+        if ( that.spear.x <=  that.x + 145 ){
+          that.spear.thrust();
+        }
+      }
+    }
 
     if ( key_press == '105' ){
       console.log( 'key_press = ' + key_press );
       that.got_ruby();
+
     }
 
     var new_animation = that.get_animation( key_press );
@@ -181,13 +190,16 @@ var player = function( spec ){
 
     that.style.left = that.x + 'px'; 
     that.style.top  = that.y + 'px'; 
+    if ( typeof( that.spear ) != 'undefined' ){
+      that.spear.draw();
+    }
      
   };
 
   that.make_cell_on_page=function(){
 
     var div_style = "style=\"width:" + that.width + "px; height:" + that.height + "px; position:absolute;\"";
-    that.element = $("#draw-target").append( '<div ' + div_style + '></div>' ).find( ':last' );
+    that.element = $("#draw-target").append( '<div id = "' + that.name + '" ' + div_style + '></div>' ).find( ':last' );
 
     that.style = that.element[ 0 ].style;
     

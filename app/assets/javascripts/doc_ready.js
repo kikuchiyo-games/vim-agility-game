@@ -9,6 +9,10 @@ $( document ).ready( function(){
   game.make_rubies();
   kikuchiyo = player( { name:"kikuchiyo", nature:"good", user_controls:true  } );
   kikuchiyo.animate();
+  spear = new Spear();
+  kikuchiyo.spear = spear;
+  kikuchiyo.spear.draw();
+  console.log( 'kikuchiyo.spear = ' + kikuchiyo.spear );
   kikuchiyo.execute_command( "108" );
   capture_kikuchiyo = function(evil_player){
 
@@ -67,10 +71,10 @@ $( document ).ready( function(){
     }
     
     setTimeout(evil_player.capture_kikuchiyo, 60);
-    // if ( typeof( power_ball ) != 'undefined' ){
-    //   setTimeout(power_ball.move, 10);
-    //   setTimeout(kikuchiyo.hit_by_fireball, 60);
-    // }
+    if ( typeof( power_ball ) != 'undefined' ){
+      setTimeout(power_ball.move, 10);
+      setTimeout(kikuchiyo.hit_by_fireball, 60);
+    }
   };
 
   if (!TRAINING) {
@@ -137,7 +141,7 @@ $( document ).ready( function(){
     for (var key in teleport_keys){
       if (key_code == teleport_keys[key] ){ play_sound("teleport_sound"); }
     }
-
+  
     if ( /* TRAINING && USER_NEEDS_A_CHALLENGE && */ !USER_BEING_CHALLENED ){
       
       cs_dogma = player( { name:"cs_dogma",  nature:"evil", user_controls:false } );

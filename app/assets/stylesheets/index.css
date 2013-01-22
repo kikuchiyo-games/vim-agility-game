@@ -1,10 +1,12 @@
 #fb-root {
   color:white;
 }
+
 .fb-like {
   margin-top:-40px; 
   color:white;
 }
+
 #key-description {
   margin-top:30px;
 }
@@ -35,8 +37,12 @@
   color:white !important;
 }
 
+.blood {
+  background-image:url( 'blood_small.png' );
+}
+
 ul.list_container {
-  list-style:none;
+  list-style-image:url( 'blood_small.png' );
 }
 
 ul.inline li, #user_stats li {
