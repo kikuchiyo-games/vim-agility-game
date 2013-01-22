@@ -62,10 +62,11 @@
         </ul>
         <ul>
           <% profile = current_user.profile %>
-          <li>Seniority <%=profile.experience_points %></li>
-          <li>Bravery   <%=profile.bravery_points%></li>
-          <li><%= image_tag 'rubies/ruby.png' %>:    <%=profile.rubies%></li>
-          <li><%= image_tag 'rubies/diamond.png' %>:  <%=profile.diamonds%></li>
+          <li>Wealth <%=profile.experience_points %></li>
+          <li>Bravery <%=profile.bravery_points%></li>
+          <li><%= image_tag 'rubies/ruby.png' %> <%=profile.rubies%></li>
+          <li><%= image_tag 'rubies/diamond.png' %> <%=profile.diamonds%></li>
+          <li><%= image_tag 'blood_small.png' %> <%=profile.kills%></li>
         </ul>
       </div>
     </p>

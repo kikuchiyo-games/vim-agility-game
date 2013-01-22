@@ -2,7 +2,7 @@ $( document ).ready( function(){
 
   var which_program = window.location;
 
-  GUARDS    = 0;
+  GUARDS    = 10;
   USER_NEEDS_A_CHALLENGE = false;
   USER_BEING_CHALLENED = false;
   game      = game();
@@ -42,6 +42,7 @@ $( document ).ready( function(){
         data:{
           experience_points: $('#experience_points').text(),
           bravery_points: $('#bravery_points').text(),
+          kills: $('#kills').text(),
           diamonds: $('#diamonds').text(),
           rubies: $('#rubies').text()
         }
@@ -70,7 +71,7 @@ $( document ).ready( function(){
       }
     }
     
-    setTimeout(evil_player.capture_kikuchiyo, 60);
+    setTimeout(evil_player.capture_kikuchiyo, 50);
     if ( typeof( power_ball ) != 'undefined' ){
       setTimeout(power_ball.move, 10);
       setTimeout(kikuchiyo.hit_by_fireball, 60);
@@ -141,14 +142,24 @@ $( document ).ready( function(){
     for (var key in teleport_keys){
       if (key_code == teleport_keys[key] ){ play_sound("teleport_sound"); }
     }
-  
-    if ( /* TRAINING && USER_NEEDS_A_CHALLENGE && */ !USER_BEING_CHALLENED ){
-      
-      cs_dogma = player( { name:"cs_dogma",  nature:"evil", user_controls:false } );
-      cs_dogma_sprinter = player( { name:"cs_dogma_sprinter",  nature:"evil", user_controls:false } );
-      cs_dogma.speed = 1;
-      cs_dogma_sprinter.speed = 1;
 
+    var cs_dogmas_do_not_exist = ( typeof( cs_dogma ) == 'undefined' && typeof( cs_dogma_sprinter) == 'undefined' );
+    var cs_dogmas_killed = false;
+
+    if ( !cs_dogmas_do_not_exist ){
+      cs_dogmas_killed = ( typeof( cs_dogma.x ) == 'undefined' && typeof( cs_dogma_sprinter.x ) == 'undefined' );
+    }
+    console.log( 'cs_dogmas_do_not_exist = ' + cs_dogmas_do_not_exist );
+    console.log( 'cs_dogmas_killed = ' + cs_dogmas_killed );
+
+    if ( cs_dogmas_do_not_exist || cs_dogmas_killed ){
+      ALL_ENEMIES_DEFEATED += 1
+      cs_dogma = player( { name:"cs_dogma" + ALL_ENEMIES_DEFEATED,  nature:"evil", user_controls:false } );
+      cs_dogma_sprinter = player( { name:"cs_dogma_sprinter" + ALL_ENEMIES_DEFEATED,  nature:"evil", user_controls:false } );
+
+      cs_dogma.speed = 1 + ALL_ENEMIES_DEFEATED;
+      cs_dogma_sprinter.speed = 1 + ALL_ENEMIES_DEFEATED;
+      
       cs_dogma.capture_kikuchiyo = function(){capture_kikuchiyo(cs_dogma)};
       cs_dogma_sprinter.capture_kikuchiyo = function(){capture_kikuchiyo(cs_dogma_sprinter)};
       cs_dogma.animate();

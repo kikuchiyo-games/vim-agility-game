@@ -38,6 +38,7 @@ var player = function( spec ){
   that.points = 0;
   that.diamonds = 0;
   that.bravery_points = 0;
+  that.kills = 0;
   that.command_time = new Date();
 
   that.user_controls = spec.user_controls || false;
@@ -161,7 +162,6 @@ var player = function( spec ){
     }
 
     if ( key_press == '97' ){
-      console.log('key_press = ' + key_press );
       if ( typeof( that.spear ) != 'undefined' ){
         if ( that.spear.x <=  that.x + 145 ){
           that.spear.thrust();
@@ -170,9 +170,7 @@ var player = function( spec ){
     }
 
     if ( key_press == '105' ){
-      console.log( 'key_press = ' + key_press );
       that.got_ruby();
-
     }
 
     var new_animation = that.get_animation( key_press );
@@ -299,10 +297,6 @@ var player = function( spec ){
       } else {
         var x_interception = ( Math.abs(this_ruby.x - that.x - 217 ) < 50 );
         var y_interception = ( Math.abs(this_ruby.y - that.y - 20 ) < 50 );
-        console.log( 'this_ruby.x = ' + this_ruby.x + ', that.x = ' + that.x  );
-        console.log( 'this_ruby.y = ' + this_ruby.y );
-        console.log( 'y_interception = ' + y_interception );
-
       }
 
       if ( x_interception && y_interception ) {

@@ -3,13 +3,18 @@ var Spear = function(){
   var that = $( '#spear' );
 
   that.thrust = function(){
-    that.x += 20;
+    that.x += 5;
     that[ 0 ].style.left = that.x + 'px'; 
+
     var x = Math.random(1);
     var angle = (90 * x);
-    $(that).css("-moz-transform", "rotate(" + angle + "deg)");
-    that.draw( that.x + 5, that.y);
-    console.log( typeof( cs_dogma ) );
+
+    //alert('asdfadsf');
+    if ( BROWSER == 'firefox' ){
+      $( that ).css("-moz-transform", "rotate(" + angle + "deg)");
+    } else { $( that ).css("-webkit-transform", "rotate(" + angle + "deg)"); }
+
+    that.draw( that.x, that.y);
 
     if ( typeof( cs_dogma ) != 'undefined' && kill( cs_dogma ) ){ 
       blood_x = cs_dogma.x;
@@ -21,18 +26,9 @@ var Spear = function(){
       $('#' + name ).css( 'backgroundSize', '50%' );
       $('#' + name ).css( 'width', '90px' );
       $('#' + name ).css( 'height', '20px' );
-      console.log( $('#' + name ) );
-      // $('body').append('<div class = "blood" style = "postion:absolute; top:' + blood_y + ';left;' + blood_x + '"></div>')
+      kikuchiyo.kills += 1;
+      $('#kills').text(kikuchiyo.kills)
     }
-
-    // if ( typeof( guard ) != 'undefined' && kill( guard ) ){ 
-    //   blood_x = guard.x;
-    //   blood_y = guard.y;
-    //   guard = null;
-    //   delete guard;
-    //   $('body').append('<div class = "blood" style = "postion:absolute; top:' + blood_y + ';left;' + blood_x + '"></div>')
-
-    // }
 
     if ( typeof( cs_dogma_sprinter ) != 'undefined' && kill( cs_dogma_sprinter  ) ){
       blood_x = cs_dogma_sprinter.x;
@@ -44,8 +40,6 @@ var Spear = function(){
       $('#' + name ).css( 'backgroundSize', '50%' );
       $('#' + name ).css( 'width', '90px' );
       $('#' + name ).css( 'height', '20px' );
-      console.log( $('#' + name ) );
-      //$('body').append('<div class = "blood" style = "postion:absolute; top:' + blood_y + ';left;' + blood_x + '"></div>')
     }
   }
 
@@ -54,7 +48,7 @@ var Spear = function(){
     // console.log(  'cs_dogma.x = ' + enemy.x + ', cs_dogma.y = ' + enemy.y );
     // console.log(  'that.x = ' + that.x + ', that.y = ' + that.y );
     
-    var x_intercept = ( Math.abs( that.x - enemy.x -150 ) < 50 );
+    var x_intercept = ( Math.abs( that.x - enemy.x - 150 ) < 50 );
     var y_intercept = ( Math.abs( that.y - enemy.y ) < 50 );
     // console.log( 'x_intercept = ' + x_intercept );
     // console.log( 'y_intercept = ' + y_intercept );

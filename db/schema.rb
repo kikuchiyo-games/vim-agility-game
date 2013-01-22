@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130120173632) do
+ActiveRecord::Schema.define(:version => 20130122052327) do
 
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130120173632) do
     t.float    "experience_points"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "kills",             :default => 0
   end
 
   create_table "users", :force => true do |t|
