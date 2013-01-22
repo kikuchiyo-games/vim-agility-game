@@ -1,9 +1,9 @@
 <%= render :partial => 'shared/facebook' %>
-<div class = 'span-24 push-1'>
+<div class = 'span-30 push-1'>
   <ul class = 'list_container'>
     <li class = 'span-24'>
       <ul class = 'inline'>
-        <li class = 'span-3'> name </li>
+        <li class = 'span-5'> name </li>
         <li class = 'span-3'> Lead </li>
         <li class = 'span-3'> Nuts </li>
         <li class = 'span-3'> Bling</li>
@@ -16,7 +16,7 @@
       <% user = User.find( profile.user_id ) %>
       <li class = 'span-24'>
         <ul class = 'inline'>
-          <li class = 'span-3'> <%= user.email%> </li>
+          <li class = 'span-5'> <%= user.email%> </li>
           <li class = 'span-3'> <%= profile.experience_points %></li>
           <li class = 'span-3'> <%= profile.bravery_points %></li>
           <li class = 'span-3'> <%= profile.diamonds %></li>
