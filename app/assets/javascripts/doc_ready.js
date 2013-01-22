@@ -12,7 +12,6 @@ $( document ).ready( function(){
   spear = new Spear();
   kikuchiyo.spear = spear;
   kikuchiyo.spear.draw();
-  console.log( 'kikuchiyo.spear = ' + kikuchiyo.spear );
   kikuchiyo.execute_command( "108" );
   capture_kikuchiyo = function(evil_player){
 
@@ -149,8 +148,6 @@ $( document ).ready( function(){
     if ( !cs_dogmas_do_not_exist ){
       cs_dogmas_killed = ( typeof( cs_dogma.x ) == 'undefined' && typeof( cs_dogma_sprinter.x ) == 'undefined' );
     }
-    console.log( 'cs_dogmas_do_not_exist = ' + cs_dogmas_do_not_exist );
-    console.log( 'cs_dogmas_killed = ' + cs_dogmas_killed );
 
     if ( cs_dogmas_do_not_exist || cs_dogmas_killed ){
       ALL_ENEMIES_DEFEATED += 1

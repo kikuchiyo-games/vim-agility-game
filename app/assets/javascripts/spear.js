@@ -10,7 +10,7 @@ var Spear = function(){
     var angle = (90 * x);
 
     //alert('asdfadsf');
-    if ( BROWSER == 'firefox' ){
+    if ( BROWSER == 'fire_fox' ){
       $( that ).css("-moz-transform", "rotate(" + angle + "deg)");
     } else { $( that ).css("-webkit-transform", "rotate(" + angle + "deg)"); }
 
