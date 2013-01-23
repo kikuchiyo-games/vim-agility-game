@@ -16,9 +16,9 @@ var movement = function(speed, distance){
       '72': { x: -1, y:0, z:'teleport' },
       '48': { x:0 , y:-1, z:'teleport' },
 
-      '76': { x: -1, y:window.innerHeight - 100, z:'teleport' },
+      '76': { x:-1,  y:window.innerHeight - 100, z:'teleport' },
       '77': { x:-1,  y:window.innerHeight/2,     z:'teleport' },
-      '52': { x: window.innerWidth - 100, y:-1,  z:'teleport' }
+      '52': { x: window.innerWidth - 1, y:-1,  z:'teleport' }
     }
   };
 };

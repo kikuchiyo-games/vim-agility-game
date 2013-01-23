@@ -13,6 +13,7 @@ $( document ).ready( function(){
   kikuchiyo.spear = spear;
   kikuchiyo.spear.draw();
   kikuchiyo.execute_command( "108" );
+
   capture_kikuchiyo = function(evil_player){
 
     if (GAME_OVER){ return }; 
@@ -79,14 +80,24 @@ $( document ).ready( function(){
 
   if (!TRAINING) {
 
-    cs_dogma = player( { name:"cs_dogma",  nature:"evil", user_controls:false } );
-    cs_dogma_sprinter = player( { name:"cs_dogma_sprinter",  nature:"evil", user_controls:false } );
+    cs_dogma = player( { 
+      name:"cs_dogma",  
+      nature:"evil", 
+      user_controls:false 
+    } );
+
+    cs_dogma_sprinter = player( { 
+      name:"cs_dogma_sprinter",  
+      nature:"evil", 
+      user_controls:false 
+    } );
+
     cs_dogma.speed = 5;
     cs_dogma_sprinter.speed = 7;
 
-
     cs_dogma.capture_kikuchiyo = function(){capture_kikuchiyo(cs_dogma)};
     cs_dogma_sprinter.capture_kikuchiyo = function(){capture_kikuchiyo(cs_dogma_sprinter)};
+
     cs_dogma.animate();
     cs_dogma_sprinter.animate();
     cs_dogma.execute_command( "76" );

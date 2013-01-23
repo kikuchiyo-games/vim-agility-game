@@ -3,7 +3,7 @@ var Spear = function(){
   var that = $( '#spear' );
 
   that.thrust = function(){
-    that.x += 5;
+    //that.x += 5;
     that[ 0 ].style.left = that.x + 'px'; 
 
     var x = Math.random(1);
@@ -45,25 +45,59 @@ var Spear = function(){
 
   kill = function( enemy ){
     if ( typeof( enemy ) == 'undefined' ){ return false }
+
     // console.log(  'cs_dogma.x = ' + enemy.x + ', cs_dogma.y = ' + enemy.y );
     // console.log(  'that.x = ' + that.x + ', that.y = ' + that.y );
-    
-    var x_intercept = ( Math.abs( that.x - enemy.x - 150 ) < 50 );
-    var y_intercept = ( Math.abs( that.y - enemy.y ) < 50 );
+    // var x_intercept = ( Math.abs( that.x - enemy.x - 82 ) < 10 );
+    // var y_intercept = ( Math.abs( that.y - enemy.y - 80) < 50 );
     // console.log( 'x_intercept = ' + x_intercept );
     // console.log( 'y_intercept = ' + y_intercept );
-    
-    if ( !( x_intercept && y_intercept ) ){ return false }
-    return true;
 
+    var kl = $( '#spear' ).offset().left;
+    var kt = $( '#spear' ).offset().top;
+    var matl = $( '#' + enemy.name ).offset().left;
+    var matt = $( '#' + enemy.name  ).offset().top;
+
+    var kb = $( '#spear' ).height() + kt;
+    var matb = $( '#' + enemy.name  ).height() + matt;
+
+    var kr = $( '#spear' ).width() + kl;
+    var matr = $( '#' + enemy.name  ).width() + matl;
+
+    var a =  ( kr < matl );
+    var b =  ( kl > matr );
+    var c =  ( kt > matt + 40 );
+    var d =  ( kb < matb + 40 );
+
+    //console.log( 'kl = ' + kl + ' matl' + b + ' ' + c + ' ' + d );
+
+    if ( kr < matl ){
+      // console.log( 'spear too far left' );
+      return false;
+    } else if ( kl > matr ){ 
+      // console.log( 'kikuchiyo too far right' );
+      return false;
+    } else if ( kt > matt ){ 
+      // console.log( 'spear too high' );
+      return false;
+    } else if ( kb < matb - 50 ){ 
+      // console.log( 'spear too low' );
+      return false;
+    } else { 
+      // console.log( 'collision!' );
+      return true; 
+    }
+ 
+    // if ( !( x_intercept && y_intercept ) ){ return false }
+    // return true;
   };
 
   that.x = null;
   that.y = null;
 
   that.draw = function(){
-    that.x = kikuchiyo.x + 145;
-    that.y = kikuchiyo.y - 15;
+    that.x = kikuchiyo.x + 140;
+    that.y = kikuchiyo.y + 180;
     that[ 0 ].style.left = that.x + 'px'; 
     that[ 0 ].style.top = that.y + 'px'; 
   }; 

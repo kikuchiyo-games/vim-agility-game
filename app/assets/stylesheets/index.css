@@ -437,4 +437,8 @@ h3 { margin-left:0px; margin-bottom:0px; }
   margin-right:-10px; 
   padding-left:0px; 
   margin-left:0px;
+  margin-top:100px;
+  width:1000px !important;
+  height:400px !important;
+  border:5px solid blue;
 }

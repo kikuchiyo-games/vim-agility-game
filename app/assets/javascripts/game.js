@@ -27,8 +27,8 @@ var game = function( spec ){
 
       page_rubies[ r ] = Rubies( r, ruby_image );
       page_rubies[ r ].draw(
-        Math.floor( Math.random() * ( window.innerWidth - 100 ) ),
-        Math.floor( Math.random() * ( window.innerHeight - 100 ) )
+        Math.floor( Math.random() * ( window.innerWidth - 200 ) + 100 ),
+        Math.floor( Math.random() * ( window.innerHeight - 200 ) + 100 )
       );
       $( "#ruby" + r ).append( "<p>" + /* r + */ "</p>" );
     }

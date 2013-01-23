@@ -131,6 +131,7 @@ var player = function( spec ){
 
     var new_movement = that.get_movement(key_press); 
 
+
     if (new_movement.z == 'teleport') {
 
       if ( new_movement.x != -1 ) { that.x = new_movement.x }
@@ -138,11 +139,46 @@ var player = function( spec ){
 
     } else {
 
-      if ( -200 <= ( x + new_movement.x ) && ( x + new_movement.x ) <=  window.innerWidth  ) { 
+      var kl = $( '#' + that.name ).offset().left;
+      var kt = $( '#' + that.name ).offset().top;
+      var matl = $( '#draw-target'  ).offset().left;
+      var matt = $( '#draw-target'  ).offset().top;
+
+      var kb = $( '#' + that.name ).height() + kt;
+      var matb = $( '#draw-target'  ).height() + matt;
+
+      var kr = $( '#' + that.name ).width() + kl;
+      var matr = $( '#draw-target'  ).width() + matl;
+
+      if ( kl < matl ){
+        that.x += 10;
+        return;
+      } else if ( kt < matt ){
+        that.y += 10;
+        return;
+      } else if ( kb > matb ){
+        that.y -= 10;
+        return;
+      } else if ( kr > matr ){
+        that.x -= 10;
+        return;
+      }
+
+      that.y += new_movement.y 
+      that.x += new_movement.x 
+      return;
+
+      if ( that.name.match( /cs_dogma/ ) ){
+        that.y += new_movement.y 
+        that.x += new_movement.x 
+        return;
+      }
+
+      if ( -100 <= ( x + new_movement.x ) && ( x + new_movement.x ) <=  window.innerWidth -200 ) { 
         that.x += new_movement.x 
       }
 
-      if ( -200 <= ( y + new_movement.y ) && ( y + new_movement.y ) <=  window.innerHeight ) { 
+      if ( -75 <= ( y + new_movement.y ) && ( y + new_movement.y ) <=  window.innerHeight - 200 ) { 
         that.y += new_movement.y 
       }
 
@@ -295,8 +331,9 @@ var player = function( spec ){
         var y_interception = ( Math.abs(this_ruby.y - that.y ) == 0 );
 
       } else {
-        var x_interception = ( Math.abs(this_ruby.x - that.x - 217 ) < 50 );
-        var y_interception = ( Math.abs(this_ruby.y - that.y - 20 ) < 50 );
+        // alert( this_ruby.y - that.y - 207);
+        var x_interception = ( Math.abs(this_ruby.x - that.x - 155 ) < 30 );
+        var y_interception = ( Math.abs(this_ruby.y - that.y - 207  ) < 30 );
       }
 
       if ( x_interception && y_interception ) {
@@ -313,5 +350,6 @@ var player = function( spec ){
       }
     }
   };
+
   return that;
 };
