@@ -6,15 +6,57 @@
   </h3>
 </div>
 <div id = 'dojo' class = 'push-1 span-22'>
-  <div class = 'text push-7 span-24' id = 'key-description'>
+  <div class = 'push-7 span-24' id = 'key-description'>
     <div class = 'span-10'>
       <hr class = 'pull-1 span-10'>
     </div>
-    <div class = 'span-24' id = 'letter-container'>
-      <%= image_tag 'letter-h-icon.png' , :class => 'span-2 key', :title => 'Side step left' %>
-      <%= image_tag 'letter-j-icon.png' , :class => 'span-2 key', :title => 'Side step down' %>
-      <%= image_tag 'letter-k-icon.png' , :class => 'span-2 key', :title => 'Side step up' %>
-      <%= image_tag 'letter-l-icon.png' , :class => 'span-2 key', :title => 'Side step right' %>
+    <div class = 'pull-20 span-9' id = 'letter-container'>
+
+      <div class = 'span-8' id = 'side-stepping-container'>
+        <p class = 'span-3'> side-stepping </p>
+        <%= image_tag 'h.png' , :class => 'span-1 key', :title => 'right' %>
+        <%= image_tag 'j.png' , :class => 'span-1 key', :title => 'down' %>
+        <%= image_tag 'k.png' , :class => 'span-1 key', :title => 'up' %>
+        <%= image_tag 'l.png' , :class => 'span-1 key', :title => 'left' %>
+      </div>
+
+      <div class = 'span-8' id = 'lunging-container'>
+        <p class = 'span-3'> lunging </p>
+        <%= image_tag 'w.png' ,     :class => 'span-1 key', :title => 'right' %>
+        <%= image_tag 'o.png' ,     :class => 'span-1 key', :title => 'down' %>
+        <%= image_tag 'big_o.png' , :class => 'span-1 key', :title => 'up' %>
+        <%= image_tag 'b.png' ,     :class => 'span-1 key', :title => 'left' %>
+      </div>
+
+
+      <div class = 'span-8' id = 'teleporting-container'>
+        <p class = 'span-3'> teleporting </p>
+        <%= image_tag '0.png' , :class => 'span-1 key', :title => 'left' %>
+        <%= image_tag 'big_l.png' , :class => 'span-1 key', :title => 'up' %>
+        <%= image_tag 'big_h.png' , :class => 'span-1 key', :title => 'down' %>
+        <%= image_tag 'dollar.png' , :class => 'span-1 key', :title => 'right' %>
+      </div>
+
+      <div class = 'span-8' id = 'short-attack-container'>
+        <p class = 'span-3'> short attacks </p>
+        <%= image_tag 'x.png' , :class => 'span-1 key', :title => 'terminate nearby enemies' %>
+        <p class = 'span-1'> &nbsp; </p>
+        <p class = 'span-1'> &nbsp; </p>
+        <p class = 'span-1'> &nbsp; </p>
+      </div>
+
+      <div class = 'span-8' id = 'long-attack-container'>
+        <p class = 'span-3'> long attacks </p>
+      </div>
+
+      <div class = 'span-8' id = 'basic-magic-container'>
+        <p class = 'span-3'> basic magic </p>
+      </div>
+
+      <div class = 'span-8' id = 'advanced-magic-container'>
+        <p class = 'span-4'> advanced magic </p>
+      </div>
+
     </div>
   </div>
 
@@ -29,7 +71,6 @@
   <div class = 'span-3'>
     <p class = 'span-3'> 
       <%= link_to image_tag( 'curtain.png', :class => 'span-2 clickable', :title => 'Travel Outside'), game_index_path %>
-      <%= image_tag 'letter-a-icon.png' , :class => 'span-2 key', :title => 'Will attack right', :id => 'a-key' %>
     </p>
   </div>
   <div class = 'span-3'>
@@ -41,7 +82,6 @@
   <div class = 'span-3'>
     <p class = 'span-3'> 
       <%= link_to image_tag( 'guide.png', :class => 'span-2 clickable', :title => 'Leaderboard' ), leaderboard_path %> 
- 
     </p>
   </div>
 
@@ -89,3 +129,4 @@
 <%= render :partial => 'shared/chase_music' %>
 <%= javascript_include_tag "jquery-1.7.1.min" %>
 <%= render :partial => 'shared/profile_stats' %>
+<%= render :partial => 'shared/facebook' %>

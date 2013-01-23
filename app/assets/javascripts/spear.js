@@ -1,5 +1,5 @@
 var Spear = function(){
-  $( "body" ).append( "<div id=\"spear\">&nbsp;</div>" );
+  $( "#draw-target" ).append( "<div id=\"spear\">&nbsp;</div>" );
   var that = $( '#spear' );
 
   that.thrust = function(){
@@ -40,6 +40,9 @@ var Spear = function(){
       $('#' + name ).css( 'backgroundSize', '50%' );
       $('#' + name ).css( 'width', '90px' );
       $('#' + name ).css( 'height', '20px' );
+      kikuchiyo.kills += 1;
+      $('#kills').text(kikuchiyo.kills)
+
     }
   }
 
@@ -96,8 +99,8 @@ var Spear = function(){
   that.y = null;
 
   that.draw = function(){
-    that.x = kikuchiyo.x + 140;
-    that.y = kikuchiyo.y + 90;
+    that.x = kikuchiyo.x - 10;// + 140;
+    that.y = kikuchiyo.y - 15;// + 90;
     that[ 0 ].style.left = that.x + 'px'; 
     that[ 0 ].style.top = that.y + 'px'; 
   }; 

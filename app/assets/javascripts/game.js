@@ -25,10 +25,14 @@ var game = function( spec ){
 
       } else { var ruby_image = "/images/rubies/diamond.png" }
 
+      var width = $('#draw-target').width();
+      var height = $('#draw-target').height();
+      //alert( width );
+      //alert( height );
       page_rubies[ r ] = Rubies( r, ruby_image );
       page_rubies[ r ].draw(
-        Math.floor( Math.random() * ( window.innerWidth - 200 ) + 100 ),
-        Math.floor( Math.random() * ( window.innerHeight - 200 ) + 100 )
+        Math.floor( Math.max( $('#draw-target').position().left, Math.random(1) * width  ) ),
+        Math.floor( Math.max( $('#draw-target').position().top + 100, Math.random(1) * height ) )
       );
       $( "#ruby" + r ).append( "<p>" + /* r + */ "</p>" );
     }

@@ -197,7 +197,7 @@ var player = function( spec ){
       return true 
     }
 
-    if ( key_press == '97' ){
+    if ( key_press == '120' ){
       if ( typeof( that.spear ) != 'undefined' ){
         if ( that.spear.x <=  that.x + 145 ){
           that.spear.thrust();
@@ -241,6 +241,7 @@ var player = function( spec ){
       width:that.width, 
       height:that.height, 
       height:that.height, 
+      position:'absolute',
       backgroundImage: 'url(' + that.sheet + ')' 
     });
 

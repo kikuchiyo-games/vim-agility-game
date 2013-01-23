@@ -1,7 +1,6 @@
 <div id = 'create-account' class = 'push-5 span-5'>
   <%= image_tag 'createNewAccount.png', :class => 'push-0-2-5' %>
   <%= link_to '  Create an Account!', new_users_path, :class => 'push-1' %>
-  <%= render :partial => 'shared/facebook' %>
 </div>
 
 <%= form_tag session_path, :class => 'gradiant-green-black span-24' do %>
@@ -26,3 +25,4 @@
   <% end %>
 <% end %>
 <%= render :partial => 'shared/theme_music' %>
+<%= render :partial => 'shared/facebook' %>

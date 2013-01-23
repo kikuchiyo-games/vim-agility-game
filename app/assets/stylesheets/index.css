@@ -12,7 +12,7 @@
 }
 
 .fb-like {
-  margin-top:-40px; 
+  margin-top:0px; 
   color:white;
 }
 
@@ -113,10 +113,30 @@ ul.inline li, #user_stats li {
 p {  text-shadow: black 0.1em 0.1em 0.2em !important; }
 #user-navigation-container {height:90px !important; /*position:absolute;*/}
 #user-navigation-container h3 {color:white !important;}
-#welcome-text {padding-left:230px; font-size: 30px; margin-top:-50px; /*position:absolute;*/ font-family: Brush Script MT; color:white !important; }
-#header-bottom{ margin-top:-40px !important;}
+
+#welcome-text {
+  padding-left:230px; 
+  font-size: 30px; 
+  margin-top:0px; 
+  position:absolute; 
+  font-family: Brush Script MT; 
+  color:white !important; 
+}
+
+#score-board {
+  color:white;
+}
+
+#lesson{
+  position:absolute;
+  top:20px;
+}
+
+#header-bottom{ 
+  margin-top:-40px !important;
+}
 #fotter { margin-top:-90px !important;}
-.key { cursor:pointer !important; border: green 1px solid; min-height:100px; max-width:90px; background-color:white;}
+.key { cursor:pointer !important; border: green 1px solid; background-color:white;}
 
 .hide {
   display:none;
@@ -180,7 +200,7 @@ div.even, div.odd {background-color:black;}
 #notice {color:red;}
 
 #create-account, #log-in, #sign-up {
-  color:#0066CC !important; border-bottom:0px; padding-bottom:0px; top: -50px;
+  color:#0066CC !important; border-bottom:0px; padding-bottom:0px; top: 20px;
 }
 
 label {color:#0066CC !important;}
@@ -231,6 +251,8 @@ body {
 }
 
 #header-container { 
+  position:absolute;
+  top:0;
   height:30px; 
   background-image:url('kikuchiyos_way_header.png'); 
   background-repeat:no-repeat;
@@ -440,5 +462,9 @@ h3 { margin-left:0px; margin-bottom:0px; }
   margin-top:100px;
   width:1000px !important;
   height:400px !important;
-  border:5px solid blue;
+  border:2px solid blue;
+  -moz-border-image:url(/assets/bamboo.png) 30 30 round; /* Old Firefox */
+  -webkit-border-image:url(/assets/bamboo.png) 30 30 round; /* Safari */
+  -o-border-image:url(/assets/bamboo.png) 30 30 round; /* Opera */
+  border-image:url(/assets/bamboo.png) 30 30 round;
 }
