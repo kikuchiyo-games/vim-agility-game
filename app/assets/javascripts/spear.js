@@ -97,7 +97,7 @@ var Spear = function(){
 
   that.draw = function(){
     that.x = kikuchiyo.x + 140;
-    that.y = kikuchiyo.y + 180;
+    that.y = kikuchiyo.y + 90;
     that[ 0 ].style.left = that.x + 'px'; 
     that[ 0 ].style.top = that.y + 'px'; 
   }; 
