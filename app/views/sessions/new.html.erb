@@ -1,3 +1,4 @@
+
 <div id = 'create-account' class = 'push-5 span-5'>
   <%= image_tag 'createNewAccount.png', :class => 'push-0-2-5' %>
   <%= link_to '  Create an Account!', new_users_path, :class => 'push-1' %>
@@ -18,11 +19,18 @@
     <%= submit_tag 'login', :class => 'push-2' %>
   </p>
   <hr>
+
   <% if !flash[:notice].blank? %>
     <p id = 'notice' style = 'color:red; font-weight:bold;' class = 'span-10 push-8'>
       <%= flash[:notice] %>
     </p>
   <% end %>
+
 <% end %>
+
 <%= render :partial => 'shared/theme_music' %>
+
+<p id = 'intro'>  
+  Help Kikuchiyo evade his captors and join ranks with the agile revolutionaries in this Vim game to improve basic movement skills.
+</p>
 <%= render :partial => 'shared/facebook' %>
