@@ -30,7 +30,7 @@ function set_by_date() {
 
 // Set by date/time offset
 function set_by_offset() {
-  alert("Pres 'i' to pick up the rubies.  Go!");
+  //alert("Pres 'i' to pick up the rubies.  Go!");
 
   var minutes = 5;
   var seconds = 0;

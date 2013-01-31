@@ -40,6 +40,10 @@ body {
   text-shadow: black 0.1em 0.1em 0.2em !important;
 }
 
+ul.list_container li.white ul.inline li{
+  color:#FFCC33 !important;
+}
+
 #map-header h2 {
   color:white;
   font-family: Brush Script MT;
@@ -67,7 +71,7 @@ ul.list_container {
 ul.inline li, #user_stats li {
   display:inline;
   padding-right:10px; 
-  color:white;
+  color:#CCFF00;
 }
 
 #user_stats {

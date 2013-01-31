@@ -1,7 +1,8 @@
-<%= render :partial => 'shared/facebook' %>
+<br />
+<br />
 <div class = 'span-30 push-1'>
   <ul class = 'list_container'>
-    <li class = 'span-24'>
+    <li class = 'span-24 white'>
       <ul class = 'inline'>
         <li class = 'span-5'> name </li>
         <li class = 'span-3'> Lead </li>
@@ -11,14 +12,14 @@
         <li class = 'span-3'> Kills</li>
       </ul>
     </li>
-
+    <hr class = 'span-24'>
     <% @profiles.each do |profile| %>
       <% user = User.find( profile.user_id ) %>
       <li class = 'span-24'>
         <ul class = 'inline'>
           <li class = 'span-5'> <%= user.email%> </li>
-          <li class = 'span-3'> <%= profile.experience_points %></li>
-          <li class = 'span-3'> <%= profile.bravery_points %></li>
+          <li class = 'span-3'> <%= profile.experience_points.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse %></li>
+          <li class = 'span-3'> <%= profile.bravery_points.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse %></li>
           <li class = 'span-3'> <%= profile.diamonds %></li>
           <li class = 'span-3'> <%= profile.rubies %></li>
           <li class = 'span-3'> <%= profile.kills %></li>
@@ -27,3 +28,4 @@
     <% end %>
   </ul>
 </div>
+<%= render :partial => 'shared/facebook' %>

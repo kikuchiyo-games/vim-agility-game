@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   before_filter :authorize, :only => :show
 
   def index
-    @profiles = Profile.all.sort_by &:experience_points
+    # @profiles = Profile.all.sort_by &:experience_points,
+    @profiles = Profile.all.sort_by{ |record| -record.experience_points }
   end
 
   def new
