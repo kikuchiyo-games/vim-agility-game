@@ -32,7 +32,7 @@ var game = function( spec ){
       page_rubies[ r ] = Rubies( r, ruby_image );
       page_rubies[ r ].draw(
         Math.floor( Math.max( $('#draw-target').position().left, Math.random(1) * width  ) ),
-        Math.floor( Math.max( $('#draw-target').position().top + 100, Math.random(1) * height ) )
+        Math.floor( Math.max( $('#draw-target').position().top + 200, Math.random(1) * height ) )
       );
       $( "#ruby" + r ).append( "<p>" + /* r + */ "</p>" );
     }

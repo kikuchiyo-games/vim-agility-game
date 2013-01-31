@@ -332,9 +332,10 @@ var player = function( spec ){
         var y_interception = ( Math.abs(this_ruby.y - that.y ) == 0 );
 
       } else {
+        // alert( this_ruby.x - that.x - parseInt( $('#draw-target').css('left') ) );
         // alert( this_ruby.y - that.y - 207);
-        var x_interception = ( Math.abs(this_ruby.x - that.x - 155 ) < 30 );
-        var y_interception = ( Math.abs(this_ruby.y - that.y - 107  ) < 30 );
+        var x_interception = ( Math.abs(this_ruby.x - that.x - 70   ) < 50 );
+        var y_interception = ( Math.abs(this_ruby.y - that.y - 207  ) < 30 );
       }
 
       if ( x_interception && y_interception ) {

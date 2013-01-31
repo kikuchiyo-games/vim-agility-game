@@ -5,7 +5,7 @@ var Spear = function(){
   that.thrust = function(){
     //that.x += 5;
     that[ 0 ].style.left = that.x + 'px'; 
-
+    play_sound( 'spear-swing' );
     var x = Math.random(1);
     var angle = (90 * x);
 
@@ -88,6 +88,7 @@ var Spear = function(){
       return false;
     } else { 
       // console.log( 'collision!' );
+      play_sound( 'blood-splat' );
       return true; 
     }
  

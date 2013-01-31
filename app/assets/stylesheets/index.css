@@ -1,4 +1,14 @@
 
+html {
+  background:url(prison.jpg) !important;
+  background-size:100% 60% !important;
+  background-position:bottom left !important;
+}
+
+body {
+  /*background:url(night_grass.jpg) !important;*/
+}
+
 #a-key {
   margin-top:-200px;
   margin-left:400px;
@@ -450,21 +460,27 @@ h3 { margin-left:0px; margin-bottom:0px; }
 
 #partial-container div {
   padding-top:1%;
-  padding-left:1%;
+  /*padding-left:1%; */
   margin-top:16px;
 }
 
+canvas {
+  background:url(/assets/wood_floor.jpg) !important;
+  background-size:95% !important;
+  background-position:center !important;
+}
+
 #draw-target { 
+  postition:absolute;
+  left:0;
   padding-right:-10px; 
-  margin-right:-10px; 
+  margin-right:-100px; 
   padding-left:0px; 
-  margin-left:0px;
-  margin-top:100px;
-  width:1000px !important;
-  height:400px !important;
-  border:2px solid blue;
-  -moz-border-image:url(/assets/bamboo.png) 30 30 round; /* Old Firefox */
-  -webkit-border-image:url(/assets/bamboo.png) 30 30 round; /* Safari */
-  -o-border-image:url(/assets/bamboo.png) 30 30 round; /* Opera */
-  border-image:url(/assets/bamboo.png) 30 30 round;
+  margin-left:-100px;
+  margin-top:200px;
+  width:120% !important;
+  height:190px !important;
+  background:url(/assets/wood_floor.jpg) !important;
+  background-size:95% !important;
+  background-position:center !important;
 }
