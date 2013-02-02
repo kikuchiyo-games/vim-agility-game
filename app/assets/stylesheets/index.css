@@ -490,7 +490,8 @@ canvas {
   margin-left:-100px;
   margin-top:200px;
   width:120% !important;
-  height:190px !important;
+  /*height:190px !important;*/
+  height:100%;
   background:url(/assets/wood_floor.jpg) !important;
   background-size:95% !important;
   background-position:center !important;
