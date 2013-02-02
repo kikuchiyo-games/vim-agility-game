@@ -34,7 +34,7 @@ var game = function( spec ){
         Math.floor( Math.max( $('#draw-target').position().left, Math.random(1) * width  ) ),
         Math.floor( Math.max( $('#draw-target').position().top + 200, Math.random(1) * height ) )
       );
-      $( "#ruby" + r ).append( "<p>" + /* r + */ "</p>" );
+      $( "#ruby" + r ).append( "<p class = 'ruby'>" + /* r + */ "</p>" );
     }
   };
 

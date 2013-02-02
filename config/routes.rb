@@ -3,6 +3,7 @@ KikuchiyosWay::Application.routes.draw do
   #get "sessions/new"
   match "game/ruby_chase" => 'game#ruby_chase'
   match "profiles/update.json" => 'profiles#update'
+  resource :assets
   resource :profiles
   resource :session
   resource :users

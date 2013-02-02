@@ -320,6 +320,28 @@ var player = function( spec ){
     power_ball.draw( 0, that.y );
   }
 
+  that.offset_x = function( this_ruby ){
+    var floor_left = $( '#draw-target' ).position().left;
+    var floor_margin_left = $( '#draw-target' ).css( 'margin-left' );
+    var floor_offset = parseInt( floor_left ) + parseInt( floor_margin_left );
+    var kikuchiyo_offset = parseInt( $( '#kikuchiyo' ).width() ) - 
+      parseInt( $( this_ruby ).width() ); 
+    var x_offset = floor_offset - kikuchiyo_offset;
+    return x_offset;
+  },
+
+  that.offset_y = function( this_ruby ){
+    var floor_top = $( '#draw-target' ).position().top;
+    var floor_margin_top = $( '#draw-target' ).css( 'margin-top' );
+    var floor_offset = parseInt( floor_top ) + parseInt( floor_margin_top );
+    var kikuchiyo_offset = parseInt( $( '#kikuchiyo' ).height() ) - 
+      parseInt( $( this_ruby ).height() ) - 
+      parseInt( $( '#header-container').height() )
+    ; 
+    var y_offset = floor_offset - kikuchiyo_offset;
+    return y_offset;
+  },
+
   that.got_ruby = function(){
     for ( r in page_rubies ){
 
@@ -332,10 +354,14 @@ var player = function( spec ){
         var y_interception = ( Math.abs(this_ruby.y - that.y ) == 0 );
 
       } else {
-        // alert( this_ruby.x - that.x - parseInt( $('#draw-target').css('left') ) );
-        // alert( this_ruby.y - that.y - 207);
-        var x_interception = ( Math.abs(this_ruby.x - that.x - 70   ) < 50 );
-        var y_interception = ( Math.abs(this_ruby.y - that.y - 207  ) < 30 );
+
+        var x_interception = ( 
+          Math.abs(this_ruby.x - that.x - that.offset_x(this_ruby) ) < 50 
+        );
+
+        var y_interception = ( 
+          Math.abs(this_ruby.y - that.y - that.offset_y(this_ruby)  ) < 30 
+        );
       }
 
       if ( x_interception && y_interception ) {
