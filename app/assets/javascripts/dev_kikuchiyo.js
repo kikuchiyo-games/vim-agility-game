@@ -360,7 +360,7 @@ var player = function( spec ){
         );
 
         var y_interception = ( 
-          Math.abs(this_ruby.y - that.y - that.offset_y(this_ruby)  ) < 30 
+          Math.abs(this_ruby.y - that.y - that.offset_y(this_ruby)  ) < 50 
         );
       }
 
