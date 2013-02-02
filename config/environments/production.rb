@@ -1,4 +1,4 @@
-if ENV['NO_COMPILED_ASSETS']
+# if ENV['NO_COMPILED_ASSETS']
   KikuchiyosWay::Application.configure do
     # Settings specified here will take precedence over those in config/application.rb
   
@@ -65,18 +65,18 @@ if ENV['NO_COMPILED_ASSETS']
     # Send deprecation notices to registered listeners
     config.active_support.deprecation = :notify
   end
-else
-  KikuchiyosWay::Application.configure do
-    config.assets.compress = false
-    config.assets.debug = true
-    config.cache_classes = true
-    config.assets.enabled = true
-    config.consider_all_requests_local       = false
-    config.action_controller.perform_caching = true
-    config.serve_static_assets = false
-    config.assets.compress = true
-    config.assets.compile = true
-    config.i18n.fallbacks = true
-    config.active_support.deprecation = :notify
-  end
-end
+# else
+#   KikuchiyosWay::Application.configure do
+#     config.assets.compress = false
+#     config.assets.debug = true
+#     config.cache_classes = true
+#     config.assets.enabled = true
+#     config.consider_all_requests_local       = false
+#     config.action_controller.perform_caching = true
+#     config.serve_static_assets = false
+#     config.assets.compress = true
+#     config.assets.compile = true
+#     config.i18n.fallbacks = true
+#     config.active_support.deprecation = :notify
+#   end
+# end
