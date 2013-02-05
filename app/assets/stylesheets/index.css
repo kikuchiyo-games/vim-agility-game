@@ -10,6 +10,7 @@ html {
   background:url(prison.jpg) !important;
   background-size:100% 60% !important;
   background-position:bottom left !important;
+  width:100%;
 }
 
 body {
@@ -22,6 +23,89 @@ body {
   background:url('/assets/blood.png');
   background-size:100%;
   border:none;
+}
+
+#side-stepping-container {
+  border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+  margin-bottom:10px;
+  height:30px;
+  background:white;
+  background: -webkit-gradient(linear, left center, right center, from(white), to(rgba(0,0,0,0)));
+  background: -moz-linear-gradient(left, white, rgba(0,0,0,0) );
+}
+
+#lunging-container{
+  border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+  margin-bottom:10px;
+  height:30px;
+  background:yellow;
+  background: -webkit-gradient(linear, left center, right center, from(yellow), to(rgba(0,0,0,0)));
+  background: -moz-linear-gradient(left, yellow, rgba(0,0,0,0) );
+  /*background: -webkit-linear-gradient(yellow, white);
+  background: -moz-linear-gradient(yellow, white);
+  background: -ms-linear-gradient(yellow, white);
+  background: -o-linear-gradient(yellow, white);
+  background: linear-gradient(yellow, white);
+  -pie-background: linear-gradient(yellow, white);*/
+
+}
+
+#short-attack-container{
+  border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+  margin-bottom:10px;
+  height:30px;
+  background:green;
+  background: -webkit-gradient(linear, left center, right center, from(green), to(rgba(0,0,0,0)));
+  background: -moz-linear-gradient(left, green, rgba(0,0,0,0) );
+  /*background: -webkit-linear-gradient(orange, white);
+  background: -moz-linear-gradient(orange, white);
+  background: -ms-linear-gradient(orange, white);
+  background: -o-linear-gradient(orange, white);
+  background: linear-gradient(orange, white);*/
+  -pie-background: linear-gradient(orange, white);
+}
+
+#teleporting-container{
+  border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+  margin-bottom:10px;
+  height:30px;
+  background:orange;
+  background: -webkit-gradient(linear, left center, right center, from(orange), to(rgba(0,0,0,0)));
+  background: -moz-linear-gradient(left, orange, rgba(0,0,0,0) );
+  /*background: -webkit-linear-gradient(purple, white);
+  background: -moz-linear-gradient(purple, white);
+  background: -ms-linear-gradient(purple, white);
+  background: -o-linear-gradient(purple, white);
+  background: linear-gradient(purple, white);
+  -pie-background: linear-gradient(purple, white);*/
+
+}
+
+#long-attack-container {
+  border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+  margin-bottom:10px;
+  height:30px;
+  background:blue;
+  background: -webkit-gradient(linear, left center, right center, from(blue), to(rgba(0,0,0,0)));
+  background: -moz-linear-gradient(left, blue, rgba(0,0,0,0) );
+}
+
+#basic-magic-container{
+  border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+  margin-bottom:10px;
+  height:30px;
+  background:brown;
+  background: -webkit-gradient(linear, left center, right center, from(brown), to(rgba(0,0,0,0)));
+  background: -moz-linear-gradient(left, brown, rgba(0,0,0,0) );
+}
+
+#advanced-magic-container{
+  border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+  margin-bottom:10px;
+  height:30px;
+  background:white;
+  background: -webkit-gradient(linear, left center, right center, from(black), to(rgba(0,0,0,0)));
+  background: -moz-linear-gradient(left, black, rgba(0,0,0,0) );
 }
 
 #fb-root {
@@ -135,13 +219,18 @@ p {  text-shadow: black 0.1em 0.1em 0.2em !important; }
 #user-navigation-container {height:90px !important; /*position:absolute;*/}
 #user-navigation-container h3 {color:white !important;}
 
+#fate {
+  color:black !important; 
+  text-shadow: silver 1px 0px 1px !important;
+}
+
 #welcome-text {
   padding-left:230px; 
   font-size: 30px; 
   margin-top:0px; 
   position:absolute; 
   font-family: Brush Script MT; 
-  color:white !important; 
+  color:gray !important; 
 }
 
 #score-board {
@@ -156,8 +245,24 @@ p {  text-shadow: black 0.1em 0.1em 0.2em !important; }
 #header-bottom{ 
   margin-top:-40px !important;
 }
+
 #fotter { margin-top:-90px !important;}
-.key { cursor:pointer !important; border: green 1px solid; background-color:white;}
+
+.key { 
+  cursor:pointer !important;
+  /*border-left:1px dashed black;
+  border-right:1px dashed black;*/
+  /*background:white;
+  background: -webkit-gradient(linear, left center, right center, from(white), to(rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(white, rgba(0,0,0,0));
+  background: -moz-linear-gradient(white, rgba(0,0,0,0));
+  background: -ms-linear-gradient(white, rgba(0,0,0,0));
+  background: -o-linear-gradient(white, rgba(0,0,0,0));
+  background: linear-gradient(white, rgba(0,0,0,0));
+  -pie-background: linear-gradient(white, rgba(0,0,0,0));
+  */
+
+}
 
 .hide {
   display:none;

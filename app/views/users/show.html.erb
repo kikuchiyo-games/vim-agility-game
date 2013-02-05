@@ -1,21 +1,29 @@
-<%= render :partial => 'shared/facebook' %>
-
-<div class = 'span-20'>
-  <h3 class = 'span-18' id = 'welcome-text' class ='text'>
-    <%= @user.email %>, to start your journey, we will be focusing on the 
-    keys below .  Remember these keys when you travel outside.
-    <%= image_tag 'blood.png', :class => 'span-1' %>
-  </h3>
-</div>
 <div id = 'dojo' class = 'push-1 span-22'>
-  <div class = 'push-7 span-24' id = 'key-description'>
-    <div class = 'span-10'>
-      <hr class = 'pull-1 span-10'>
+  <div class = 'span-20'>
+    <h3 class = 'span-20' id = 'welcome-text' class ='text'>
+      <p class = 'push-2'>Study requires calm; talent requires study</p> 
+      <br />
+      <p class = 'pull-1'>- Zhuge Liang.</p>
+      <p id = 'fate' class = 'push-2'> <br />
+        Please study the keys on each belt to the left.<br />
+        When you are comfortable, test yourself against fate<br />
+        by traveling the world outside
+      </p>
+    </h3>
+    <div class = 'span-20' style = 'position:absolute; padding-left:320px; padding-top:220px;'>
+      <%= link_to image_tag( 'curtain.png', :class => 'span-2 clickable push-12', :title => 'Travel Outside'), game_index_path %>
     </div>
-    <div class = 'pull-20 span-12' id = 'letter-container'>
+
+  </div>
+
+  <div class = 'push-7 span-14' id = 'key-description'>
+    <div class = 'span-10'>
+      <hr class = 'push-1 span-11'>
+    </div>
+    <div class = 'pull-17 span-12' id = 'letter-container'>
 
       <div class = 'span-8' id = 'side-stepping-container'>
-        <p class = 'span-3'> side-stepping </p>
+        <p class = 'span-3'> &nbsp; side-stepping </p>
         <%= image_tag 'h.png' , :class => 'span-1 key', :title => 'left' %>
         <%= image_tag 'j.png' , :class => 'span-1 key', :title => 'down' %>
         <%= image_tag 'k.png' , :class => 'span-1 key', :title => 'up' %>
@@ -23,7 +31,7 @@
       </div>
 
       <div class = 'span-8' id = 'lunging-container'>
-        <p class = 'span-3'> lunging </p>
+        <p class = 'span-3'>  &nbsp; lunging </p>
         <%= image_tag 'b.png' ,     :class => 'span-1 key', :title => 'left' %>
         <%= image_tag 'o.png' ,     :class => 'span-1 key', :title => 'down' %>
         <%= image_tag 'big_o.png' , :class => 'span-1 key', :title => 'up' %>
@@ -32,7 +40,7 @@
 
 
       <div class = 'span-8' id = 'teleporting-container'>
-        <p class = 'span-3'> teleporting </p>
+        <p class = 'span-3'>  &nbsp; teleporting </p>
         <%= image_tag '0.png' , :class => 'span-1 key', :title => 'left' %>
         <%= image_tag 'big_l.png' , :class => 'span-1 key', :title => 'down' %>
         <%= image_tag 'big_h.png' , :class => 'span-1 key', :title => 'up' %>
@@ -40,7 +48,7 @@
       </div>
 
       <div class = 'span-8' id = 'short-attack-container'>
-        <p class = 'span-3'> short attacks </p>
+        <p class = 'span-3'>  &nbsp; short attacks </p>
         <%= image_tag 'x.png' , :class => 'span-1 key', :title => 'terminate nearby enemies' %>
         <p class = 'span-1'> &nbsp; </p>
         <p class = 'span-1'> &nbsp; </p>
@@ -48,15 +56,15 @@
       </div>
 
       <div class = 'span-8' id = 'long-attack-container'>
-        <p class = 'span-3'> long attacks </p>
+        <p class = 'span-3 push-3'> long attacks </p>
       </div>
 
       <div class = 'span-8' id = 'basic-magic-container'>
-        <p class = 'span-3'> basic magic </p>
+        <p class = 'span-3 push-3'> basic magic </p>
       </div>
 
       <div class = 'span-8' id = 'advanced-magic-container'>
-        <p class = 'span-4'> advanced magic </p>
+        <p class = 'span-4 push-3'> advanced magic </p>
       </div>
 
     </div>
@@ -70,30 +78,39 @@
     <hr class = 'span-22'>
     </div>
   </div>
-  <div class = 'span-3'>
+  <!--div class = 'span-3'>
     <p class = 'span-3'> 
       <%= link_to image_tag( 'curtain.png', :class => 'span-2 clickable', :title => 'Travel Outside'), game_index_path %>
     </p>
-  </div>
-  <div class = 'span-3'>
+  </div-->
+  <!--div class = 'span-3'>
     <p class = 'span-3'> 
       <%= image_tag 'sign.png', :class => 'span-2 clickable', :title => 'Seek Direction'%>
+     </p>
+  </div-->
+
+  <div class = 'span-3'>
+    <p class = 'span-3'> 
+      &nbsp;Rankings
+      <%= link_to image_tag( 'guide.png', :class => 'span-2 clickable', :title => 'via user stats' ), leaderboard_path %> 
+    </p>
+  </div>
+
+  <!--div class = 'span-3'>
+    <p class = 'span-3'> 
+      <%= image_tag 'levelUp.png', :class => 'span-2 clickable', :title => 'Level Up!'%> 
+    </p>
+  </div-->
+
+  <div class = 'span-3'>
+    <p class = 'span-3'> &nbsp; &nbsp; Rest
+      <%= link_to image_tag( 'bed.png', :class => 'span-2 clickable', :title => 'for a little while'), logout_path %>
      </p>
   </div>
 
   <div class = 'span-3'>
-    <p class = 'span-3'> 
-      <%= link_to image_tag( 'guide.png', :class => 'span-2 clickable', :title => 'Leaderboard' ), leaderboard_path %> 
-    </p>
-  </div>
-
-  <div class = 'span-3'>
-    <p class = 'span-3'> 
-      <%= image_tag 'levelUp.png', :class => 'span-2 clickable', :title => 'Level Up!'%> 
-    </p>
-  </div>
-
-  <div class = 'span-3'>
+    <p class = 'span-3'> Personal </p>
+    <br />
     <p id = 'user_stats_container' class = 'span-3'> 
       <%= image_tag 'stats.png', :class => 'span-2 clickable', :title => 'Journal' %> 
       <div id = 'user_stats' style = 'display:none;'>
@@ -114,21 +131,19 @@
     </p>
   </div>
 
-  <div class = 'span-3'>
+  <!--div class = 'span-3'>
     <p class = 'span-3'> 
       <%= image_tag 'edit.png', :class => 'span-2 clickable', :title => 'Edit Profile'%> 
     </p>
-  </div>
-  <div class = 'span-3'>
-    <p class = 'span-3'> 
-      <%= link_to image_tag( 'bed.png', :class => 'span-2 clickable', :title => 'Rest'), logout_path %>
-     </p>
-  </div>
+  </div-->
 
 
 </div>
 
 <%#= render :partial => 'shared/chase_music' %>
 <%= javascript_include_tag "jquery-1.7.1.min" %>
-<%= render :partial => 'shared/dojo_music' %>
 <%= render :partial => 'shared/profile_stats' %>
+<div class = 'span-10'>
+  <%= render :partial => 'shared/dojo_music' %>
+</div>
+<%= render :partial => 'shared/facebook' %>

@@ -1,11 +1,6 @@
 
 <div id = 'create-account' class = 'push-5 span-20'>
-  <div class = 'span-21'>
-    <p class = 'span-7'>Equal Opportunity Education</p>
-    <div class = 'span-10'>
-      <%= render :partial => 'shared/theme_music'%>
-    </div>
-  </div>
+  <p class = 'span-6'>Equal Opportunity Education</p>
 
   <%= image_tag 'createNewAccount.png', :class => 'span-1' %>
   <%= link_to '  Create an Account!', new_users_path, :class => 'span-4' %>
@@ -37,11 +32,8 @@
 
 <% end %>
 
-<p id = 'intro'>  
-  Help Kikuchiyo evade his captors and join ranks with the agile revolutionaries in this Vim game to improve basic movement skills.
-</p>
-
 <div class = 'span-10'>
+  <%= render :partial => 'shared/theme_music' %>
   <%= render :partial => 'shared/facebook' %>
 </div>
 

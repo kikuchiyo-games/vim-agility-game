@@ -1,33 +1,30 @@
 #side-stepping-container{
-  color:white;
+  color:black;
+  text-shadow: black 0.1em 0.1em 0.2em !important;
 }
 
 #lunging-container{
-  color:yellow;
+  color:black;
 }
 
 #teleporting-container{
-  color:purple;
-}
-
-#teleporting-container{
-  color:purple;
+  color:black;
 }
 
 #short-attack-container{
-  color:orange;
+  color:black;
 }
 
 #long-attack-container{
-  color:gray;
+  color:black;
 }
 
 #basic-magic-container{
-  color:gray;
+  color:rgba(0,0,0,0);
 }
 
 #advanced-magic-container{
-  color:gray;
+  color:rgba(0,0,0,0);
 }
 
 #user_header {
@@ -43,7 +40,7 @@
 #dojo {
   color: black;
   margin-top:100px;
-  background-image: url( dojo.png );
-  background-size: 100% 100%;
-  height:220px;
+  /*background-image: url( dojo.png );
+  background-size: 100% 100%;*/
+  height:280px;
 }
