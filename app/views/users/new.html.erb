@@ -1,7 +1,10 @@
 
-<div id = 'log-in' class = 'push-5 span-4'>
+<div id = 'log-in' class = 'push-5 span-10'>
   <%= image_tag 'logInWithExistingAccount.png', :class => 'push-0-2-5' %>
   <%= link_to 'Log in', new_session_path, :class => 'push-1' %>
+  <div class = 'push-2'>
+    <%= render :partial => 'shared/theme_music' %>
+  </div>
 </div>
 
 
@@ -39,6 +42,7 @@
   <p style = 'color:red; font-weight:bold;' class = 'span-10 push-8'>
     <%= flash[:notice] %>
   </p>
+
 </div>
-<%= render :partial => 'shared/theme_music' %>
+
 <%= render :partial => 'shared/facebook' %>

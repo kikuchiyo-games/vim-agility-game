@@ -1,6 +1,9 @@
 
 <div id = 'create-account' class = 'push-5 span-20'>
-  <p>Equal Opportunity Education</p>
+  <div class = 'span-21'>
+    <p class = 'span-7'>Equal Opportunity Education</p>
+    <%= render :partial => 'shared/theme_music', :class => 'span-10' %>
+  </div>
   <%= image_tag 'createNewAccount.png', :class => 'push-0-2-5' %>
   <%= link_to '  Create an Account!', new_users_path, :class => 'push-1' %>
   <a href = 'https://github.com/kikuchiyo/vim_game' class = 'push-2'>Source Code</a>
@@ -36,7 +39,6 @@
 </p>
 
 <div class = 'span-10'>
-  <%= render :partial => 'shared/theme_music' %>
   <%= render :partial => 'shared/facebook' %>
 </div>
 
