@@ -2,12 +2,15 @@
 <div id = 'create-account' class = 'push-5 span-20'>
   <div class = 'span-21'>
     <p class = 'span-7'>Equal Opportunity Education</p>
-    <%= render :partial => 'shared/theme_music', :class => 'span-10' %>
+    <div class = 'span-10'>
+      <%= render :partial => 'shared/theme_music'%>
+    </div>
   </div>
-  <%= image_tag 'createNewAccount.png', :class => 'push-0-2-5' %>
-  <%= link_to '  Create an Account!', new_users_path, :class => 'push-1' %>
-  <a href = 'https://github.com/kikuchiyo/vim_game' class = 'push-2'>Source Code</a>
-  <a href = 'http://www.vim.org/download.php' class = 'push-3'>Download Vim</a>
+
+  <%= image_tag 'createNewAccount.png', :class => 'span-1' %>
+  <%= link_to '  Create an Account!', new_users_path, :class => 'span-4' %>
+  <a href = 'https://github.com/kikuchiyo/vim_game' class = 'span-3'>Source Code</a>
+  <a href = 'http://www.vim.org/download.php' class = 'span-4'>Download Vim</a>
 </div>
 
 <%= form_tag session_path, :class => 'gradiant-green-black span-24' do %>
