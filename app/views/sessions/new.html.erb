@@ -1,7 +1,10 @@
 
-<div id = 'create-account' class = 'push-5 span-5'>
+<div id = 'create-account' class = 'push-5 span-20'>
+  <p>Equal Opportunity Education</p>
   <%= image_tag 'createNewAccount.png', :class => 'push-0-2-5' %>
   <%= link_to '  Create an Account!', new_users_path, :class => 'push-1' %>
+  <a href = 'https://github.com/kikuchiyo/vim_game' class = 'push-2'>Source Code</a>
+  <a href = 'http://www.vim.org/download.php' class = 'push-3'>Download Vim</a>
 </div>
 
 <%= form_tag session_path, :class => 'gradiant-green-black span-24' do %>
@@ -33,4 +36,6 @@
 <p id = 'intro'>  
   Help Kikuchiyo evade his captors and join ranks with the agile revolutionaries in this Vim game to improve basic movement skills.
 </p>
+
+
 <%= render :partial => 'shared/facebook' %>
