@@ -1,4 +1,9 @@
-<audio id = 'dojo_theme'     src = '/audios/kikuchiyo_training_theme.mp3' loop = loop></audio>
+<audio <audio id = 'dojo_theme' controls>
+  <source src = '/audios/kikuchiyo_training_theme.mp3' loop = loop>
+  <source src = '/audios/kikuchiyo_training_theme.wav' loop = loop>
+</audio>
+
+
 <script>
   var thissound=document.getElementById( 'dojo_theme' );
   thissound.play();

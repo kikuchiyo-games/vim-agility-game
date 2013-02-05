@@ -1,5 +1,8 @@
-<audio id = 'theme' src = '/audios/kikuchiyo_title_page_the_one.mp3' loop = loop></audio>
-<!--audio id = 'theme' src = '/audios/kikuchiyo_theme.mp3'></audio-->
+<audio id = 'theme' controls>
+  <source src = '/audios/kikuchiyo_title_page_the_one.mp3' loop = loop>
+  <source src = '/audios/kikuchiyo_title_page_the_one.wav' loop = loop>
+</audio>
+
 <script>
   var thissound=document.getElementById( 'theme' );
   thissound.play();
