@@ -14,7 +14,7 @@
     </li>
   </ul>
   <hr class = 'span-18'>
-  <ul class = 'list_container'  style = 'overflow-y: scroll; height:80%; width:100%;'>
+  <ul class = 'list_container'  style = 'overflow-y: scroll; height:400px; width:100%;'>
     <li>
       <% @profiles.each do |profile| %>
         <% user = User.find( profile.user_id ) %>
