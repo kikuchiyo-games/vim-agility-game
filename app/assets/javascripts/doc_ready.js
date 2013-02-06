@@ -119,7 +119,6 @@ $( document ).ready( function(){
     //   };
     // }
     // KEY_PRESSES += 1;
-
     if (GAME_OVER){ return }; 
 
     if ( game.player_won() ){ game.advance_to_next_level(); }

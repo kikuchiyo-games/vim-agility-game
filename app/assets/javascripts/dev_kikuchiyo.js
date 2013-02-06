@@ -185,12 +185,75 @@ var player = function( spec ){
     }
 
   }
+  that.beat_level = function(){
 
+    var x_escape_route = parseInt( $('#escape_route').position().left );
+    var x_kikuchiyo = parseInt( $('#kikuchiyo').position().left )
+    var y_kikuchiyo = parseInt( $('#kikuchiyo').position().top ) - $('#kikuchiyo').height();
+    var y_escape_route = parseInt( $('#escape_route').position().top ) - 
+      parseInt( $('#escape_route').height() );
+    alert(
+    'y: escape route' + y_escape_route +
+    'y: kikuchiyo' + y_kikuchiyo + '\n' +
+    'x: escape route' + x_escape_route +
+    'x: kikuchiyo' + x_kikuchiyo
+    );
+
+    var x_interception = ( 
+      Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route ) < 50 
+    );
+
+    var y_interception = ( 
+      Math.abs( Math.abs( y_kikuchiyo ) - y_escape_route ) < 50 
+    );
+
+    // alert( 'y:' +  + ', ' + $('#kikuchiyo').position().top  + ', ' + $( '#draw-target' ).css( 'margin-top' ) + $('#escape_route').height() );
+    // alert( 'x:' + $('#escape_route').position().left + ', ' + $('#kikuchiyo').position().left $('#kikuchiyo'));
+    // return true;
+    if ( !x_interception || !y_interception ){ 
+      alert( x_interception + ", " + y_interception );
+      return true; 
+    }
+    GAME_OVER = true;
+
+    $.ajax({ 
+      type:'put',
+      url: '/profiles/update.json',
+      dataType: 'json',
+      beforeSend: function(jqXHR, settings) {
+        jqXHR.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+      },
+      data:{
+        experience_points: $('#experience_points').text(),
+        bravery_points: $('#bravery_points').text(),
+        kills: $('#kills').text(),
+        diamonds: $('#diamonds').text(),
+        rubies: $('#rubies').text()
+        //levels: 1
+      }
+    });
+
+    var game_ending_text = "<a href = \"/users/" + USER_ID + "\"><p style = \"position:absolute; left:25%; top:25%; color:red; font-size:24px;\">";
+    game_ending_text    += "Success! Tune in next week for level two";
+    game_ending_text    += "</p></a>";
+
+    $('#countdown_dashboard').stopCountDown();
+    $('body #draw-target').append(
+        game_ending_text
+    );
+    if( typeof( kikuchiyo ) != 'undefined' ){
+      kikuchiyo.destroy();
+    }
+  }
   that.execute_command = function( key_press ){
 
     that.command_time = new Date();
 
     if ( key_press == '16' ){ return true }
+    if ( key_press == '97' && $('#escape_route').css('display') != 'none'){ 
+      that.beat_level();
+      return true 
+    }
 
     if ( key_press == '59' ){ 
       that.ask( "State your query below: " );
@@ -371,9 +434,15 @@ var player = function( spec ){
         $( "#experience_points" ).text( that.points );
         $( "#rubies" ).text( that.rubies );
         $( "#diamonds" ).text( that.diamonds );
+        $( "#payoff_count" ).text( that.diamonds + '/20');
         this_ruby.destroy();
         play_sound( 'picked_up_gem' );
         page_rubies[ r ] = undefined;
+
+        if ( that.diamonds == 20 ){
+          alert('Guard has been bribed.  Now flee out the Eastern gate! Press `a` to exit when near the gate.')
+          $('#escape_route').show();
+        }
         //that.increment_sprite_rubies();
       }
     }
