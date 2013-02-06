@@ -211,7 +211,7 @@ var player = function( spec ){
     // alert( 'x:' + $('#escape_route').position().left + ', ' + $('#kikuchiyo').position().left $('#kikuchiyo'));
     // return true;
     if ( !x_interception || !y_interception ){ 
-      alert( x_interception + ", " + y_interception );
+      //alert( x_interception + ", " + y_interception );
       return true; 
     }
     GAME_OVER = true;
