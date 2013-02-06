@@ -192,12 +192,12 @@ var player = function( spec ){
     var y_kikuchiyo = parseInt( $('#kikuchiyo').position().top ) - $('#kikuchiyo').height();
     var y_escape_route = parseInt( $('#escape_route').position().top ) - 
       parseInt( $('#escape_route').height() );
-    alert(
-    'y: escape route' + y_escape_route +
-    'y: kikuchiyo' + y_kikuchiyo + '\n' +
-    'x: escape route' + x_escape_route +
-    'x: kikuchiyo' + x_kikuchiyo
-    );
+    // alert(
+    // 'y: escape route' + y_escape_route +
+    // 'y: kikuchiyo' + y_kikuchiyo + '\n' +
+    // 'x: escape route' + x_escape_route +
+    // 'x: kikuchiyo' + x_kikuchiyo
+    // );
 
     var x_interception = ( 
       Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route ) < 50 
