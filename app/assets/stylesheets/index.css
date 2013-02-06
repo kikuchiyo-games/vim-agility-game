@@ -134,7 +134,17 @@ body {
 ul.list_container li.white ul.inline li{
   color:#FFCC33 !important;
 }
+ul.inline li {
+  white-space: pre;           /* CSS 2.0 */
+  white-space: pre-wrap;      /* CSS 2.1 */
+  white-space: pre-line;      /* CSS 3.0 */
+  white-space: -pre-wrap;     /* Opera 4-6 */
+  white-space: -o-pre-wrap;   /* Opera 7 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap;  /* HP Printers */
+  word-wrap: break-word; 
 
+}
 #map-header h2 {
   color:white;
   font-family: Brush Script MT;
