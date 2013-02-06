@@ -5,7 +5,6 @@
       USER_NEEDS_A_CHALLENGE = true;
       USER_BEING_CHALLENED = false;
     </script>
-
     <%= javascript_include_tag "jquery-1.9.0.js", 
       "jquery-ui-1.10.0.custom.js", "sheet_clips", 
       "animation", "movement", "power_balls",
@@ -21,8 +20,8 @@
 
     <title>Training! Collect all the rubies in under 30 seconds.</title>
     <div class = 'span-20 push-5' id = 'lesson'>
-      <div id = ''class = 'push-1 span-3'>
-        <p style="color:red;"> Lesson 01: </p>
+      <div id = ''class = 'push-1 span-10'>
+        <p style="color:yellow;"> Lesson 01: Gather Treasure to pay off the guards <span></span></p>
       </div>
 
       <!--div id="leftheader" class = 'push-1 span-18'>
@@ -33,13 +32,14 @@
       </div-->
     </div>
 
-    <div id="score-board" class = 'span-20' style = 'background:black !important;'>
-      <ul id = "score-board-list" class = "push-2 span-20" style = 'margin-top: -30px; background: black !important;'>
-        <li class = "score-rubies span-4"  > Rubies : <span id = 'rubies'>0</span> </li>
-        <li class = "score-diamonds span-4"> Diamonds : <span id = 'diamonds'>0</span>  </li>
-        <li class = "score-points span-4"  > Experience : <span id = 'experience_points'>0</span>  </li>
-        <li class = "score-bravery-points span-4"  > Bravery Points : <span id = 'bravery_points'>0</span>  </li>
-        <li class = "score-kills span-4"  > Kills : <span id = 'kills'>0</span>  </li>
+    <div id="score-board" class = 'span-10'>
+      <ul id = "score-board-list" class = "span-10">
+        <li class = "score-rubies span-4"  > &nbsp; Rubies : <span id = 'rubies'>0</span> </li>
+        <li class = "score-diamonds span-4"> &nbsp; Diamonds : <span id = 'diamonds'>0</span>  </li>
+        <li class = "score-points span-4"  > &nbsp; Experience : <span id = 'experience_points'>0</span>  </li>
+        <li class = "score-kills span-4"  > &nbsp; Kills : <span id = 'kills'>0</span>  </li>
+        <li class = "score-bravery-points span-8"  > &nbsp; Bravery Points : <span id = 'bravery_points'>0</span>  </li>
+
         <!--li class = "span-4"  > 		      
           <div class = 'span-1'>
             <div class='dash' >
@@ -54,7 +54,11 @@
 
     <div id = 'draw-target'>
     </div>
-
+    <%= link_to image_tag( 'curtain.png', :class => 'span-2 clickable push-1', :style => 'position:absolute; z-index:88; left:0; top:140px;', :title => 'Flee'), game_index_path %>
+    <%= image_tag( 'bamboo.png', :class => "span-2 clickable pull-1", :style => 'position:absolute; z-index:88; top:140px;', :title => 'Flee')%>
+    <% 25.times do |i| %>
+      <%= image_tag( 'bamboo.png', :class => "span-2 clickable push-#{i}", :style => 'position:absolute; z-index:88; top:140px;', :title => 'Flee')%>
+    <% end %>
     <%= render :partial => 'shared/chase_music' %>
     <script>
       $(document).ready(function(){

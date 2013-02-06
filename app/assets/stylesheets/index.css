@@ -7,9 +7,13 @@ p.ruby {
 }
 
 html {
-  background:url(prison.jpg) !important;
-  background-size:100% 60% !important;
-  background-position:bottom left !important;
+  background-color:black !important;
+  background-image:url(grass.png) !important;
+  background-size:95% !important;
+  background-position:center !important;
+  /*background: -webkit-gradient(linear, left center, right center, from(white), to(black)) !important;
+  background: -moz-linear-gradient(left, white, black ) !important;
+  background-position:bottom left !important;*/
   width:100%;
 }
 
@@ -243,10 +247,6 @@ p {  text-shadow: black 0.1em 0.1em 0.2em !important; }
   color:gray !important; 
 }
 
-#score-board {
-  color:white;
-}
-
 #lesson{
   position:absolute;
   top:20px;
@@ -298,6 +298,7 @@ p {  text-shadow: black 0.1em 0.1em 0.2em !important; }
   -pie-background: linear-gradient(green, white);
 
 }
+
 .next-page {
   position:absolute !important;
   bottom:0px;
@@ -594,6 +595,32 @@ canvas {
   background:url(/assets/wood_floor.jpg) !important;
   background-size:95% !important;
   background-position:center !important;
+}
+
+#score-board-list {
+  text-shadow: green 2px 0px 10px !important;
+  color:yellow;
+  z-index:900;
+  height:25px;
+  background-image:url(grass.png) !important;
+  background-size:100% !imporant;
+  margin-top: -130px;
+  /*border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;*/
+  margin-left: 450px;
+}
+
+#score-board-list li {
+  background-color:black;
+  border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+}
+#score-board {
+  background-image:url(grass.png) !important;
+  color:white;
+  padding-right:-10px; 
+  margin-right:-100px; 
+  padding-left:0px; 
+  margin-left:-100px;
+  width:120% !important;
 }
 
 #draw-target { 

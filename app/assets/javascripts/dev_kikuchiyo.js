@@ -232,7 +232,7 @@ var player = function( spec ){
 
   that.make_cell_on_page=function(){
 
-    var div_style = "style=\"width:" + that.width + "px; height:" + that.height + "px; position:absolute;\"";
+    var div_style = "style=\"width:" + that.width + "px; height:" + that.height + "px; position:absolute; z-index:901;\"";
     that.element = $("#draw-target").append( '<div id = "' + that.name + '" ' + div_style + '></div>' ).find( ':last' );
 
     that.style = that.element[ 0 ].style;

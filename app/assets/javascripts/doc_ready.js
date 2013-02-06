@@ -48,12 +48,12 @@ $( document ).ready( function(){
         }
       });
 
-      var game_ending_text = "<a href = \"/users/" + USER_ID + "\"><h1 style = \"position:absolute; left:25%; top:50%; color:red;\">";
-      game_ending_text    += "  GAME OVER!";
-      game_ending_text    += "</h1></a>";
+      var game_ending_text = "<a href = \"/users/" + USER_ID + "\"><p style = \"position:absolute; left:25%; top:25%; color:red; font-size:100px;\">";
+      game_ending_text    += "Captured!";
+      game_ending_text    += "</p></a>";
 
       $('#countdown_dashboard').stopCountDown();
-      $('body #draw-target').html(
+      $('body #draw-target').append(
           game_ending_text
       );
       if( typeof( kikuchiyo ) != 'undefined' ){
@@ -170,12 +170,16 @@ $( document ).ready( function(){
       
       cs_dogma.capture_kikuchiyo = function(){capture_kikuchiyo(cs_dogma)};
       cs_dogma_sprinter.capture_kikuchiyo = function(){capture_kikuchiyo(cs_dogma_sprinter)};
+
       cs_dogma.animate();
       cs_dogma_sprinter.animate();
+
       cs_dogma.execute_command( "76" );
       cs_dogma_sprinter.execute_command( "52" );
+
       cs_dogma.capture_kikuchiyo();
       cs_dogma_sprinter.capture_kikuchiyo();
+
       cs_guards = [];
       USER_BEING_CHALLENED = true;
       TRAINING = true;
