@@ -9,10 +9,42 @@ $( document ).ready( function(){
   game.make_rubies();
   kikuchiyo = player( { name:"kikuchiyo", nature:"good", user_controls:true  } );
   kikuchiyo.animate();
-  spear = new Spear();
+  var spear = new Spear( { player: kikuchiyo } );
   kikuchiyo.spear = spear;
   kikuchiyo.spear.draw();
   kikuchiyo.execute_command( "108" );
+
+  end_game = function( state ){
+    GAME_OVER = true; 
+
+    $.ajax({ 
+      type:'put',
+      url: '/profiles/update.json',
+      dataType: 'json',
+      beforeSend: function(jqXHR, settings) {
+        jqXHR.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+      },
+      data:{
+        experience_points: $('#experience_points').text(),
+        bravery_points: $('#bravery_points').text(),
+        kills: $('#kills').text(),
+        diamonds: $('#diamonds').text(),
+        rubies: $('#rubies').text()
+      }
+    });
+
+    var game_ending_text = "<p style = \"position:absolute; left:25%; top:25%; color:red; font-size:48px;\">";
+    game_ending_text    += state;
+    game_ending_text    += "<br /><a href = \"/users/" + USER_ID + "\">Respawn?</a></p>";
+
+    $('#countdown_dashboard').stopCountDown();
+    $('body #draw-target').append(
+        game_ending_text
+    );
+    if( typeof( kikuchiyo ) != 'undefined' ){
+      kikuchiyo.destroy();
+    }
+  }
 
   capture_kikuchiyo = function(evil_player){
 
@@ -24,42 +56,13 @@ $( document ).ready( function(){
     if ( ek[ 'x' ] > kikuchiyo[ 'x' ] ){ ek.execute_command("104"); }
     if ( ek[ 'y' ] < kikuchiyo[ 'y' ] ){ ek.execute_command("106"); }
     if ( ek[ 'y' ] > kikuchiyo[ 'y' ] ){ ek.execute_command("107"); }
+    if ( Math.random() > 0.9 ){ ek.execute_command("120") }
 
     var y_distance = Math.abs( ek[ 'y' ] - kikuchiyo[ 'y' ] );
     var x_distance = Math.abs( ek[ 'x' ] - kikuchiyo[ 'x' ] );
 
     if ( y_distance < 5 && x_distance < 5 ){ 
-
-      GAME_OVER = true; 
-
-      $.ajax({ 
-        type:'put',
-        url: '/profiles/update.json',
-        dataType: 'json',
-        beforeSend: function(jqXHR, settings) {
-          jqXHR.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-        },
-        data:{
-          experience_points: $('#experience_points').text(),
-          bravery_points: $('#bravery_points').text(),
-          kills: $('#kills').text(),
-          diamonds: $('#diamonds').text(),
-          rubies: $('#rubies').text()
-        }
-      });
-
-      var game_ending_text = "<a href = \"/users/" + USER_ID + "\"><p style = \"position:absolute; left:25%; top:25%; color:red; font-size:100px;\">";
-      game_ending_text    += "Captured!";
-      game_ending_text    += "</p></a>";
-
-      $('#countdown_dashboard').stopCountDown();
-      $('body #draw-target').append(
-          game_ending_text
-      );
-      if( typeof( kikuchiyo ) != 'undefined' ){
-        kikuchiyo.destroy();
-      }
-
+      end_game( 'Captured!' );
     } else { 
 
       if (x_distance + y_distance){
@@ -86,11 +89,20 @@ $( document ).ready( function(){
       user_controls:false 
     } );
 
+    var cs_dogma_spear = new Spear( { player: cs_dogma } );
+    cs_dogma_spear.spear = cs_dogma_spear;
+    cs_dogma_spear.spear.draw();
+
     cs_dogma_sprinter = player( { 
       name:"cs_dogma_sprinter",  
       nature:"evil", 
       user_controls:false 
     } );
+
+    var cs_dogma_sprinter_spear = new Spear( { player: cs_dogma_sprinter } );
+    cs_dogma_sprinter.spear = cs_dogma_sprinter_spear;
+    cs_dogma_sprinter.spear.draw();
+
 
     cs_dogma.speed = 5;
     cs_dogma_sprinter.speed = 7;
@@ -178,8 +190,15 @@ $( document ).ready( function(){
 
       cs_dogma.capture_kikuchiyo();
       cs_dogma_sprinter.capture_kikuchiyo();
-
       cs_guards = [];
+      cs_dogma_spear = new Spear( { player: cs_dogma } );
+      cs_dogma.spear = cs_dogma_spear;
+      cs_dogma.spear.draw();
+
+      cs_dogma_sprinter_spear = new Spear( { player: cs_dogma_sprinter }  );
+      cs_dogma_sprinter.spear = cs_dogma_sprinter_spear;
+      cs_dogma_sprinter.spear.draw();
+
       USER_BEING_CHALLENED = true;
       TRAINING = true;
 
