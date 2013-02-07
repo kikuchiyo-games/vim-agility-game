@@ -40,7 +40,7 @@ var player = function( spec ){
   that.bravery_points = 0;
   that.kills = 0;
   that.command_time = new Date();
-
+  that.diamond_quota = 1
   that.user_controls = spec.user_controls || false;
 
   that.math_floor = Math.floor;
@@ -204,7 +204,7 @@ var player = function( spec ){
     );
 
     var y_interception = ( 
-      Math.abs( Math.abs( y_kikuchiyo ) - y_escape_route ) < 50 
+      Math.abs( y_escape_route + y_kikuchiyo ) < 50 
     );
 
     // alert( 'y:' +  + ', ' + $('#kikuchiyo').position().top  + ', ' + $( '#draw-target' ).css( 'margin-top' ) + $('#escape_route').height() );
@@ -439,7 +439,7 @@ var player = function( spec ){
         play_sound( 'picked_up_gem' );
         page_rubies[ r ] = undefined;
 
-        if ( that.diamonds == 20 ){
+        if ( that.diamonds == that.diamond_quota ){
           alert('Guard has been bribed.  Now flee out the Eastern gate! Press `a` to exit when near the gate.')
           $('#escape_route').show();
         }
