@@ -33,9 +33,9 @@ $( document ).ready( function(){
       }
     });
 
-    var game_ending_text = "<p style = \"position:absolute; left:25%; top:25%; color:red; font-size:48px;\">";
+    var game_ending_text = "<p id = 'the_end' style = \"position:absolute; z-index:1000 !important; left:25%; top:25%; color:yellow; font-size:48px;\">";
     game_ending_text    += state;
-    game_ending_text    += "<br /><a href = \"/users/" + USER_ID + "\">Respawn?</a></p>";
+    game_ending_text    += " &nbsp; <a href = \"/users/" + USER_ID + "\">Respawn?</a></p>";
 
     $('#countdown_dashboard').stopCountDown();
     $('body #draw-target').append(

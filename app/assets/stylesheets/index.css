@@ -1,3 +1,11 @@
+#the_end {
+  font-family: Brush Script MT;
+  text-shadow: yellow 0.1em 0.1em 0.2em !important;
+  background-color:white;
+  background: -webkit-gradient(linear, left center, right center, from(black), to(rgba(0,0,0,0)));
+  background: -moz-linear-gradient(left, black, rgba(0,0,0,0) );
+  border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+}
 p.ruby {
   position:relative !important;
 }
