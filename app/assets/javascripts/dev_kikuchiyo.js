@@ -40,7 +40,7 @@ var player = function( spec ){
   that.bravery_points = 0;
   that.kills = 0;
   that.command_time = new Date();
-  that.diamond_quota = 1
+  that.diamond_quota = 20
   that.user_controls = spec.user_controls || false;
 
   that.math_floor = Math.floor;
