@@ -40,7 +40,7 @@ var player = function( spec ){
   that.bravery_points = 0;
   that.kills = 0;
   that.command_time = new Date();
-  that.diamond_quota = 20
+  that.diamond_quota = 1
   that.user_controls = spec.user_controls || false;
 
   that.math_floor = Math.floor;
@@ -214,33 +214,36 @@ var player = function( spec ){
       //alert( x_interception + ", " + y_interception );
       return true; 
     }
-    GAME_OVER = true;
 
-    $.ajax({ 
-      type:'put',
-      url: '/profiles/update.json',
-      dataType: 'json',
-      beforeSend: function(jqXHR, settings) {
-        jqXHR.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-      },
-      data:{
-        experience_points: $('#experience_points').text(),
-        bravery_points: $('#bravery_points').text(),
-        kills: $('#kills').text(),
-        diamonds: $('#diamonds').text(),
-        rubies: $('#rubies').text()
-        //levels: 1
-      }
-    });
+    end_game('Success! Level 2 coming soon...', 'Home?');
 
-    var game_ending_text = "<a href = \"/users/" + USER_ID + "\"><p style = \"position:absolute; left:25%; top:25%; color:red; font-size:24px;\">";
-    game_ending_text    += "Success! Tune in next week for level two";
-    game_ending_text    += "</p></a>";
+    // GAME_OVER = true;
 
-    $('#countdown_dashboard').stopCountDown();
-    $('body #draw-target').append(
-        game_ending_text
-    );
+    // $.ajax({ 
+    //   type:'put',
+    //   url: '/profiles/update.json',
+    //   dataType: 'json',
+    //   beforeSend: function(jqXHR, settings) {
+    //     jqXHR.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+    //   },
+    //   data:{
+    //     experience_points: $('#experience_points').text(),
+    //     bravery_points: $('#bravery_points').text(),
+    //     kills: $('#kills').text(),
+    //     diamonds: $('#diamonds').text(),
+    //     rubies: $('#rubies').text()
+    //     //levels: 1
+    //   }
+    // });
+
+    // var game_ending_text = "<a href = \"/users/" + USER_ID + "\"><p style = \"position:absolute; left:25%; top:25%; color:red; font-size:24px;\">";
+    // game_ending_text    += "Success! Tune in next week for level two";
+    // game_ending_text    += "</p></a>";
+
+    // $('#countdown_dashboard').stopCountDown();
+    // $('body #draw-target').append(
+    //     game_ending_text
+    // );
     if( typeof( kikuchiyo ) != 'undefined' ){
       kikuchiyo.destroy();
     }

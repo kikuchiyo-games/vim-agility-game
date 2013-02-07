@@ -14,7 +14,7 @@ $( document ).ready( function(){
   kikuchiyo.spear.draw();
   kikuchiyo.execute_command( "108" );
 
-  end_game = function( state ){
+  end_game = function( state, link ){
     GAME_OVER = true; 
 
     $.ajax({ 
@@ -35,7 +35,7 @@ $( document ).ready( function(){
 
     var game_ending_text = "<p id = 'the_end' style = \"position:absolute; z-index:1000 !important; left:25%; top:25%; color:yellow; font-size:48px;\">";
     game_ending_text    += state;
-    game_ending_text    += " &nbsp; <a href = \"/users/" + USER_ID + "\">Respawn?</a></p>";
+    game_ending_text    += " &nbsp; <a href = \"/users/" + USER_ID + "\">" + link + "</a></p>";
 
     $('#countdown_dashboard').stopCountDown();
     $('body #draw-target').append(
@@ -62,7 +62,7 @@ $( document ).ready( function(){
     var x_distance = Math.abs( ek[ 'x' ] - kikuchiyo[ 'x' ] );
 
     if ( y_distance < 5 && x_distance < 5 ){ 
-      end_game( 'Captured!' );
+      end_game( 'Captured!', 'Respawn?' );
     } else { 
 
       if (x_distance + y_distance){

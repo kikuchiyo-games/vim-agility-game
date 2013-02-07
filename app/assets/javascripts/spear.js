@@ -58,7 +58,7 @@ var Spear = function( options ){
         $('#' + name ).css( 'backgroundSize', '50%' );
         $('#' + name ).css( 'width', '90px' );
         $('#' + name ).css( 'height', '20px' );
-        end_game( "Well, that's one way to die..." );
+        end_game( "Well, that's one way to die...", 'Respawn?' );
         // kikuchiyo.kills += 1;
         // $('#kills').text(kikuchiyo.kills)
       }
