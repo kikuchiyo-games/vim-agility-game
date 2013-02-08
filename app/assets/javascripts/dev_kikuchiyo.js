@@ -43,6 +43,10 @@ var player = function( spec ){
   that.diamond_quota = 20
   that.user_controls = spec.user_controls || false;
 
+  var spear = new Spear( { player: that } );
+  that.spear = spear;
+  that.spear.draw();
+
   that.math_floor = Math.floor;
   that.image_width = 596;
   that.height = 68;
@@ -215,39 +219,13 @@ var player = function( spec ){
       return true; 
     }
 
-    end_game('Success! Level 2 coming soon...', 'Home?');
+    game.end_game('Success! Level 2 coming soon...', 'Home?');
 
-    // GAME_OVER = true;
-
-    // $.ajax({ 
-    //   type:'put',
-    //   url: '/profiles/update.json',
-    //   dataType: 'json',
-    //   beforeSend: function(jqXHR, settings) {
-    //     jqXHR.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-    //   },
-    //   data:{
-    //     experience_points: $('#experience_points').text(),
-    //     bravery_points: $('#bravery_points').text(),
-    //     kills: $('#kills').text(),
-    //     diamonds: $('#diamonds').text(),
-    //     rubies: $('#rubies').text()
-    //     //levels: 1
-    //   }
-    // });
-
-    // var game_ending_text = "<a href = \"/users/" + USER_ID + "\"><p style = \"position:absolute; left:25%; top:25%; color:red; font-size:24px;\">";
-    // game_ending_text    += "Success! Tune in next week for level two";
-    // game_ending_text    += "</p></a>";
-
-    // $('#countdown_dashboard').stopCountDown();
-    // $('body #draw-target').append(
-    //     game_ending_text
-    // );
     if( typeof( kikuchiyo ) != 'undefined' ){
       kikuchiyo.destroy();
     }
   }
+
   that.execute_command = function( key_press ){
 
     that.command_time = new Date();
@@ -448,6 +426,48 @@ var player = function( spec ){
         }
         //that.increment_sprite_rubies();
       }
+    }
+  };
+
+  that.capture_kikuchiyo = function(){
+
+    if ( that.dead == true ){
+      for (var o in that) if (isNaN(parseInt(o))) dispose(that[o]);
+      delete that;
+      return false;
+    }
+
+    if (GAME_OVER){ return }; 
+
+    var ek = that;
+
+    if ( ek[ 'x' ] < kikuchiyo[ 'x' ] ){ ek.execute_command("108"); }
+    if ( ek[ 'x' ] > kikuchiyo[ 'x' ] ){ ek.execute_command("104"); }
+    if ( ek[ 'y' ] < kikuchiyo[ 'y' ] ){ ek.execute_command("106"); }
+    if ( ek[ 'y' ] > kikuchiyo[ 'y' ] ){ ek.execute_command("107"); }
+    if ( Math.random() > 0.9 ){ ek.execute_command("120") }
+
+    var y_distance = Math.abs( ek[ 'y' ] - kikuchiyo[ 'y' ] );
+    var x_distance = Math.abs( ek[ 'x' ] - kikuchiyo[ 'x' ] );
+
+    if ( y_distance < 5 && x_distance < 5 ){ 
+      game.end_game( 'Captured!', 'Respawn?' );
+    } else { 
+
+      if (x_distance + y_distance){
+        if (!GAME_OVER){
+          kikuchiyo.bravery_points += 1 / ( x_distance + y_distance ); 
+          points = Math.round( kikuchiyo.bravery_points * 100 ) / 100;
+          $("#bravery_points").text( points );
+        }
+      }
+    }
+    
+    setTimeout(that.capture_kikuchiyo, 50);
+
+    if ( typeof( power_ball ) != 'undefined' ){
+      setTimeout(power_ball.move, 10);
+      setTimeout(kikuchiyo.hit_by_fireball, 60);
     }
   };
 

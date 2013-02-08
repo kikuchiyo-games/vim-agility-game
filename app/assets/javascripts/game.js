@@ -54,6 +54,38 @@ var game = function( spec ){
     }
     return true;
   };
-  
+
+  that.end_game = function( state, link ){
+    GAME_OVER = true; 
+
+    $.ajax({ 
+      type:'put',
+      url: '/profiles/update.json',
+      dataType: 'json',
+      beforeSend: function(jqXHR, settings) {
+        jqXHR.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+      },
+      data:{
+        experience_points: $('#experience_points').text(),
+        bravery_points: $('#bravery_points').text(),
+        kills: $('#kills').text(),
+        diamonds: $('#diamonds').text(),
+        rubies: $('#rubies').text()
+      }
+    });
+
+    var game_ending_text = "<p id = 'the_end' style = \"position:absolute; z-index:1000 !important; left:25%; top:25%; color:yellow; font-size:48px;\">";
+    game_ending_text    += state;
+    game_ending_text    += " &nbsp; <a href = \"/users/" + USER_ID + "\">" + link + "</a></p>";
+
+    $('#countdown_dashboard').stopCountDown();
+    $('body #draw-target').append(
+        game_ending_text
+    );
+    if( typeof( kikuchiyo ) != 'undefined' ){
+      kikuchiyo.destroy();
+    }
+  }
+ 
   return that;
 };
