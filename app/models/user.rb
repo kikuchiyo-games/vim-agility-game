@@ -9,11 +9,6 @@ class User < ActiveRecord::Base
 
   def profile
     id = self.id
-    puts "id = #{id}"
-    profile = Profile.find_by_user_id( id )
-    puts "Profile.all = #{Profile.all}"
-    puts "profile = #{profile}"
-    profile
+    Profile.find_by_user_id( id )
   end
-
 end

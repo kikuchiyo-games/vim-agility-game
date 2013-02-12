@@ -11,8 +11,9 @@ class ProfilesController < ApplicationController
           :diamonds => profile.diamonds.to_i + params[:diamonds].to_i,
           :rubies => profile.rubies.to_i + params[:rubies].to_i,
           :kills => profile.kills.to_i + params[:kills].to_i
-        ).save!
+        )
       }
     end
+    render :nothing => true
   end
 end
