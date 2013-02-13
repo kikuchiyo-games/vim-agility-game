@@ -62,8 +62,8 @@ var player = function( spec ){
   that.last_key_press = spec.last_key_press || "108"
 
   that.sheets = {
-    good:"/images/sheets/mega_man_boss.png",
-    evil:"/images/sheets/mega_man_evil.png"
+    good:"/assets/sheets/mega_man_boss.png",
+    evil:"/assets/sheets/mega_man_evil.png"
   }; 
 
   that.set_sheet = function(){

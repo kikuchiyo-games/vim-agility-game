@@ -30,7 +30,7 @@ group :test do
     gem 'database_cleaner'
 
   #-- reporting --#
-    gem 'rcov'
+  #  gem 'rcov'
 
   #-- tdd --#
     gem 'rspec'
