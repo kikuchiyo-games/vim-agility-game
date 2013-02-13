@@ -463,12 +463,12 @@ var player = function( spec ){
       }
     }
     
-    setTimeout(that.capture_kikuchiyo, 50);
+    setTimeout(that.capture_kikuchiyo, 140);
 
-    if ( typeof( power_ball ) != 'undefined' ){
-      setTimeout(power_ball.move, 10);
-      setTimeout(kikuchiyo.hit_by_fireball, 60);
-    }
+    // if ( typeof( power_ball ) != 'undefined' ){
+    //   setTimeout(power_ball.move, 10);
+    //   setTimeout(kikuchiyo.hit_by_fireball, 60);
+    // }
   };
 
   return that;
