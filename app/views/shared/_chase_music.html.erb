@@ -3,14 +3,29 @@
   <source src = '/assets/kikuchiyo_theme.wav' loop = loop>
 </audio>
 
-<audio id = 'teleport_sound' src = '/assets/teleport.mp3' preload = 'auto'></audio>
-<audio id = 'picked_up_gem'  src = '/assets/button-6.mp3'  preload = 'auto'></audio>
-<audio id = 'spear-swing'    src = '/assets/machete-swing-air.mp3' preload = 'auto'></audio>
-<audio id = 'blood-splat'    src = '/assets/blood_splat.mp3' preload = 'auto'></audio>
-<audio
-  id = 'thunder_clap' 
-  src = "/assets/weather_thunder_rain_03_NifterDotCom.mp3"
-></audio>
+<audio id = 'teleport_sound'>
+  <source src = '/assets/teleport.mp3' preload = 'auto'>
+  <source src = '/assets/teleport.wav' preload = 'auto'>
+</audio>
+
+<audio id = 'picked_up_gem'>
+  <source src = '/assets/button-6.mp3' preload = 'auto'>
+  <source src = '/assets/button-6.wav' preload = 'auto'>
+</audio>
+
+<audio id = 'spear-swing'>
+  <source src = '/assets/machete-swing-air.mp3' preload = 'auto'>
+  <source src = '/assets/machete-swing-air.wav' preload = 'auto'>
+</audio>
+
+<audio id = 'blood-splat'>
+  <source src = '/assets/blood_splat.mp3' preload = 'auto'>
+  <source src = '/assets/blood_splat.wav' preload = 'auto'>
+</audio>
+
+<audio id = 'thunder_clap'>
+  <source src = "/assets/weather_thunder_rain_03_NifterDotCom.mp3">
+</audio>
 
 <script>
   var thissound=document.getElementById( 'dojo_theme' );
