@@ -21,9 +21,9 @@ var game = function( spec ){
 
       if ( r % 2 == 0 ){
 
-        var ruby_image = "/assets/images/rubies/ruby.png"
+        var ruby_image = "/assets/rubies/ruby.png"
 
-      } else { var ruby_image = "/assets/images/rubies/diamond.png" }
+      } else { var ruby_image = "/assets/rubies/diamond.png" }
 
       var width = parseInt( $('#draw-target').width() );
       var height = parseInt( $('#draw-target').height() ) + parseInt( $('#draw-target').css( 'margin-top' ) );
