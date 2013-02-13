@@ -445,7 +445,7 @@ var player = function( spec ){
     if ( ek[ 'x' ] > kikuchiyo[ 'x' ] ){ ek.execute_command("104"); }
     if ( ek[ 'y' ] < kikuchiyo[ 'y' ] ){ ek.execute_command("106"); }
     if ( ek[ 'y' ] > kikuchiyo[ 'y' ] ){ ek.execute_command("107"); }
-    if ( Math.random() > 0.9 ){ ek.execute_command("120") }
+    if ( Math.random() > 0.975 ){ ek.execute_command("120") }
 
     var y_distance = Math.abs( ek[ 'y' ] - kikuchiyo[ 'y' ] );
     var x_distance = Math.abs( ek[ 'x' ] - kikuchiyo[ 'x' ] );
