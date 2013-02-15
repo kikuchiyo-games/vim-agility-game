@@ -78,12 +78,12 @@ var game = function( spec ){
     game_ending_text    += state;
     game_ending_text    += " &nbsp; <a href = \"/users/" + USER_ID + "\">" + link + "</a></p>";
 
-    $('#countdown_dashboard').stopCountDown();
     $('body #draw-target').append(
         game_ending_text
     );
-    if( typeof( kikuchiyo ) != 'undefined' ){
-      kikuchiyo.destroy();
+
+    if( typeof( Players.kikuchiyo ) != 'undefined' ){
+      Players.kikuchiyo.destroy();
     }
   }
  

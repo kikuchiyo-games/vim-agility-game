@@ -19,16 +19,16 @@ var Spear = function( options ){
 
     that.draw( that.x, that.y);
     if ( that.indicator == '#spear_kikuchiyo' ){
-      for( var i = 0; i <  cs_dogmas.length; i++ ){
-        var cs_dogma = cs_dogmas[i];
+      for( var i = 0; i <  Players.cs_dogmas.length; i++ ){
+        var cs_dogma = Players.cs_dogmas[i];
         if ( typeof( cs_dogma ) != 'undefined' && that.kill( cs_dogma ) ){ 
           blood_x = cs_dogma.x;
           blood_y = cs_dogma.y;
           var name = cs_dogma.name;
           //function dispose(obj) {
-          cs_dogmas[i].dead = true;
+          Players.cs_dogmas[i].dead = true;
           //}
-          cs_dogmas.splice( i, 1 )
+          Players.cs_dogmas.splice( i, 1 )
           // cs_dogmas[i].spear = null;
           // delete cs_dogmas[i].spear;
           // cs_dogmas[i] = null;
@@ -38,19 +38,19 @@ var Spear = function( options ){
           $('#' + name ).css( 'backgroundSize', '50%' );
           $('#' + name ).css( 'width', '90px' );
           $('#' + name ).css( 'height', '20px' );
-          kikuchiyo.kills += 1;
-          $('#kills').text(kikuchiyo.kills)
+          Players.kikuchiyo.kills += 1;
+          $('#kills').text(Players.kikuchiyo.kills)
         }
       }
 
     } else {
 
-      if ( typeof( kikuchiyo ) != 'undefined' && that.kill( kikuchiyo ) ){ 
-        blood_x = kikuchiyo.x;
-        blood_y = kikuchiyo.y;
-        var name = kikuchiyo.name;
+      if ( typeof( Players.kikuchiyo ) != 'undefined' && that.kill( Players.kikuchiyo ) ){ 
+        blood_x = Players.kikuchiyo.x;
+        blood_y = Players.kikuchiyo.y;
+        var name = Players.kikuchiyo.name;
         kiluchiyo = null;
-        delete kikuchiyo;
+        delete Players.kikuchiyo;
         $('#' + name ).css( 'backgroundImage', 'url( "/assets/blood.png" )' );
         $('#' + name ).css( 'backgroundSize', '50%' );
         $('#' + name ).css( 'width', '90px' );

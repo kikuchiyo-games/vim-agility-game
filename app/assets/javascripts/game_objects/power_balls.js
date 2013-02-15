@@ -5,8 +5,8 @@ var PowerBall = function( id, power_ball_image ){
   var that = $( power_ball_id );
 
   that.move = function(){
-    var x_intercept = ( Math.abs( that.x - kikuchiyo.x ) < 50 );
-    var y_intercept = ( Math.abs( that.y - kikuchiyo.y ) < 50 );
+    var x_intercept = ( Math.abs( that.x - Players.kikuchiyo.x ) < 50 );
+    var y_intercept = ( Math.abs( that.y - Players.kikuchiyo.y ) < 50 );
     if ( x_intercept && y_intercept ){
       GAME_OVER = true;
     }

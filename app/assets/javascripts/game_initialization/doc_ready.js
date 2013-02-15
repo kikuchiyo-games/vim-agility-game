@@ -1,13 +1,13 @@
 $( document ).ready( function(){
-  cs_dogmas = [];
+  Players.cs_dogmas = [];
   var which_program = window.location;
 
   game = game();
   game.make_rubies();
 
-  kikuchiyo = player( { name:"kikuchiyo", nature:"good", user_controls:true  } );
-  kikuchiyo.animate();
-  kikuchiyo.execute_command( "108" );
+  Players.kikuchiyo = player( { name:"kikuchiyo", nature:"good", user_controls:true  } );
+  Players.kikuchiyo.animate();
+  Players.kikuchiyo.execute_command( "108" );
 
 
   teleport_keys = [ "72", "48", "76", "77", "52" ];
@@ -17,14 +17,14 @@ $( document ).ready( function(){
     if ( game.player_won() ){ game.advance_to_next_level(); }
 
     var key_code = game.get_keycode( event.keyCode, event.shiftKey);
-    kikuchiyo.execute_command( key_code );
 
     for (var key in teleport_keys){
       if (key_code == teleport_keys[key] ){ play_sound("teleport_sound"); }
     }
 
+    Players.kikuchiyo.execute_command( key_code );
 
-    if ( cs_dogmas.length == 0 ){ regenerate_cs_dogmas(); }
+    if ( Players.cs_dogmas.length == 0 ){ regenerate_cs_dogmas(); }
   });
 
   regenerate_cs_dogmas = function(){
@@ -41,7 +41,7 @@ $( document ).ready( function(){
         var y = 10;
       }
 
-      cs_dogmas.push( 
+      Players.cs_dogmas.push( 
         player({ 
           name: prefix + i + '-' + ALL_ENEMIES_DEFEATED,  
           nature:"evil", 
@@ -51,9 +51,9 @@ $( document ).ready( function(){
           y: y
         })
       );
-      cs_dogmas[ cs_dogmas.length - 1 ].animate();
-      cs_dogmas[ cs_dogmas.length - 1 ].execute_command( "76" )
-      cs_dogmas[ cs_dogmas.length - 1 ].capture_kikuchiyo();
+      Players.cs_dogmas[ Players.cs_dogmas.length - 1 ].animate();
+      Players.cs_dogmas[ Players.cs_dogmas.length - 1 ].execute_command( "76" )
+      Players.cs_dogmas[ Players.cs_dogmas.length - 1 ].capture_kikuchiyo();
     }
   }
 

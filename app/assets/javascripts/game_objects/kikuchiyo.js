@@ -221,8 +221,9 @@ var player = function( spec ){
 
     game.end_game('Success! Level 2 coming soon...', 'Home?');
 
-    if( typeof( kikuchiyo ) != 'undefined' ){
-      kikuchiyo.destroy();
+    if( typeof( Players.kikuchiyo ) != 'undefined' ){
+      console.log( typeof( Players.kikuchiyo ) );
+      Players.kikuchiyo.destroy();
     }
   }
 
@@ -320,7 +321,7 @@ var player = function( spec ){
   }
 
   that.animate=function(){
-     
+    if( typeof( that.idle_user ) != 'function' ) { return }
     if ( that.idle_user() ) { setTimeout( that.animate, 140 ); return }
 
     var sheet_to_animate = that.get_animation( that.last_key_press );
@@ -432,7 +433,7 @@ var player = function( spec ){
   that.capture_kikuchiyo = function(){
 
     if ( that.dead == true ){
-      for (var o in that) if (isNaN(parseInt(o))) dispose(that[o]);
+      for (var o in that) if (isNaN(parseInt(o))) delete that[o] ;
       delete that;
       return false;
     }
@@ -441,14 +442,17 @@ var player = function( spec ){
 
     var ek = that;
 
-    if ( ek[ 'x' ] < kikuchiyo[ 'x' ] ){ ek.execute_command("108"); }
-    if ( ek[ 'x' ] > kikuchiyo[ 'x' ] ){ ek.execute_command("104"); }
-    if ( ek[ 'y' ] < kikuchiyo[ 'y' ] ){ ek.execute_command("106"); }
-    if ( ek[ 'y' ] > kikuchiyo[ 'y' ] ){ ek.execute_command("107"); }
+    if ( typeof( Players.kikuchiyo ) == 'undefined' ){ return }
+
+    if ( ek[ 'x' ] < Players.kikuchiyo[ 'x' ] ){ ek.execute_command("108"); }
+    if ( ek[ 'x' ] > Players.kikuchiyo[ 'x' ] ){ ek.execute_command("104"); }
+    if ( ek[ 'y' ] < Players.kikuchiyo[ 'y' ] ){ ek.execute_command("106"); }
+    if ( ek[ 'y' ] > Players.kikuchiyo[ 'y' ] ){ ek.execute_command("107"); }
     if ( Math.random() > 0.975 ){ ek.execute_command("120") }
 
-    var y_distance = Math.abs( ek[ 'y' ] - kikuchiyo[ 'y' ] );
-    var x_distance = Math.abs( ek[ 'x' ] - kikuchiyo[ 'x' ] );
+    if ( typeof( Players.kikuchiyo ) == 'undefined' ){ return }
+    var y_distance = Math.abs( ek[ 'y' ] - Players.kikuchiyo[ 'y' ] );
+    var x_distance = Math.abs( ek[ 'x' ] - Players.kikuchiyo[ 'x' ] );
 
     if ( y_distance < 5 && x_distance < 5 ){ 
       game.end_game( 'Captured!', 'Respawn?' );
@@ -456,8 +460,8 @@ var player = function( spec ){
 
       if (x_distance + y_distance){
         if (!GAME_OVER){
-          kikuchiyo.bravery_points += 1 / ( x_distance + y_distance ); 
-          points = Math.round( kikuchiyo.bravery_points * 100 ) / 100;
+          Players.kikuchiyo.bravery_points += 1 / ( x_distance + y_distance ); 
+          points = Math.round( Players.kikuchiyo.bravery_points * 100 ) / 100;
           $("#bravery_points").text( points );
         }
       }
