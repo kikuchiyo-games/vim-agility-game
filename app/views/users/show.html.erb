@@ -4,14 +4,14 @@
       <p class = 'push-2'>Study requires calm; talent requires study</p> 
       <br />
       <p class = 'pull-1'>- Zhuge Liang.</p>
-      <p id = 'fate' class = 'push-2'> <br />
+      <p id = 'fate' class = 'push-2'> 
         Please study the keys on each belt to the left.<br />
         When you are comfortable, test yourself against fate<br />
         by traveling the world outside
       </p>
     </h3>
-    <div class = 'span-12' style = 'position:absolute; padding-left:320px; padding-top:220px;'>
-      <%= link_to image_tag( 'curtain.png', :class => 'span-2 clickable push-12', :title => 'Travel Outside'), game_index_path %>
+    <div id = 'curtain_container' class = 'span-12'>
+      <%= link_to image_tag( 'curtain.png', :class => 'span-2 clickable push-7', :title => 'Travel Outside', :id => 'curtain'), game_index_path %>
     </div>
   </div>
 
@@ -111,7 +111,7 @@
     <p class = 'span-3'> Personal </p>
     <br />
     <p id = 'user_stats_container' class = 'span-3'> 
-      <%= image_tag 'stats.png', :class => 'span-2 clickable', :title => 'Journal' %> 
+      <%= image_tag 'stats.png', :class => 'span-2 clickable', :title => 'Journal', :id => 'journal-toggler' %> 
       <div id = 'user_stats' style = 'display:none;'>
         <h5> User Profile: </h5>
         <hr>
@@ -135,14 +135,12 @@
       <%= image_tag 'edit.png', :class => 'span-2 clickable', :title => 'Edit Profile'%> 
     </p>
   </div-->
-
-
 </div>
 
 <%#= render :partial => 'shared/chase_music' %>
-<%= javascript_include_tag "jquery-1.7.1.min" %>
+<%= javascript_include_tag "jquery/jquery-1.7.1.min" %>
 <%= render :partial => 'shared/profile_stats' %>
-<div class = 'span-10'>
+<div class = 'span-10 push-1' style = 'margin-top:-10px;'>
   <%= render :partial => 'shared/dojo_music' %>
 </div>
-<%= render :partial => 'shared/facebook' %>
+<%#= render :partial => 'shared/facebook' %>

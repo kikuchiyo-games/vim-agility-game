@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_filter :authorize, :only => :show
 
   def index
-    # @profiles = Profile.all.sort_by &:experience_points,
     @profiles = Profile.all.sort_by{ |record| -record.experience_points }
   end
 
@@ -15,9 +14,7 @@ class UsersController < ApplicationController
     @user = User.find( session[:user_id] )
     if @user != current_user || ( params[:id] && @user.id != params[:id].to_i )
       redirect_to root_url, :notice => "You have been logged out for accessing a resrouce illegally."
-    else
     end
-
   end
 
   def home

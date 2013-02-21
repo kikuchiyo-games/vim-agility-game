@@ -1,34 +1,7 @@
-// --------------------------------------------------
-// player:
-// --------------------------------------------------
-//   Object
-//     Can ask() questions
-//     Can move()
-//     Is  bound_to_screen()
-//     Has sprite_sheet()
-//     Can animate()
-//     Is  destroyable()
-//     Is either good_or_evil()
-// Test specs: dev_kikuchiyo_spec.js
-// Requires animation.js, sheets_clips.js, movement.js
-
-
-// --------------------------------------------------
-// QUNIT = false in production...
-// --------------------------------------------------
-//
-// For testing, the more liberal
-// < 30 requirement fails, becasue we pick up multiple
-// rubies with one swipe, occasionally, if placed in
-// such a convenient manner for the user.  luck you!
-// to test, we ensure the == 0 condition.  Otherwise
-// rubies are missing, and the test fails...
-
-QUNIT = false;
 
 var player = function( spec ){
-
   var that = {};
+
   that.last_sheet = null;
   that.current_image_index = 0;
   that.name = spec.name;
@@ -40,8 +13,9 @@ var player = function( spec ){
   that.bravery_points = 0;
   that.kills = 0;
   that.command_time = new Date();
-  that.diamond_quota = 20
+  that.diamond_quota = 20;
   that.user_controls = spec.user_controls || false;
+  that.health = 2;
 
   var spear = new Spear( { player: that } );
   that.spear = spear;
@@ -189,6 +163,7 @@ var player = function( spec ){
     }
 
   }
+
   that.beat_level = function(){
 
     var x_escape_route = parseInt( $('#escape_route').position().left );
@@ -196,12 +171,6 @@ var player = function( spec ){
     var y_kikuchiyo = parseInt( $('#kikuchiyo').position().top ) - $('#kikuchiyo').height();
     var y_escape_route = parseInt( $('#escape_route').position().top ) - 
       parseInt( $('#escape_route').height() );
-    // alert(
-    // 'y: escape route' + y_escape_route +
-    // 'y: kikuchiyo' + y_kikuchiyo + '\n' +
-    // 'x: escape route' + x_escape_route +
-    // 'x: kikuchiyo' + x_kikuchiyo
-    // );
 
     var x_interception = ( 
       Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route ) < 50 
@@ -211,13 +180,7 @@ var player = function( spec ){
       Math.abs( y_escape_route + y_kikuchiyo ) < 50 
     );
 
-    // alert( 'y:' +  + ', ' + $('#kikuchiyo').position().top  + ', ' + $( '#draw-target' ).css( 'margin-top' ) + $('#escape_route').height() );
-    // alert( 'x:' + $('#escape_route').position().left + ', ' + $('#kikuchiyo').position().left $('#kikuchiyo'));
-    // return true;
-    if ( !x_interception || !y_interception ){ 
-      //alert( x_interception + ", " + y_interception );
-      return true; 
-    }
+    if ( !x_interception || !y_interception ){ return true; }
 
     game.end_game('Success! Level 2 coming soon...', 'Home?');
 
@@ -230,7 +193,12 @@ var player = function( spec ){
   that.execute_command = function( key_press ){
 
     that.command_time = new Date();
-
+    if ( key_press == '118' ){ 
+    //   $( '#draw-target' ).append(
+    //     '<div id = "visual_mode" style = "top:' + Players.kikuchiyo.y + 
+    //       'px; left: ' + Players.kikuchiyo.x + 'px;"><div>'
+    //   )
+    }
     if ( key_press == '16' ){ return true }
     if ( key_press == '97' && $('#escape_route').css('display') != 'none'){ 
       that.beat_level();
@@ -394,20 +362,8 @@ var player = function( spec ){
 
       if ( this_ruby == undefined ){ continue }
   
-      if ( QUNIT ){
-        var x_interception = ( Math.abs(this_ruby.x - that.x ) == 0 );
-        var y_interception = ( Math.abs(this_ruby.y - that.y ) == 0 );
-
-      } else {
-
-        var x_interception = ( 
-          Math.abs(this_ruby.x - that.x - that.offset_x(this_ruby) ) < 50 
-        );
-
-        var y_interception = ( 
-          Math.abs(this_ruby.y - that.y - that.offset_y(this_ruby)  ) < 50 
-        );
-      }
+      var x_interception = ( Math.abs(this_ruby.x - that.x - that.offset_x(this_ruby) ) < 50 );
+      var y_interception = ( Math.abs(this_ruby.y - that.y - that.offset_y(this_ruby)  ) < 50 );
 
       if ( x_interception && y_interception ) {
         that.rubies += this_ruby.rubies;
@@ -425,13 +381,11 @@ var player = function( spec ){
           alert('Guard has been bribed.  Now flee out the Eastern gate! Press `a` to exit when near the gate.')
           $('#escape_route').show();
         }
-        //that.increment_sprite_rubies();
       }
     }
   };
 
   that.capture_kikuchiyo = function(){
-
     if ( that.dead == true ){
       for (var o in that) if (isNaN(parseInt(o))) delete that[o] ;
       delete that;
@@ -456,6 +410,7 @@ var player = function( spec ){
 
     if ( y_distance < 5 && x_distance < 5 ){ 
       game.end_game( 'Captured!', 'Respawn?' );
+
     } else { 
 
       if (x_distance + y_distance){
@@ -466,13 +421,7 @@ var player = function( spec ){
         }
       }
     }
-    
     setTimeout(that.capture_kikuchiyo, 140);
-
-    // if ( typeof( power_ball ) != 'undefined' ){
-    //   setTimeout(power_ball.move, 10);
-    //   setTimeout(kikuchiyo.hit_by_fireball, 60);
-    // }
   };
 
   return that;

@@ -1,3 +1,10 @@
+#visual_mode {
+  position:absolute;
+  background-color:rgba(0,250,154,0.1);
+  height:60px;
+  width:60px;
+}
+
 #the_end {
   font-family: Brush Script MT;
   text-shadow: yellow 0.1em 0.1em 0.2em !important;
@@ -187,14 +194,29 @@ ul.inline li, #user_stats li {
   color:#CCFF00;
 }
 
+#curtain_container{
+  position:absolute; 
+  padding-left:320px; 
+  padding-top:160px;
+}
+
+#curtain {
+  padding:2px;
+  /*border-radius: 200px 200px;*/
+  height:250px;
+  width:250px;
+  z-index: 99;
+}
+
 #user_stats {
   list-style: none;
   border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   font-family: Calibri, Tahoma, Geneva, sans-serif;
   position: absolute; 
-  left: 1em; 
-  top: -190%; 
+  left: 35%; 
+  top: -290%; 
+  height:300px;
   z-index: 99;
   margin-left: 0; width: 750px;
   background: rgba(0, 0, 0, 0.7); border: 1px solid #FFAD33; 
