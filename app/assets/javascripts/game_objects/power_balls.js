@@ -1,5 +1,5 @@
 var PowerBall = function( id, power_ball_image ){
-  $( "body" ).append( "<div id=\"power_ball" + id + "\"></div>" );
+  $( "body" ).append( "<div id=\"power_ball" + id + "\" style = 'position:absolute;'></div>" );
 
   var power_ball_id = "#power_ball" + id;
   var that = $( power_ball_id );

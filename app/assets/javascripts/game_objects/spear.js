@@ -21,7 +21,9 @@ var Spear = function( options ){
     if ( that.indicator == '#spear_kikuchiyo' ){
       for( var i = 0; i <  Players.cs_dogmas.length; i++ ){
         var cs_dogma = Players.cs_dogmas[i];
-        if ( typeof( cs_dogma ) != 'undefined' && that.kill( cs_dogma ) ){ 
+        var hit = typeof( cs_dogma ) != 'undefined' && that.kill( cs_dogma )
+        if ( hit ){ cs_dogma.health -= 1; }
+        if ( cs_dogma.health <= 0 ){
           blood_x = cs_dogma.x;
           blood_y = cs_dogma.y;
           var name = cs_dogma.name;
@@ -105,7 +107,11 @@ var Spear = function( options ){
       return false;
     } else { 
       // console.log( 'collision!' );
-      play_sound( 'blood-splat' );
+      if ( enemy.health <= 1 ){
+        play_sound( 'blood-splat' );
+      } else {
+        play_sound( 'sword_slice' );
+      }
       return true; 
     }
  
