@@ -22,24 +22,22 @@ var Spear = function( options ){
       for( var i = 0; i <  Players.cs_dogmas.length; i++ ){
         var cs_dogma = Players.cs_dogmas[i];
         var hit = typeof( cs_dogma ) != 'undefined' && that.kill( cs_dogma )
-        if ( hit ){ cs_dogma.health -= 1; }
+        if ( hit ){ 
+          if ( typeof( powerballs ) == 'undefined' ){ powerballs = 0 }
+          powerballs += 1;
+          cs_dogma.health -= 1; 
+          powerball = new PowerBall(powerballs, 'asdf');
+          powerball.draw(0, Players.kikuchiyo.y);
+          setInterval(powerball.move, 10);
+        }
         if ( cs_dogma.health <= 0 ){
           blood_x = cs_dogma.x;
           blood_y = cs_dogma.y;
           var name = cs_dogma.name;
           //function dispose(obj) {
           Players.cs_dogmas[i].dead = true;
-          //}
+          Players.cs_dogmas[i].to_death();
           Players.cs_dogmas.splice( i, 1 )
-          // cs_dogmas[i].spear = null;
-          // delete cs_dogmas[i].spear;
-          // cs_dogmas[i] = null;
-          // delete cs_dogmas[i];
-          
-          $('#' + name ).css( 'backgroundImage', 'url( "/assets/blood.png" )' );
-          $('#' + name ).css( 'backgroundSize', '50%' );
-          $('#' + name ).css( 'width', '90px' );
-          $('#' + name ).css( 'height', '20px' );
           Players.kikuchiyo.kills += 1;
           $('#kills').text(Players.kikuchiyo.kills)
         }
@@ -52,11 +50,8 @@ var Spear = function( options ){
         blood_y = Players.kikuchiyo.y;
         var name = Players.kikuchiyo.name;
         kiluchiyo = null;
+        Players.kikuchiyo.to_death();
         delete Players.kikuchiyo;
-        $('#' + name ).css( 'backgroundImage', 'url( "/assets/blood.png" )' );
-        $('#' + name ).css( 'backgroundSize', '50%' );
-        $('#' + name ).css( 'width', '90px' );
-        $('#' + name ).css( 'height', '20px' );
         game.end_game( "Well, that's one way to die...", 'Respawn?' );
         // kikuchiyo.kills += 1;
         // $('#kills').text(kikuchiyo.kills)

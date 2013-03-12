@@ -1,14 +1,18 @@
 var PowerBall = function( id, power_ball_image ){
-  $( "body" ).append( "<div id=\"power_ball" + id + "\" style = 'position:absolute;'></div>" );
+  $( "#draw-target" ).append( "<div class=\"power_ball span-1\" id=\"power_ball" + id + "\" style = 'position:relative;'></div>" );
 
   var power_ball_id = "#power_ball" + id;
   var that = $( power_ball_id );
 
   that.move = function(){
-    var x_intercept = ( Math.abs( that.x - Players.kikuchiyo.x ) < 50 );
-    var y_intercept = ( Math.abs( that.y - Players.kikuchiyo.y ) < 50 );
-    if ( x_intercept && y_intercept ){
+    var x_intercept = ( Math.abs( that.x - Players.kikuchiyo.x ) < 30 );
+    var y_intercept = ( Math.abs( that.y - Players.kikuchiyo.y ) < 30 );
+    if ( !GAME_OVER && x_intercept && y_intercept ){
+
       GAME_OVER = true;
+      Players.kikuchiyo.to_death();
+      game.end_game('Captured!', 'Home?');
+      return;
     }
     that.draw( that.x + 5, that.y);
   }
@@ -17,7 +21,7 @@ var PowerBall = function( id, power_ball_image ){
   that.x = null;
   that.y = null;
 
-  that.draw = function( ){
+  that.draw = function( x, y ){
     that.x = x;
     that.y = y;
     that[ 0 ].style.left = x + 'px'; 
@@ -34,8 +38,8 @@ var PowerBall = function( id, power_ball_image ){
     position:'absolute', 
     display:'block', 
     zIndex:'1000', 
-    //background: 'url( /assets/blue_glossy_ball.png )' 
-    background: 'url( /assets/spear_small.png )' 
+    background: 'url( /assets/shuriken-icon.png )' 
+    //background: 'url( /assets/spear_small.png )' 
   });
 
   that.destroy=function(){

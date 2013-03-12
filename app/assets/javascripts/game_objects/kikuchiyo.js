@@ -2,6 +2,7 @@
 var player = function( spec ){
   var that = {};
 
+  // to => initialization
   that.last_sheet = null;
   that.current_image_index = 0;
   that.name = spec.name;
@@ -18,6 +19,7 @@ var player = function( spec ){
   that.health = 2;
 
   var spear = new Spear( { player: that } );
+
   that.spear = spear;
   that.spear.draw();
 
@@ -35,6 +37,7 @@ var player = function( spec ){
 
   that.last_key_press = spec.last_key_press || "108"
 
+  // to => sheets object?
   that.sheets = {
     good:"/assets/sheets/mega_man_boss.png",
     evil:"/assets/sheets/mega_man_evil.png"
@@ -48,12 +51,21 @@ var player = function( spec ){
     }
   };
 
+  that.to_death = function(){
+    $('#' + that.name ).css( 'backgroundImage', 'url( "/assets/blood.png" )' );
+    $('#' + that.name ).css( 'backgroundSize', '50%' );
+    $('#' + that.name ).css( 'width', '90px' );
+    $('#' + that.name ).css( 'height', '20px' );
+  };
+
+
   that.set_sheet();
 
   that.get_sheet = function(){
     return that.sheet;
   };
 
+  // to => talk module?
   //how to test? test response
   that.ask = function( question ){
     return prompt( question, "" );
@@ -68,6 +80,7 @@ var player = function( spec ){
     return that.nature;
   }; 
 
+  // to => location module?
   that.get_location=function(){
     return { x:that.x, y:that.y };
   }; 
@@ -164,6 +177,7 @@ var player = function( spec ){
 
   }
 
+  // to => game object?
   that.beat_level = function(){
 
     var x_escape_route = parseInt( $('#escape_route').position().left );
@@ -190,6 +204,7 @@ var player = function( spec ){
     }
   }
 
+  // to => stays here?
   that.execute_command = function( key_press ){
 
     that.command_time = new Date();
@@ -278,6 +293,7 @@ var player = function( spec ){
 
   };
 
+  // to => location module?
   that.idle_user=function(){
     var now = new Date();
     return ( now.getTime() - that.command_time.getTime() ) / 1000 > 0.5; 
@@ -385,6 +401,7 @@ var player = function( spec ){
     }
   };
 
+  // to => bad guy class inheriting from player class?
   that.capture_kikuchiyo = function(){
     if ( that.dead == true ){
       for (var o in that) if (isNaN(parseInt(o))) delete that[o] ;

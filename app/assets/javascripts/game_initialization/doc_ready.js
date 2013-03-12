@@ -54,7 +54,7 @@ $( document ).ready( function(){
       Players.cs_dogmas[ Players.cs_dogmas.length - 1 ].animate();
       Players.cs_dogmas[ Players.cs_dogmas.length - 1 ].execute_command( "76" )
       Players.cs_dogmas[ Players.cs_dogmas.length - 1 ].capture_kikuchiyo();
+
     }
   }
-
 });
