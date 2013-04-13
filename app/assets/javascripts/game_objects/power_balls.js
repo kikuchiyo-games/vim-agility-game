@@ -3,18 +3,24 @@ var PowerBall = function( id, power_ball_image ){
 
   var power_ball_id = "#power_ball" + id;
   var that = $( power_ball_id );
+  that.id = id;
 
   that.move = function(){
+    if ( that.x > Players.kikuchiyo.x ){ 
+      that.destroy() 
+      window.clearInterval( window.POWERBALL_INTERVALS[that.id - 1] );
+      return( false );
+    }
     var x_intercept = ( Math.abs( that.x - Players.kikuchiyo.x ) < 30 );
     var y_intercept = ( Math.abs( that.y - Players.kikuchiyo.y ) < 30 );
     if ( !GAME_OVER && x_intercept && y_intercept ){
-
       GAME_OVER = true;
       Players.kikuchiyo.to_death();
       game.end_game('Captured!', 'Home?');
       return;
     }
     that.draw( that.x + 5, that.y);
+
   }
 
   that.power_ball_id = power_ball_id;

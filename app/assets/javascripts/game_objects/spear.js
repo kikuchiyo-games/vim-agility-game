@@ -1,3 +1,5 @@
+window.POWERBALL_INTERVALS = [];
+
 var Spear = function( options ){
   $( "#draw-target" ).append( "<div id=\"spear_" + options.player.name +
     "\" syle = 'z-index:999 !important;'>&nbsp;</div>" 
@@ -28,7 +30,7 @@ var Spear = function( options ){
           cs_dogma.health -= 1; 
           powerball = new PowerBall(powerballs, 'asdf');
           powerball.draw(0, Players.kikuchiyo.y);
-          setInterval(powerball.move, 10);
+          window.POWERBALL_INTERVALS[powerballs - 1] = setInterval(powerball.move, 10);
         }
         if ( cs_dogma.health <= 0 ){
           blood_x = cs_dogma.x;
