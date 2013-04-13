@@ -37,6 +37,8 @@
 </div>
 
 <div > 
-  <h1 class = 'push-1' style = 'font-family: Brush Script MT; position:absolute; bottom:10%; color:red;'> Happy Valentines Day, Liyan!  I love you so much!</h1>
-  <%= image_tag 'valentines_day.png', :class => 'pull-3', :style => 'margin-top:-100px;'  %>
+  <% if Time.now.strftime('%m %d') == '02 14' %>
+    <h1 class = 'push-1' style = 'font-family: Brush Script MT; position:absolute; bottom:10%; color:red;'> Happy Valentines Day, Liyan!  I love you so much!</h1>
+    <%= image_tag 'valentines_day.png', :class => 'pull-3', :style => 'margin-top:-100px;'  %>
+  <% end %>
 </div>
