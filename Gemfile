@@ -6,11 +6,12 @@ gem 'bcrypt-ruby',
 gem 'rails', '3.1.1'
 gem 'jquery-rails'
 gem 'json'
-
+# gem 'activerecord-mysql2-adapter'
+gem 'mysql2', '0.3.7'
 group :production do
   # gem 'pg'
   # gem 'activerecord-mysql2-adapter'
-  gem 'mysql2' #, '0.3.7'
+  # gem 'mysql2' #, '0.3.7'
   # gem 'sqlite3'
 end
 

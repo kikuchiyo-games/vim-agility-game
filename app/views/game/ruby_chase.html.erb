@@ -60,13 +60,13 @@
 
     <div id = 'draw-target'>
     </div>
-    <%= link_to image_tag( 'curtain.png', :class => 'span-2 clickable push-1', :style => 'position:absolute; z-index:88; left:0; top:140px;', :title => 'Flee'), game_index_path %>
+    <%= link_to image_tag( 'curtain.png', :class => 'span-2 clickable push-1', :style => 'position:absolute; z-index:100; left:30; top:140px;', :title => 'Flee'), game_index_path %>
     <%= image_tag( 'bamboo.png', :class => "span-2 clickable pull-1", :style => 'position:absolute; z-index:88; top:140px;', :title => 'Flee')%>
     <% 25.times do |i| %>
       <%= image_tag( 'bamboo.png', :class => "span-2 clickable push-#{i}", :style => 'position:absolute; z-index:88; top:140px;', :title => 'Stop using the mouse.')%>
     <% end %>
     <%= render :partial => 'shared/chase_music' %>
-    <%= image_tag( 'curtain.png', :id => 'escape_route', :class => 'span-2 clickable push-1', :style => 'position:absolute; z-index:88; right:10%; top:150px; display:none;', :title => 'Flee') %>
+    <%= image_tag( 'curtain.png', :id => 'escape_route', :class => 'span-2 clickable push-1', :style => 'position:absolute; z-index:100; right:10%; top:150px; display:none;', :title => 'Flee') %>
     <script>
       $(document).ready(function(){
         alert( 'A riot has broken out in the concentration camp.  Gather enough rubies and diamonds to bribe the guards. PRESS `i` TO PICK UP ITEMS.'  );
