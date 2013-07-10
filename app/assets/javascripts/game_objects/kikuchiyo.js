@@ -14,7 +14,7 @@ var player = function( spec ){
   that.bravery_points = 0;
   that.kills = 0;
   that.command_time = new Date();
-  that.diamond_quota = 20;
+  that.diamond_quota = 1;
   that.user_controls = spec.user_controls || false;
   that.health = 2;
 
@@ -179,22 +179,19 @@ var player = function( spec ){
 
   // to => game object?
   that.beat_level = function(){
-    var x_escape_route = parseInt( $('#escape_route').position().left ) - parseInt( $('#escape_route').width() );
+    var x_escape_route = parseInt( $('#escape_route').css('margin-left') ) + parseInt( $('#escape_route').width() );
     var x_kikuchiyo = parseInt( $('#kikuchiyo').position().left )
     var y_kikuchiyo = parseInt( $('#kikuchiyo').position().top ) - $('#kikuchiyo').height();
     var y_escape_route = parseInt( $('#escape_route').position().top ) - 
       parseInt( $('#escape_route').height() );
 
     var x_interception = ( 
-      Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route /*- that.offset_x( $('#escape_route') )*/ ) < 125 
+      Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route /*- that.offset_x( $('#escape_route') ) */ ) < 50 
     );
 
     var y_interception = ( 
       Math.abs( y_escape_route + y_kikuchiyo ) < 50 
     );
-
-    //console.log( 'x: ' + Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route - that.offset_x( $('#escape_route') ) ) );
-    //console.log( 'y: ' + Math.abs( y_escape_route + y_kikuchiyo ) );
 
     if ( !x_interception || !y_interception ){ return true; }
 
