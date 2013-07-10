@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   # create session on log in
   # what is restful way to create new user?
   def new
-    redirect_to users_path(session[:user_id]) if session[:user_id]    
+    redirect_to user_path(session[:user_id]) if session[:user_id]    
   end
 
   def create
