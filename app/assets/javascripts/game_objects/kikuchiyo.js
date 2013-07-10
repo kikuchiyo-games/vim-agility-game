@@ -186,7 +186,7 @@ var player = function( spec ){
       parseInt( $('#escape_route').height() );
 
     var x_interception = ( 
-      Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route - that.offset_x( $('#escape_route') ) ) < 125 
+      Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route /*- that.offset_x( $('#escape_route') )*/ ) < 125 
     );
 
     var y_interception = ( 
