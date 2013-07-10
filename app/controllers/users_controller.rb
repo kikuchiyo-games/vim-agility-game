@@ -26,7 +26,8 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       Profile.new( :user_id => @user.id ).save!
-      redirect_to root_url, :notice => "Thank you for signing up!"
+      # redirect_to root_url, :notice => "Thank you for signing up!"
+      redirect_to user_path(@user.id), :notice => "Thank you for signing up!"
     else
       render "new"
     end

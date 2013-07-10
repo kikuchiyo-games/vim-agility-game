@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   # create session on log in
   # what is restful way to create new user?
   def new
-    
+    redirect_to users_path(session[:user_id]) if session[:user_id]    
   end
 
   def create
@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
   
   def destroy
     reset_session 
+    session[:user_id] = nil
     redirect_to root_url, :notice => "Logged out!"
   end
 
