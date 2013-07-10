@@ -179,20 +179,22 @@ var player = function( spec ){
 
   // to => game object?
   that.beat_level = function(){
-
-    var x_escape_route = parseInt( $('#escape_route').position().left );
+    var x_escape_route = parseInt( $('#escape_route').position().left ) - parseInt( $('#escape_route').width() );
     var x_kikuchiyo = parseInt( $('#kikuchiyo').position().left )
     var y_kikuchiyo = parseInt( $('#kikuchiyo').position().top ) - $('#kikuchiyo').height();
     var y_escape_route = parseInt( $('#escape_route').position().top ) - 
       parseInt( $('#escape_route').height() );
 
     var x_interception = ( 
-      Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route ) < 50 
+      Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route - that.offset_x( $('#escape_route') ) ) < 125 
     );
 
     var y_interception = ( 
       Math.abs( y_escape_route + y_kikuchiyo ) < 50 
     );
+
+    //console.log( 'x: ' + Math.abs( Math.abs( x_kikuchiyo ) - x_escape_route - that.offset_x( $('#escape_route') ) ) );
+    //console.log( 'y: ' + Math.abs( y_escape_route + y_kikuchiyo ) );
 
     if ( !x_interception || !y_interception ){ return true; }
 
