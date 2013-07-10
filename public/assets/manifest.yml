@@ -187,5 +187,6 @@ x.png: x.png
 y.png: y.png
 z.png: z.png
 application.js: application.js
+game.js: game.js
 helpers/flowchartConnectorsDemo.html: helpers/flowchartConnectorsDemo.html
 application.css: application.css
