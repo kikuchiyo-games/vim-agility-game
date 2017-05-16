@@ -1,0 +1,37 @@
+@import url('colors.css');
+@import url('fonts.css');
+
+.session-form {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.session-form h3 {
+  font-family: var(--font-comfortaa);
+  color: var(--color-gray);
+  font-size: 66px;
+  font-weight: normal;
+}
+
+.session-form p {
+  display: block;
+}
+
+.session-form p label {
+  display: inline-block;
+  font-family: var(--font-comfortaa);
+  color: var(--color-gray);
+  width: 80px;
+}
+
+.session-form p input {
+  display: inline-block;
+  font-family: var(--font-comfortaa);
+  color: var(--color-watermelon);
+  width: 120px;
+}
+
+.session-form p input[type='submit'] {
+  width: 136px;
+}

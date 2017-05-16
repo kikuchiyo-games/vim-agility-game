@@ -10,16 +10,20 @@
     <META NAME="revisit-after" CONTENT="14 days">
     <META NAME="robots" CONTENT="all">
     <META NAME="Author" CONTENT="kikuchiyo">
-    <!-- vim game -->
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Julius+Sans+One'/>
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Ruthie'/>
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Mr+Dafoe'/>
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Comfortaa'/>
 
-    <%= stylesheet_link_tag "screen" %>
-    <%= stylesheet_link_tag "index"  %>
+    <!-- vim game -->
+    <%#= stylesheet_link_tag "screen" %>
+    <%#= stylesheet_link_tag "index"  %>
+    <%= stylesheet_link_tag "layout"  %>
+    <%= stylesheet_link_tag "form"  %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class = 'container'>
-      <div id = 'header-container' class = 'span-24'></div>
-      <%= yield %>
-    </div>
+    <header>Vim Agility Game</header>
+    <%= yield %>
   </body>
 </html>

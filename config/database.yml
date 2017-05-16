@@ -1,5 +1,6 @@
 test:
-  adapter: mysql2
+  # adapter: mysql2
+  adapter: sqlite3
   database: test_vim_game
   user: root
   password:
@@ -7,7 +8,8 @@ test:
   encoding: utf8
 
 development:
-  adapter: mysql2
+  # adapter: mysql2
+  adapter: sqlite3
   database: development_vim_game
   user: root
   password:
@@ -15,7 +17,8 @@ development:
   encoding: utf8
  
 production:
-  adapter: mysql2
+  # adapter: mysql2
+  adapter: sqlite3
   database: vim_game
   user: root
   password:

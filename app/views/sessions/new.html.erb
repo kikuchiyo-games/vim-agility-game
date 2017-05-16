@@ -1,28 +1,29 @@
+<nav>
+  <ul>
+    <li><%= link_to 'Log in', new_session_path, :class => 'active' %></li>
+    <li><%= link_to 'Sign up', new_users_path %></li>
+    <li><a href='https://github.com/kikuchiyo-games/vim-agility-game.git'>Source</a></li>
+    <li><a href='http://www.vim.org/download.php'>Download Vim</a></li>
+  </ul>
+</nav>
 
-<div id = 'create-account' class = 'push-5 span-20'>
-  <p class = 'span-6'>Equal Opportunity Education</p>
+<%= form_tag session_path, :class => 'session-form' do %>
+  <!--h3 id = 'log-in' class = 'span-10 push-2'>Log In</h3-->
 
-  <%= image_tag 'createNewAccount.png', :class => 'span-1' %>
-  <%= link_to '  Create an Account!', new_users_path, :class => 'span-4' %>
-  <a href = 'https://github.com/kikuchiyo/vim_game' class = 'span-3'>Source Code</a>
-  <a href = 'http://www.vim.org/download.php' class = 'span-4'>Download Vim</a>
-</div>
-
-<%= form_tag session_path, :class => 'gradiant-green-black span-24' do %>
-  <h3 id = 'log-in' class = 'span-10 push-2'>Log In</h3>
-  <hr>
-  <p class = 'span-18 push-2' >
-    <%= label_tag :email, nil, :class => 'span-2' %>
+  <p>
+    <%= label_tag :email, nil %>
     <%= text_field_tag :email %>
   </p>
-  <p class = 'span-18 push-2' >
-    <%= label_tag :password, nil, :class => 'span-2' %>
+
+  <p>
+    <%= label_tag :password, nil %>
     <%= password_field_tag :password %>
-    <br />
-    <br />
+  </p>
+
+  <p>
+    <%= label_tag '', nil %>
     <%= submit_tag 'login', :class => 'push-2' %>
   </p>
-  <hr>
 
   <% if !flash[:notice].blank? %>
     <p id = 'notice' style = 'color:red; font-weight:bold;' class = 'span-10 push-8'>
@@ -31,9 +32,10 @@
   <% end %>
 
 <% end %>
+
 <div class = 'span-10'>
-  <%= render :partial => 'shared/theme_music' %>
-  <%= render :partial => 'shared/facebook' %>
+  <%#= render :partial => 'shared/theme_music' %>
+  <%#= render :partial => 'shared/facebook' %>
 </div>
 
 <div > 

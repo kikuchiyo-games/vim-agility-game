@@ -8,7 +8,6 @@ gem 'jquery-rails'
 gem 'json'
 # gem 'activerecord-mysql2-adapter'
 # gem 'mysql2', '0.3.7'
-gem 'pg'
 gem 'activerecord-postgresql-adapter'
 
 group :production, :staging do
@@ -47,8 +46,8 @@ group :test do
     gem 'cucumber-rails'
 
   #----- js -----#
-    gem 'jasmine'
-    gem 'jasmine-headless-webkit'
+    # gem 'jasmine'
+    # gem 'jasmine-headless-webkit'
 
   #----- browser -----#
     gem 'headless'
